@@ -141,9 +141,9 @@ cd xj1core
 #### 2. 设置ESP32开发环境
 ```bash
 # 安装ESP-IDF
-curl -LO https://github.com/espressif/esp-idf/releases/download/v4.4.2/esp-idf-v4.4.2.zip
-unzip esp-idf-v4.4.2.zip
-cd esp-idf-v4.4.2
+curl -LO https://github.com/espressif/esp-idf/releases/download/v5.4.1/esp-idf-v5.4.1.zip
+unzip esp-idf-v5.4.1.zip
+cd esp-idf-v5.4.1
 ./install.sh
 source export.sh
 
