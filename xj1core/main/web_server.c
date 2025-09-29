@@ -1169,10 +1169,15 @@ static esp_err_t save_ethernet_config_api_handler(httpd_req_t *req) {
  * @brief 蓝牙配置保存API处理器
  */
 static esp_err_t save_bluetooth_config_api_handler(httpd_req_t *req) {
+    ESP_LOGI(TAG, "Bluetooth config API handler called");
+    
     if (!is_authenticated(req)) {
+        ESP_LOGW(TAG, "Bluetooth config API: Authentication failed");
         send_json_response(req, 401, "{\"success\":false,\"message\":\"未认证\"}");
         return ESP_OK;
     }
+    
+    ESP_LOGI(TAG, "Bluetooth config API: Authentication passed");
     
     char content[512];
     int ret = httpd_req_recv(req, content, sizeof(content) - 1);
@@ -1208,14 +1213,20 @@ static esp_err_t save_bluetooth_config_api_handler(httpd_req_t *req) {
     return ESP_OK;
 }
 
+
 /**
  * @brief MQTT配置保存API处理器
  */
 static esp_err_t save_mqtt_config_api_handler(httpd_req_t *req) {
+    ESP_LOGI(TAG, "MQTT config API handler called");
+    
     if (!is_authenticated(req)) {
+        ESP_LOGW(TAG, "MQTT config API: Authentication failed");
         send_json_response(req, 401, "{\"success\":false,\"message\":\"未认证\"}");
         return ESP_OK;
     }
+    
+    ESP_LOGI(TAG, "MQTT config API: Authentication passed");
     
     char content[512];
     int ret = httpd_req_recv(req, content, sizeof(content) - 1);
@@ -1394,7 +1405,7 @@ esp_err_t web_server_start(void) {
     
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     config.server_port = web_config.port;
-    config.max_uri_handlers = 20;
+    config.max_uri_handlers = 30;  // 增加到30以容纳所有处理器
     config.max_open_sockets = 7;
     config.stack_size = 8192;
     
@@ -1578,7 +1589,8 @@ esp_err_t web_server_start(void) {
         .handler = save_bluetooth_config_api_handler,
         .user_ctx = NULL
     };
-    httpd_register_uri_handler(g_server, &save_bluetooth_config_uri);
+    esp_err_t bt_reg_result = httpd_register_uri_handler(g_server, &save_bluetooth_config_uri);
+    ESP_LOGI(TAG, "Bluetooth config URI registration: %s", bt_reg_result == ESP_OK ? "SUCCESS" : "FAILED");
     
     httpd_uri_t save_mqtt_config_uri = {
         .uri = "/api/config/mqtt",
@@ -1586,9 +1598,21 @@ esp_err_t web_server_start(void) {
         .handler = save_mqtt_config_api_handler,
         .user_ctx = NULL
     };
-    httpd_register_uri_handler(g_server, &save_mqtt_config_uri);
+    esp_err_t mqtt_reg_result = httpd_register_uri_handler(g_server, &save_mqtt_config_uri);
+    ESP_LOGI(TAG, "MQTT config URI registration: %s", mqtt_reg_result == ESP_OK ? "SUCCESS" : "FAILED");
     
     ESP_LOGI(TAG, "Web server started on port %d", WEB_SERVER_PORT);
+    ESP_LOGI(TAG, "Registered URI handlers:");
+    ESP_LOGI(TAG, "  GET  / - Login page");
+    ESP_LOGI(TAG, "  GET  /dashboard - Main dashboard");
+    ESP_LOGI(TAG, "  POST /api/login - Login API");
+    ESP_LOGI(TAG, "  POST /api/logout - Logout API");
+    ESP_LOGI(TAG, "  GET  /api/status - Status API");
+    ESP_LOGI(TAG, "  GET  /api/config - Config API");
+    ESP_LOGI(TAG, "  POST /api/config/wifi - WiFi config API");
+    ESP_LOGI(TAG, "  POST /api/config/ethernet - Ethernet config API");
+    ESP_LOGI(TAG, "  POST /api/config/bluetooth - Bluetooth config API");
+    ESP_LOGI(TAG, "  POST /api/config/mqtt - MQTT config API");
     return ESP_OK;
 }
 
