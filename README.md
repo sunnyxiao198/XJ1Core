@@ -64,7 +64,7 @@
 
 ### ☁️ 云端服务 (xj1corecloud)
 - **Web管理界面**: 现代化响应式设计
-- **实时消息显示**: WebSocket实时推送
+- **实时消息显示**: MQTT实时推送
 - **MQTT客户端**: 完整的订阅和发布功能
 - **HTTP API**: RESTful接口，支持ESP32调用
 - **消息历史**: 自动保存和查询历史消息
@@ -292,7 +292,7 @@ secret_key = xj1core_web_secret_key_2025
 - **安全认证**: 登录保护，防止未授权访问
 
 ### 🌐 云端Web管理界面
-- **实时消息**: WebSocket实时推送，无需刷新
+
 - **消息发送**: 支持快捷消息和自定义消息
 - **历史记录**: 自动保存消息历史，支持查询
 - **状态监控**: 实时显示系统运行状态
@@ -401,7 +401,7 @@ def get_temperature():
 ### 技术栈
 - **硬件平台**: ESP32/ESP32-S3
 - **开发框架**: ESP-IDF
-- **通信协议**: MQTT, HTTP, WebSocket
+- **通信协议**: MQTT, HTTP
 - **前端技术**: HTML5, CSS3, JavaScript, Bootstrap
 - **后端技术**: Python, Flask, Flask-SocketIO
 - **数据库**: SQLite (可扩展)
@@ -410,9 +410,8 @@ def get_temperature():
 ## 📞 联系我们
 
 - **作者**: ironxiao
-- **邮箱**: [your-email@example.com]
-- **项目主页**: [GitHub仓库链接]
-- **问题反馈**: [Issues页面链接]
+- **项目主页**: [https://github.com/sunnyxiao198/XJ1Core]
+- **问题反馈**: [https://github.com/sunnyxiao198/XJ1Core/issues]
 
 ---
 
