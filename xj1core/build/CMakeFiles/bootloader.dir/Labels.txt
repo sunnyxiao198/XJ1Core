@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/mnt/sunny/work/xj1core/xj1core/build/CMakeFiles/bootloader
+/mnt/sunny/work/xj1core/xj1core/build/CMakeFiles/bootloader.rule
+/mnt/sunny/work/xj1core/xj1core/build/CMakeFiles/bootloader-complete.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/mnt/sunny/work/xj1core/xj1core/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

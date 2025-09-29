@@ -1,0 +1,2 @@
+/home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ar qc libini_parser.a CMakeFiles/__idf_ini_parser.dir/ini_parser.c.obj
+/home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-ranlib libini_parser.a

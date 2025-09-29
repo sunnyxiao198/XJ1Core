@@ -1,0 +1,322 @@
+/* 湘江一号云端通信系统样式文件 */
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 连接状态样式 */
+.status-connected {
+    background-color: var(--success-color) !important;
+    animation: pulse 2s infinite;
+}
+
+.status-disconnected {
+    background-color: var(--danger-color) !important;
+}
+
+.status-connecting {
+    background-color: var(--warning-color) !important;
+    animation: blink 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.5; }
+}
+
+/* 消息容器样式 */
+.message-container {
+    height: 600px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+}
+
+.message-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.message-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 消息项样式 */
+.message-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.message-item:hover {
+    background-color: #f8f9fa;
+}
+
+.message-item:last-child {
+    border-bottom: none;
+}
+
+.message-item.sent {
+    background-color: #e3f2fd;
+    border-left: 4px solid var(--primary-color);
+}
+
+.message-item.received {
+    background-color: #f3e5f5;
+    border-left: 4px solid #9c27b0;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+}
+
+.message-type {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.message-type.sent {
+    color: var(--primary-color);
+}
+
+.message-type.received {
+    color: #9c27b0;
+}
+
+.message-timestamp {
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+.message-content {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+}
+
+.message-topic {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-family: 'Courier New', monospace;
+}
+
+/* 卡片样式增强 */
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+/* 按钮样式 */
+.btn {
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.quick-message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单样式 */
+.form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* 字符计数器样式 */
+#char-count {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.char-warning {
+    color: var(--warning-color) !important;
+}
+
+.char-danger {
+    color: var(--danger-color) !important;
+}
+
+/* 导航栏样式 */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Toast 通知样式 */
+.toast {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.toast-header {
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* 加载动画 */
+.loading-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 空状态样式 */
+.empty-state {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .message-container {
+        height: 400px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .message-container {
+        height: 300px;
+    }
+    
+    .message-item {
+        padding: 8px 12px;
+    }
+    
+    .card-header h5 {
+        font-size: 1rem;
+    }
+}
+
+/* 自定义滚动条（Firefox） */
+.message-container {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* 高亮效果 */
+.highlight {
+    background-color: #fff3cd !important;
+    animation: highlight-fade 3s ease-out;
+}
+
+@keyframes highlight-fade {
+    0% { background-color: #fff3cd; }
+    100% { background-color: transparent; }
+}
+
+/* 连接状态指示器 */
+.connection-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.connection-indicator.connected {
+    background-color: var(--success-color);
+    box-shadow: 0 0 6px rgba(25, 135, 84, 0.5);
+}
+
+.connection-indicator.disconnected {
+    background-color: var(--danger-color);
+}
+
+.connection-indicator.connecting {
+    background-color: var(--warning-color);
+    animation: pulse 1.5s infinite;
+}
+
+/* 消息类型图标 */
+.message-icon {
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+.message-icon.sent {
+    color: var(--primary-color);
+}
+
+.message-icon.received {
+    color: #9c27b0;
+}

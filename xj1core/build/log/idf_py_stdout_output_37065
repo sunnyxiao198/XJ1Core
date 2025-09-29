@@ -1,0 +1,1879 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2025 21:44:45[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v0.2[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (79) boot:  3 spiffs           Unknown data     01 82 00610000 00400000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=339d4h (211412) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=000439fc vaddr=3fc9ad00 size=0568ch ( 22156) load[0m
+[0;32mI (138) esp_image: segment 2: paddr=00049090 vaddr=40374000 size=06f88h ( 28552) load[0m
+[0;32mI (145) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b97f8h (759800) map[0m
+[0;32mI (279) esp_image: segment 4: paddr=00109820 vaddr=4037af88 size=0fd58h ( 64856) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=00119580 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (303) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (303) boot: Disabling RNG early entropy source...[0m
+[0;32mI (313) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (313) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (313) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (315) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (319) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (324) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (328) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (333) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (338) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (342) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (347) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (352) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (355) esp_psram: Speed: 40MHz[0m
+[0;32mI (358) cpu_start: Multicore app[0m
+[0;32mI (1092) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1101) cpu_start: Pro cpu start user code[0m
+[0;32mI (1101) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1101) app_init: Application information:[0m
+[0;32mI (1101) app_init: Project name:     xj1core[0m
+[0;32mI (1105) app_init: App version:      1[0m
+[0;32mI (1109) app_init: Compile time:     Sep 28 2025 21:44:56[0m
+[0;32mI (1114) app_init: ELF file SHA256:  7ff2bb1a9...[0m
+[0;32mI (1118) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (1123) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1127) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1131) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1135) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1142) heap_init: At 3FCA4D60 len 000449B0 (274 KiB): RAM[0m
+[0;32mI (1147) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1152) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1157) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (1163) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1170) spi_flash: detected chip: boya[0m
+[0;32mI (1173) spi_flash: flash io: dio[0m
+[0;32mI (1176) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1182) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1189) coexist: coex firmware version: e727207[0m
+[0;32mI (1213) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1214) main_task: Started on CPU0[0m
+[0;32mI (1215) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1218) main_task: Calling app_main()[0m
+[0;32mI (1221) main: XJ1Core System Starting...[0m
+[0;32mI (1225) main: =================================[0m
+[0;32mI (1229) main: Device: ESP32-S3-WROOM-1-N16R8[0m
+[0;32mI (1233) main: Firmware: XJ1Core v1.0.0[0m
+[0;32mI (1237) main: =================================[0m
+[0;32mI (1241) main: Initializing NVS...[0m
+[0;32mI (1268) main: NVS initialized successfully[0m
+[0;32mI (1268) main: Initializing network interface...[0m
+[0;32mI (1269) main: Network interface initialized[0m
+[0;32mI (1269) main: Initializing configuration manager...[0m
+[0;32mI (1507) ini_parser: INI config created successfully[0m
+[0;32mI (1507) config_manager: Attempting to load config from: /spiffs/config.ini[0m
+[0;32mI (1509) ini_parser: Loaded 23 items from /spiffs/config.ini[0m
+[0;32mI (1513) config_manager: Config file loaded successfully from SPIFFS[0m
+[0;32mI (1519) config_manager: Loaded MQTT config - broker_host: '192.168.1.40', broker_port: 1883[0m
+[0;32mI (1527) config_manager: Loaded auth config - Username: 'admin', Password hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1540) config_manager: Configuration manager initialized successfully[0m
+[0;32mI (1546) main: Configuration manager initialized[0m
+[0;32mI (1550) main: Initializing authentication module...[0m
+[0;32mI (1556) auth: SHA-256 test - Input: '123456', Hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1566) auth: Expected hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1574) auth: SHA-256 calculation is CORRECT[0m
+[0;32mI (1578) auth: Authentication module initialized[0m
+[0;32mI (1583) main: Authentication module initialized[0m
+[0;32mI (1587) main: Initializing WiFi manager...[0m
+[0;32mI (1592) pp: pp rom version: e7ae62f[0m
+[0;32mI (1594) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1600) wifi:wifi driver task: 3fcbe398, prio:23, stack:6656, core=0[0m
+[0;32mI (1619) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (1619) wifi:wifi certification version: v7.0[0m
+[0;32mI (1619) wifi:config NVS flash: enabled[0m
+[0;32mI (1620) wifi:config nano formatting: disabled[0m
+[0;32mI (1624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1629) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1633) wifi:Init management short buffer num: 32[0m
+[0;32mI (1638) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1642) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1646) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1650) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1659) wifi_init: rx ba win: 6[0m
+[0;32mI (1661) wifi_init: accept mbox: 6[0m
+[0;32mI (1664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1667) wifi_init: udp mbox: 6[0m
+[0;32mI (1670) wifi_init: tcp mbox: 6[0m
+[0;32mI (1673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1676) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1680) wifi_init: tcp mss: 1440[0m
+[0;32mI (1683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1686) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1691) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (1733) wifi:mode : sta (98:a3:16:eb:6b:18) + softAP (98:a3:16:eb:6b:19)[0m
+[0;32mI (1734) wifi:enable tsf[0m
+[0;32mI (1737) wifi:Total power save buffer number: 16[0m
+[0;32mI (1738) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1741) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1745) wifi_manager: WiFi manager initialized successfully[0m
+[0;32mI (1746) wifi_manager: WiFi STA started[0m
+[0;32mI (1754) main: WiFi manager initialized[0m
+[0;32mI (1754) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1765) wifi_manager: WiFi AP started[0m
+[0;32mI (1769) main: Starting WiFi AP...[0m
+[0;32mI (1779) wifi:Total power save buffer number: 16[0m
+[0;32mI (1780) wifi_manager: WiFi AP stopped[0m
+[0;32mI (1781) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1788) wifi_manager: WiFi AP started[0m
+[0;32mI (1791) wifi_manager: WiFi AP started - SSID: Sparkriver-AP-01, IP: 192.168.5.1[0m
+[0;32mI (1798) main: WiFi AP started successfully[0m
+[0;32mI (1802) main: Attempting to connect WiFi STA...[0m
+[0;32mI (1806) main: Connecting to WiFi STA: fengqi-2G[0m
+[0;33mW (1811) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1821) wifi_manager: Connecting to WiFi SSID: fengqi-2G[0m
+[0;32mI (1825) main: WiFi STA connection initiated[0m
+[0;32mI (1830) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1836) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1840) main: Initializing ethernet manager...[0m
+[0;33mW (1844) ethernet_manager: Ethernet manager initialized (no physical ethernet on ESP32-S3-WROOM-1)[0m
+[0;32mI (1852) ethernet_manager: 以太网功能需要外接以太网模块才能使用[0m
+[0;32mI (1857) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1864) main: Ethernet manager initialized[0m
+[0;33mW (1867) main: 注意：ESP32-S3-WROOM-1没有内置以太网，需要外接模块[0m
+[0;33mW (1874) ethernet_manager: Ethernet start requested (no physical ethernet available)[0m
+[0;32mI (1882) main: Initializing bluetooth manager...[0m
+[0;32mI (1886) bluetooth_manager: Bluetooth manager initialized (simplified implementation)[0m
+[0;32mI (1888) wifi:state: assoc -> run (0x10)[0m
+[0;33mW (1900) bluetooth_manager: Full Bluetooth functionality will be implemented in future updates[0m
+[0;32mI (1906) main: Bluetooth manager initialized[0m
+[0;32mI (1909) bluetooth_manager: Bluetooth service marked as enabled[0m
+[0;33mW (1915) bluetooth_manager: Full BLE advertising features will be implemented in future updates[0m
+[0;32mI (1918) wifi:connected with fengqi-2G, aid = 1, channel 1, BW20, bssid = ae:64:90:c0:7d:24[0m
+[0;32mI (1932) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (1939) wifi:pm start, type: 1[0m
+
+[0;32mI (1939) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1948) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (1957) main: 等待网络连接建立...[0m
+[0;32mI (1958) wifi_manager: Connected to AP SSID:fengqi-2G, channel:1, authmode:3[0m
+[0;32mI (1966) wifi_manager: 等待获取IP地址...[0m
+[0;32mI (2018) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4150) esp_netif_handlers: sta ip: 192.168.1.44, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4151) wifi_manager: 🎉 WiFi连接成功! IP地址: 192.168.1.44[0m
+[0;32mI (4153) wifi_manager: 网关: 192.168.1.1, 子网掩码: 255.255.255.0[0m
+[0;32mI (4160) wifi_manager: 连接到AP: fengqi-2G, 信号强度: -45 dBm, 信道: 1[0m
+[0;32mI (4167) wifi_manager: WiFi状态已更新: connected=true, ip=192.168.1.44[0m
+[0;32mI (4971) main: Initializing MQTT client...[0m
+[0;32mI (4971) mqtt_client: MQTT topics loaded from config:[0m
+[0;32mI (4971) mqtt_client:   Student->Teacher: xj1core/student/message[0m
+[0;32mI (4974) mqtt_client:   Teacher->Student: xj1cloud/teacher/message[0m
+[0;32mI (4980) mqtt_client:   Heartbeat: xj1core/heartbeat[0m
+[0;32mI (4985) mqtt_client:   Status: xj1core/status[0m
+[0;32mI (4989) mqtt_client: 🔧 MQTT配置验证通过:[0m
+[0;32mI (4993) mqtt_client:   服务器: 192.168.1.40:1883[0m
+[0;32mI (4998) mqtt_client:   客户端ID: xj1core-student-01[0m
+[0;32mI (5003) mqtt_client:   保活时间: 60秒[0m
+[0;32mI (5007) mqtt_client: 🆔 使用唯一客户端ID: xj1core-student-01-eb6b18[0m
+[0;32mI (5014) mqtt_client: 🔗 MQTT URI: mqtt://192.168.1.40:1883[0m
+[0;32mI (5019) mqtt_client: ⏱️  保活时间: 60秒[0m
+[0;32mI (5024) mqtt_client: MQTT client initialized successfully[0m
+[0;32mI (5029) mqtt_client: Broker: 192.168.1.40:1883, Client ID: xj1core-student-01[0m
+[0;32mI (5036) mqtt_client: 💡 MQTT服务器配置为: 192.168.1.40，请确保该地址可访问[0m
+[0;32mI (5044) mqtt_client: 💡 提示：如果WiFi STA未连接，可能无法访问外部网络服务器[0m
+[0;32mI (5053) main: MQTT client initialized[0m
+[0;32mI (5057) main: WiFi STA已连接，IP: 192.168.1.44[0m
+[0;32mI (5061) mqtt_client: 🌐 WiFi STA已连接，IP: 192.168.1.44[0m
+[0;32mI (5067) mqtt_client: ✅ ESP32在192.168.1.x网段，能访问MQTT服务器[0m
+[0;32mI (5074) mqtt_client: 🔧 即将连接MQTT服务器: 192.168.1.40:1883[0m
+[0;32mI (5080) mqtt_client: ⏳ 等待网络稳定...[0m
+[0;32mI (7084) mqtt_client: Other event id:7[0m
+[0;32mI (7085) mqtt_client: MQTT client started, waiting for connection...[0m
+[0;32mI (7086) main: MQTT client started successfully[0m
+[0;32mI (7087) mqtt_client: 🔍 MQTT连接监控任务启动[0m
+[0;32mI (7092) mqtt_client: 🚀 MQTT连接监控任务已启动[0m
+[0;32mI (7097) main: 🔍 MQTT连接监控任务已启动[0m
+[0;32mI (7102) main: 💖 启动师生通信功能...[0m
+[0;32mI (7107) mqtt_client: 💖 学生思念心跳任务启动[0m
+[0;32mI (7111) mqtt_client: 🎓 将每5秒向老师发送思念消息...[0m
+[0;32mI (7115) mqtt_client: 🚀 学生思念心跳任务已启动[0m
+[0;32mI (7117) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (7126) main: 🎓 学生思念心跳任务已启动，每5秒向老师发送思念[0m
+[0;32mI (7134) main: Initializing web server...[0m
+[0;32mI (7137) web_server: Web server initialized[0m
+[0;32mI (7141) main: Web server initialized[0m
+[0;32mI (7145) main: Starting web server...[0m
+[0;33mW (7151) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (7156) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;32mI (7163) web_server: Web server started on port 80[0m
+[0;32mI (7168) main: Web server started on port 80[0m
+[0;32mI (7172) main: =================================[0m
+[0;32mI (7177) wifi:<ba-add>idx:0 (ifx:0, ae:64:90:c0:7d:24), tid:0, ssn:3, winSize:64[0m
+[0;32mI (7180) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (7183) main: XJ1Core System Started Successfully![0m
+[0;32mI (7190) mqtt_client: ⏰ 连接时间: 6026毫秒[0m
+[0;32mI (7201) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=9282[0m
+[0;32mI (7201) main: Access web interface at: http://192.168.5.1[0m
+[0;32mI (7209) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=11794[0m
+[0;32mI (7221) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (7221) main: Default login: admin / 123456[0m
+[0;32mI (7230) main: =================================[0m
+[0;32mI (7235) main: 等待WiFi系统稳定...[0m
+[0;32mI (7508) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=9282[0m
+[0;32mI (7514) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=11794[0m
+[0;32mI (8126) mqtt_client: ✅ MQTT已连接，开始发送思念消息[0m
+[0;32mI (8127) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第1次)[0m
+[0;32mI (8130) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (8136) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (8140) mqtt_client: 💕 第1次思念消息已发送[0m
+[0;32mI (8147) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (10238) main: WiFi扫描功能已禁用，只在Web界面手动触发时才执行[0m
+[0;32mI (10238) main: System running... Free heap: 8546280 bytes[0m
+[0;32mI (13152) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第2次)[0m
+[0;32mI (13155) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (13156) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (13161) mqtt_client: 💕 第2次思念消息已发送[0m
+[0;32mI (13168) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (17092) mqtt_client: 🎉 MQTT连接监控 - 连接成功！[0m
+[0;32mI (18173) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第3次)[0m
+[0;32mI (18176) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (18177) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (18182) mqtt_client: 💕 第3次思念消息已发送[0m
+[0;32mI (18189) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (23194) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第4次)[0m
+[0;32mI (23197) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (23198) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (23203) mqtt_client: 💕 第4次思念消息已发送[0m
+[0;32mI (23211) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (28215) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第5次)[0m
+[0;32mI (28218) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (28219) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (28224) mqtt_client: 💕 第5次思念消息已发送[0m
+[0;32mI (28231) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (33236) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第6次)[0m
+[0;32mI (33239) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (33240) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (33245) mqtt_client: 💕 第6次思念消息已发送[0m
+[0;32mI (33252) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (37579) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (37579) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (37579) mqtt_client: Other event id:7[0m
+[0;32mI (37642) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (37643) mqtt_client: ⏰ 连接时间: 36479毫秒[0m
+[0;32mI (37645) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=47778[0m
+[0;32mI (37653) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=35246[0m
+[0;32mI (37661) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (37669) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=47778[0m
+[0;32mI (37674) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=35246[0m
+[0;32mI (38257) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第7次)[0m
+[0;32mI (38260) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (38261) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (38266) mqtt_client: 💕 第7次思念消息已发送[0m
+[0;32mI (38273) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (40239) main: System running... Free heap: 8546256 bytes[0m
+[0;32mI (43278) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第8次)[0m
+[0;32mI (43281) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (43282) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (43287) mqtt_client: 💕 第8次思念消息已发送[0m
+[0;32mI (43295) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (48299) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第9次)[0m
+[0;32mI (48302) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (48303) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (48308) mqtt_client: 💕 第9次思念消息已发送[0m
+[0;32mI (48315) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (53320) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第10次)[0m
+[0;32mI (53323) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (53324) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (53329) mqtt_client: 💕 第10次思念消息已发送[0m
+[0;32mI (53337) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (58341) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第11次)[0m
+[0;32mI (58344) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (58345) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (58350) mqtt_client: 💕 第11次思念消息已发送[0m
+[0;32mI (58358) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (63362) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第12次)[0m
+[0;32mI (63365) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (63367) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (63371) mqtt_client: 💕 第12次思念消息已发送[0m
+[0;32mI (63379) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (67739) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (67740) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (67740) mqtt_client: Other event id:7[0m
+[0;32mI (67758) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (67759) mqtt_client: ⏰ 连接时间: 66595毫秒[0m
+[0;32mI (67761) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=7493[0m
+[0;32mI (67769) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=14078[0m
+[0;32mI (67777) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (67785) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=7493[0m
+[0;32mI (67790) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=14078[0m
+[0;32mI (68383) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第13次)[0m
+[0;32mI (68386) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (68388) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (68392) mqtt_client: 💕 第13次思念消息已发送[0m
+[0;32mI (68400) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (70239) main: System running... Free heap: 8546268 bytes[0m
+[0;32mI (73404) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第14次)[0m
+[0;32mI (73407) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (73408) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (73413) mqtt_client: 💕 第14次思念消息已发送[0m
+[0;32mI (73421) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (78425) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第15次)[0m
+[0;32mI (78428) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (78430) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (78434) mqtt_client: 💕 第15次思念消息已发送[0m
+[0;32mI (78442) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (83446) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第16次)[0m
+[0;32mI (83449) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (83450) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (83455) mqtt_client: 💕 第16次思念消息已发送[0m
+[0;32mI (83462) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (88467) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第17次)[0m
+[0;32mI (88470) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (88471) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (88476) mqtt_client: 💕 第17次思念消息已发送[0m
+[0;32mI (88483) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (92235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-47[0m
+[0;32mI (93488) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第18次)[0m
+[0;32mI (93491) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (93492) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (93497) mqtt_client: 💕 第18次思念消息已发送[0m
+[0;32mI (93504) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (97856) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (97856) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (97857) mqtt_client: Other event id:7[0m
+[0;32mI (97921) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (97922) mqtt_client: ⏰ 连接时间: 96758毫秒[0m
+[0;32mI (97923) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=64491[0m
+[0;32mI (97931) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=59335[0m
+[0;32mI (97939) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (97958) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=64491[0m
+[0;32mI (97973) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=59335[0m
+[0;32mI (98509) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第19次)[0m
+[0;32mI (98512) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (98513) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (98518) mqtt_client: 💕 第19次思念消息已发送[0m
+[0;32mI (98525) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (100239) main: System running... Free heap: 8546268 bytes[0m
+[0;32mI (103530) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第20次)[0m
+[0;32mI (103533) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (103535) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (103539) mqtt_client: 💕 第20次思念消息已发送[0m
+[0;32mI (103547) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (108552) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第21次)[0m
+[0;32mI (108555) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (108557) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (108561) mqtt_client: 💕 第21次思念消息已发送[0m
+[0;32mI (108569) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (113574) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第22次)[0m
+[0;32mI (113577) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (113579) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (113583) mqtt_client: 💕 第22次思念消息已发送[0m
+[0;32mI (113591) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (118596) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第23次)[0m
+[0;32mI (118599) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (118601) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (118605) mqtt_client: 💕 第23次思念消息已发送[0m
+[0;32mI (118613) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (123618) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第24次)[0m
+[0;32mI (123621) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (123623) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (123627) mqtt_client: 💕 第24次思念消息已发送[0m
+[0;32mI (123635) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (128037) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (128037) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (128037) mqtt_client: Other event id:7[0m
+[0;32mI (128066) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (128067) mqtt_client: ⏰ 连接时间: 126903毫秒[0m
+[0;32mI (128069) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=30338[0m
+[0;32mI (128077) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=62999[0m
+[0;32mI (128086) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (128093) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=30338[0m
+[0;32mI (128098) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=62999[0m
+[0;32mI (128640) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第25次)[0m
+[0;32mI (128643) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (128645) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (128649) mqtt_client: 💕 第25次思念消息已发送[0m
+[0;32mI (128657) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (130239) main: System running... Free heap: 8546288 bytes[0m
+[0;32mI (133662) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第26次)[0m
+[0;32mI (133665) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (133667) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (133671) mqtt_client: 💕 第26次思念消息已发送[0m
+[0;32mI (133679) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (138684) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第27次)[0m
+[0;32mI (138687) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (138689) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (138693) mqtt_client: 💕 第27次思念消息已发送[0m
+[0;32mI (138701) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (140881) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (140882) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (140882) mqtt_client: 💬 内容: {"timestamp": "2025-09-29 08:30:20", "message": "唐老师：您好吗？", "source": "xj1cloud_web"}[0m
+[0;32mI (140892) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (140897) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-29 08:30:20", "message": "唐老师：您好吗？", "source": "xj1cloud_web"}[0m
+[0;32mI (143706) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第28次)[0m
+[0;32mI (143709) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (143711) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (143715) mqtt_client: 💕 第28次思念消息已发送[0m
+[0;32mI (143723) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (148728) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第29次)[0m
+[0;32mI (148731) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (148733) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (148737) mqtt_client: 💕 第29次思念消息已发送[0m
+[0;32mI (148745) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (153750) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第30次)[0m
+[0;32mI (153753) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (153755) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (153759) mqtt_client: 💕 第30次思念消息已发送[0m
+[0;32mI (153767) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (158772) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第31次)[0m
+[0;32mI (158775) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (158777) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (158781) mqtt_client: 💕 第31次思念消息已发送[0m
+[0;32mI (158789) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (158948) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (158949) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (158949) mqtt_client: Other event id:7[0m
+[0;32mI (158982) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (158983) mqtt_client: ⏰ 连接时间: 157819毫秒[0m
+[0;32mI (158984) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=57880[0m
+[0;32mI (158994) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=58334[0m
+[0;32mI (159001) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (159009) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=57880[0m
+[0;32mI (159014) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=58334[0m
+[0;32mI (160239) main: System running... Free heap: 8546288 bytes[0m
+[0;32mI (163794) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第32次)[0m
+[0;32mI (163797) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (163799) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (163803) mqtt_client: 💕 第32次思念消息已发送[0m
+[0;32mI (163811) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (168816) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第33次)[0m
+[0;32mI (168819) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (168821) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (168825) mqtt_client: 💕 第33次思念消息已发送[0m
+[0;32mI (168833) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (173838) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第34次)[0m
+[0;32mI (173841) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (173843) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (173847) mqtt_client: 💕 第34次思念消息已发送[0m
+[0;32mI (173855) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (178860) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第35次)[0m
+[0;32mI (178863) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (178865) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (178869) mqtt_client: 💕 第35次思念消息已发送[0m
+[0;32mI (178877) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (183882) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第36次)[0m
+[0;32mI (183885) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (183887) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (183891) mqtt_client: 💕 第36次思念消息已发送[0m
+[0;32mI (183899) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (188904) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第37次)[0m
+[0;32mI (188907) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (188909) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (188913) mqtt_client: 💕 第37次思念消息已发送[0m
+[0;32mI (188921) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (189080) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (189080) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (189081) mqtt_client: Other event id:7[0m
+[0;32mI (189104) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (189104) mqtt_client: ⏰ 连接时间: 187941毫秒[0m
+[0;32mI (189106) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=56196[0m
+[0;32mI (189115) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=16341[0m
+[0;32mI (189123) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (189131) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=56196[0m
+[0;32mI (189135) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=16341[0m
+[0;32mI (190239) main: System running... Free heap: 8546272 bytes[0m
+[0;32mI (192235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-52[0m
+[0;32mI (193926) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第38次)[0m
+[0;32mI (193929) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (193931) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (193935) mqtt_client: 💕 第38次思念消息已发送[0m
+[0;32mI (193943) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (198948) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第39次)[0m
+[0;32mI (198951) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (198953) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (198957) mqtt_client: 💕 第39次思念消息已发送[0m
+[0;32mI (198965) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (203970) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第40次)[0m
+[0;32mI (203973) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (203975) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (203979) mqtt_client: 💕 第40次思念消息已发送[0m
+[0;32mI (203987) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (208992) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第41次)[0m
+[0;32mI (208995) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (208997) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (209001) mqtt_client: 💕 第41次思念消息已发送[0m
+[0;32mI (209008) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (214014) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第42次)[0m
+[0;32mI (214017) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (214019) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (214023) mqtt_client: 💕 第42次思念消息已发送[0m
+[0;32mI (214030) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (219036) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第43次)[0m
+[0;32mI (219039) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (219041) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (219045) mqtt_client: 💕 第43次思念消息已发送[0m
+[0;32mI (219052) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (219202) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (219202) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (219203) mqtt_client: Other event id:7[0m
+[0;32mI (219222) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (219222) mqtt_client: ⏰ 连接时间: 218058毫秒[0m
+[0;32mI (219224) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=55845[0m
+[0;32mI (219233) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=52977[0m
+[0;32mI (219241) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (219248) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=55845[0m
+[0;32mI (219255) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=52977[0m
+[0;32mI (220239) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (224058) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第44次)[0m
+[0;32mI (224061) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (224063) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (224067) mqtt_client: 💕 第44次思念消息已发送[0m
+[0;32mI (224075) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (229080) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第45次)[0m
+[0;32mI (229083) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (229085) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (229089) mqtt_client: 💕 第45次思念消息已发送[0m
+[0;32mI (229097) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (234102) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第46次)[0m
+[0;32mI (234105) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (234107) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (234111) mqtt_client: 💕 第46次思念消息已发送[0m
+[0;32mI (234119) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (239124) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第47次)[0m
+[0;32mI (239127) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (239129) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (239133) mqtt_client: 💕 第47次思念消息已发送[0m
+[0;32mI (239140) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (244146) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第48次)[0m
+[0;32mI (244149) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (244151) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (244155) mqtt_client: 💕 第48次思念消息已发送[0m
+[0;32mI (244163) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (249168) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第49次)[0m
+[0;32mI (249171) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (249173) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (249177) mqtt_client: 💕 第49次思念消息已发送[0m
+[0;32mI (249185) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (249320) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (249320) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (249321) mqtt_client: Other event id:7[0m
+[0;32mI (249460) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (249460) mqtt_client: ⏰ 连接时间: 248297毫秒[0m
+[0;32mI (249462) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=35926[0m
+[0;32mI (249471) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=32014[0m
+[0;32mI (249478) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (249487) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=35926[0m
+[0;32mI (249492) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=32014[0m
+[0;32mI (250239) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (254190) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第50次)[0m
+[0;32mI (254193) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (254195) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (254199) mqtt_client: 💕 第50次思念消息已发送[0m
+[0;32mI (254207) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (259212) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第51次)[0m
+[0;32mI (259215) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (259217) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (259221) mqtt_client: 💕 第51次思念消息已发送[0m
+[0;32mI (259228) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (264234) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第52次)[0m
+[0;32mI (264237) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (264239) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (264243) mqtt_client: 💕 第52次思念消息已发送[0m
+[0;32mI (264251) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (269256) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第53次)[0m
+[0;32mI (269259) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (269261) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (269265) mqtt_client: 💕 第53次思念消息已发送[0m
+[0;32mI (269273) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (274278) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第54次)[0m
+[0;32mI (274281) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (274283) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (274287) mqtt_client: 💕 第54次思念消息已发送[0m
+[0;32mI (274295) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (279300) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第55次)[0m
+[0;32mI (279303) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (279305) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (279309) mqtt_client: 💕 第55次思念消息已发送[0m
+[0;32mI (279316) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (279557) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (279558) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (279558) mqtt_client: Other event id:7[0m
+[0;32mI (279580) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (279581) mqtt_client: ⏰ 连接时间: 278417毫秒[0m
+[0;32mI (279583) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=46733[0m
+[0;32mI (279591) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=61896[0m
+[0;32mI (279599) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (279621) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=46733[0m
+[0;32mI (279626) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=61896[0m
+[0;32mI (280239) main: System running... Free heap: 8546092 bytes[0m
+[0;32mI (280239) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (284322) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第56次)[0m
+[0;32mI (284325) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (284327) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (284331) mqtt_client: 💕 第56次思念消息已发送[0m
+[0;32mI (284338) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (289344) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第57次)[0m
+[0;32mI (289347) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (289349) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (289353) mqtt_client: 💕 第57次思念消息已发送[0m
+[0;32mI (289361) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (292235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-50[0m
+[0;32mI (294366) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第58次)[0m
+[0;32mI (294369) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (294371) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (294375) mqtt_client: 💕 第58次思念消息已发送[0m
+[0;32mI (294383) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (299388) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第59次)[0m
+[0;32mI (299391) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (299393) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (299397) mqtt_client: 💕 第59次思念消息已发送[0m
+[0;32mI (299405) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (304410) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第60次)[0m
+[0;32mI (304413) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (304415) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (304419) mqtt_client: 💕 第60次思念消息已发送[0m
+[0;32mI (304427) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (309432) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第61次)[0m
+[0;32mI (309435) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (309437) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (309441) mqtt_client: 💕 第61次思念消息已发送[0m
+[0;32mI (309449) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (309690) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (309691) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (309691) mqtt_client: Other event id:7[0m
+[0;32mI (309717) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (309717) mqtt_client: ⏰ 连接时间: 308553毫秒[0m
+[0;32mI (309719) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=20831[0m
+[0;32mI (309728) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=58601[0m
+[0;32mI (309735) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (309743) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=20831[0m
+[0;32mI (309750) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=58601[0m
+[0;32mI (310241) main: System running... Free heap: 8546092 bytes[0m
+[0;32mI (314454) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第62次)[0m
+[0;32mI (314457) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (314459) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (314463) mqtt_client: 💕 第62次思念消息已发送[0m
+[0;32mI (314471) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (319476) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第63次)[0m
+[0;32mI (319479) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (319481) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (319485) mqtt_client: 💕 第63次思念消息已发送[0m
+[0;32mI (319493) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (324498) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第64次)[0m
+[0;32mI (324501) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (324503) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (324507) mqtt_client: 💕 第64次思念消息已发送[0m
+[0;32mI (324514) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (329520) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第65次)[0m
+[0;32mI (329523) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (329525) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (329529) mqtt_client: 💕 第65次思念消息已发送[0m
+[0;32mI (329536) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (334542) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第66次)[0m
+[0;32mI (334545) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (334547) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (334551) mqtt_client: 💕 第66次思念消息已发送[0m
+[0;32mI (334558) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (339564) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第67次)[0m
+[0;32mI (339567) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (339569) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (339573) mqtt_client: 💕 第67次思念消息已发送[0m
+[0;32mI (339581) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (339814) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (339815) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (339815) mqtt_client: Other event id:7[0m
+[0;32mI (339831) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (339832) mqtt_client: ⏰ 连接时间: 338668毫秒[0m
+[0;32mI (339833) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=62397[0m
+[0;32mI (339842) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=60169[0m
+[0;32mI (339850) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (339858) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=62397[0m
+[0;32mI (339863) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=60169[0m
+[0;32mI (340241) main: System running... Free heap: 8546092 bytes[0m
+[0;32mI (344586) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第68次)[0m
+[0;32mI (344589) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (344591) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (344595) mqtt_client: 💕 第68次思念消息已发送[0m
+[0;32mI (344603) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (349608) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第69次)[0m
+[0;32mI (349611) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (349613) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (349617) mqtt_client: 💕 第69次思念消息已发送[0m
+[0;32mI (349625) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (354630) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第70次)[0m
+[0;32mI (354633) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (354635) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (354639) mqtt_client: 💕 第70次思念消息已发送[0m
+[0;32mI (354647) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (359652) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第71次)[0m
+[0;32mI (359655) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (359657) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (359661) mqtt_client: 💕 第71次思念消息已发送[0m
+[0;32mI (359669) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (364674) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第72次)[0m
+[0;32mI (364677) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (364679) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (364683) mqtt_client: 💕 第72次思念消息已发送[0m
+[0;32mI (364691) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (369696) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第73次)[0m
+[0;32mI (369699) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (369701) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (369705) mqtt_client: 💕 第73次思念消息已发送[0m
+[0;32mI (369712) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (369929) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (369929) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (369929) mqtt_client: Other event id:7[0m
+[0;32mI (369946) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (369947) mqtt_client: ⏰ 连接时间: 368783毫秒[0m
+[0;32mI (369949) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=33136[0m
+[0;32mI (369958) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=14261[0m
+[0;32mI (369965) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (369973) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=33136[0m
+[0;32mI (369978) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=14261[0m
+[0;32mI (370241) main: System running... Free heap: 8546092 bytes[0m
+[0;32mI (374718) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第74次)[0m
+[0;32mI (374721) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (374723) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (374727) mqtt_client: 💕 第74次思念消息已发送[0m
+[0;32mI (374734) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (379740) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第75次)[0m
+[0;32mI (379743) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (379745) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (379749) mqtt_client: 💕 第75次思念消息已发送[0m
+[0;32mI (379757) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (384762) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第76次)[0m
+[0;32mI (384765) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (384767) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (384771) mqtt_client: 💕 第76次思念消息已发送[0m
+[0;32mI (384779) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (389784) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第77次)[0m
+[0;32mI (389787) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (389789) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (389793) mqtt_client: 💕 第77次思念消息已发送[0m
+[0;32mI (389801) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (392235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-52[0m
+[0;32mI (394806) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第78次)[0m
+[0;32mI (394809) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (394811) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (394815) mqtt_client: 💕 第78次思念消息已发送[0m
+[0;32mI (394823) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (399828) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第79次)[0m
+[0;32mI (399831) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (399833) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (399837) mqtt_client: 💕 第79次思念消息已发送[0m
+[0;32mI (399845) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (400044) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (400044) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (400045) mqtt_client: Other event id:7[0m
+[0;32mI (400073) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (400073) mqtt_client: ⏰ 连接时间: 398910毫秒[0m
+[0;32mI (400075) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=47802[0m
+[0;32mI (400084) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=23963[0m
+[0;32mI (400092) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (400100) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=47802[0m
+[0;32mI (400109) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=23963[0m
+[0;32mI (400241) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (404850) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第80次)[0m
+[0;32mI (404853) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (404855) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (404859) mqtt_client: 💕 第80次思念消息已发送[0m
+[0;32mI (404867) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (409872) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第81次)[0m
+[0;32mI (409875) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (409877) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (409881) mqtt_client: 💕 第81次思念消息已发送[0m
+[0;32mI (409889) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (414894) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第82次)[0m
+[0;32mI (414897) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (414899) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (414903) mqtt_client: 💕 第82次思念消息已发送[0m
+[0;32mI (414910) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (419916) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第83次)[0m
+[0;32mI (419919) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (419921) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (419925) mqtt_client: 💕 第83次思念消息已发送[0m
+[0;32mI (419933) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (424938) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第84次)[0m
+[0;32mI (424941) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (424943) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (424947) mqtt_client: 💕 第84次思念消息已发送[0m
+[0;32mI (424955) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (429960) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第85次)[0m
+[0;32mI (429963) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (429965) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (429969) mqtt_client: 💕 第85次思念消息已发送[0m
+[0;32mI (429976) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (430173) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (430173) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (430173) mqtt_client: Other event id:7[0m
+[0;32mI (430241) main: System running... Free heap: 8543872 bytes[0m
+[0;32mI (430266) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (430267) mqtt_client: ⏰ 连接时间: 429103毫秒[0m
+[0;32mI (430269) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=28051[0m
+[0;32mI (430278) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=62825[0m
+[0;32mI (430285) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (430293) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=28051[0m
+[0;32mI (430302) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=62825[0m
+[0;32mI (434982) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第86次)[0m
+[0;32mI (434985) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (434987) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (434991) mqtt_client: 💕 第86次思念消息已发送[0m
+[0;32mI (434999) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (440004) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第87次)[0m
+[0;32mI (440007) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (440009) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (440013) mqtt_client: 💕 第87次思念消息已发送[0m
+[0;32mI (440021) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (445026) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第88次)[0m
+[0;32mI (445029) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (445031) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (445035) mqtt_client: 💕 第88次思念消息已发送[0m
+[0;32mI (445042) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (450048) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第89次)[0m
+[0;32mI (450051) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (450053) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (450057) mqtt_client: 💕 第89次思念消息已发送[0m
+[0;32mI (450065) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (455070) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第90次)[0m
+[0;32mI (455073) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (455075) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (455079) mqtt_client: 💕 第90次思念消息已发送[0m
+[0;32mI (455087) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (460092) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第91次)[0m
+[0;32mI (460095) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (460097) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (460101) mqtt_client: 💕 第91次思念消息已发送[0m
+[0;32mI (460109) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (460241) main: System running... Free heap: 8546092 bytes[0m
+[0;33mW (460367) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (460367) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (460367) mqtt_client: Other event id:7[0m
+[0;32mI (460417) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (460417) mqtt_client: ⏰ 连接时间: 459254毫秒[0m
+[0;32mI (460419) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=783[0m
+[0;32mI (460427) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=55381[0m
+[0;32mI (460436) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (460444) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=783[0m
+[0;32mI (460448) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=55381[0m
+[0;32mI (465114) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第92次)[0m
+[0;32mI (465117) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (465119) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (465123) mqtt_client: 💕 第92次思念消息已发送[0m
+[0;32mI (465131) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (470136) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第93次)[0m
+[0;32mI (470139) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (470141) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (470145) mqtt_client: 💕 第93次思念消息已发送[0m
+[0;32mI (470152) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (475158) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第94次)[0m
+[0;32mI (475161) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (475163) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (475167) mqtt_client: 💕 第94次思念消息已发送[0m
+[0;32mI (475174) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (480180) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第95次)[0m
+[0;32mI (480183) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (480185) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (480189) mqtt_client: 💕 第95次思念消息已发送[0m
+[0;32mI (480197) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (485202) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第96次)[0m
+[0;32mI (485205) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (485207) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (485211) mqtt_client: 💕 第96次思念消息已发送[0m
+[0;32mI (485219) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (490224) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第97次)[0m
+[0;32mI (490227) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (490229) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (490233) mqtt_client: 💕 第97次思念消息已发送[0m
+[0;32mI (490241) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (490241) main: System running... Free heap: 8543568 bytes[0m
+[0;33mW (490514) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (490515) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (490515) mqtt_client: Other event id:7[0m
+[0;32mI (490575) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (490576) mqtt_client: ⏰ 连接时间: 489412毫秒[0m
+[0;32mI (490577) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=26270[0m
+[0;32mI (490586) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=1073[0m
+[0;32mI (490594) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (490602) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=26270[0m
+[0;32mI (490607) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=1073[0m
+[0;32mI (492235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-52[0m
+[0;32mI (495246) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第98次)[0m
+[0;32mI (495249) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (495251) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (495256) mqtt_client: 💕 第98次思念消息已发送[0m
+[0;32mI (495263) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (500268) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第99次)[0m
+[0;32mI (500271) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (500273) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (500278) mqtt_client: 💕 第99次思念消息已发送[0m
+[0;32mI (500285) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (505290) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第100次)[0m
+[0;32mI (505293) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (505295) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (505299) mqtt_client: 💕 第100次思念消息已发送[0m
+[0;32mI (505306) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (510312) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第101次)[0m
+[0;32mI (510315) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (510317) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (510321) mqtt_client: 💕 第101次思念消息已发送[0m
+[0;32mI (510329) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (515334) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第102次)[0m
+[0;32mI (515337) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (515339) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (515343) mqtt_client: 💕 第102次思念消息已发送[0m
+[0;32mI (515351) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (520251) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (520356) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第103次)[0m
+[0;32mI (520359) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (520361) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (520365) mqtt_client: 💕 第103次思念消息已发送[0m
+[0;32mI (520373) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (520672) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (520673) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (520673) mqtt_client: Other event id:7[0m
+[0;32mI (520695) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (520695) mqtt_client: ⏰ 连接时间: 519532毫秒[0m
+[0;32mI (520697) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=35419[0m
+[0;32mI (520706) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=2504[0m
+[0;32mI (520713) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (520721) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=35419[0m
+[0;32mI (520726) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=2504[0m
+[0;32mI (525378) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第104次)[0m
+[0;32mI (525381) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (525383) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (525387) mqtt_client: 💕 第104次思念消息已发送[0m
+[0;32mI (525395) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (530400) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第105次)[0m
+[0;32mI (530403) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (530405) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (530409) mqtt_client: 💕 第105次思念消息已发送[0m
+[0;32mI (530417) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (535422) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第106次)[0m
+[0;32mI (535425) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (535427) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (535431) mqtt_client: 💕 第106次思念消息已发送[0m
+[0;32mI (535439) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (540444) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第107次)[0m
+[0;32mI (540447) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (540449) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (540453) mqtt_client: 💕 第107次思念消息已发送[0m
+[0;32mI (540461) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (545467) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第108次)[0m
+[0;32mI (545470) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (545472) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (545476) mqtt_client: 💕 第108次思念消息已发送[0m
+[0;32mI (545484) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (550251) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (550489) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第109次)[0m
+[0;32mI (550492) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (550494) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (550498) mqtt_client: 💕 第109次思念消息已发送[0m
+[0;32mI (550506) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (550792) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (550792) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (550793) mqtt_client: Other event id:7[0m
+[0;32mI (550828) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (550828) mqtt_client: ⏰ 连接时间: 549665毫秒[0m
+[0;32mI (550830) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=64156[0m
+[0;32mI (550838) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=7561[0m
+[0;32mI (550846) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (550854) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=64156[0m
+[0;32mI (550861) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=7561[0m
+[0;32mI (555511) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第110次)[0m
+[0;32mI (555514) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (555516) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (555520) mqtt_client: 💕 第110次思念消息已发送[0m
+[0;32mI (555528) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (560533) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第111次)[0m
+[0;32mI (560536) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (560538) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (560542) mqtt_client: 💕 第111次思念消息已发送[0m
+[0;32mI (560550) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (565555) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第112次)[0m
+[0;32mI (565558) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (565560) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (565564) mqtt_client: 💕 第112次思念消息已发送[0m
+[0;32mI (565572) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (570577) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第113次)[0m
+[0;32mI (570580) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (570582) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (570586) mqtt_client: 💕 第113次思念消息已发送[0m
+[0;32mI (570594) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (575599) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第114次)[0m
+[0;32mI (575602) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (575604) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (575608) mqtt_client: 💕 第114次思念消息已发送[0m
+[0;32mI (575615) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (580251) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (580251) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (580621) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第115次)[0m
+[0;32mI (580624) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (580626) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (580630) mqtt_client: 💕 第115次思念消息已发送[0m
+[0;32mI (580638) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (580925) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (580926) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (580926) mqtt_client: Other event id:7[0m
+[0;32mI (580978) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (580979) mqtt_client: ⏰ 连接时间: 579815毫秒[0m
+[0;32mI (580981) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=3500[0m
+[0;32mI (580989) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=13389[0m
+[0;32mI (580997) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (581005) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=3500[0m
+[0;32mI (581010) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=13389[0m
+[0;32mI (585643) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第116次)[0m
+[0;32mI (585646) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (585648) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (585652) mqtt_client: 💕 第116次思念消息已发送[0m
+[0;32mI (585659) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (590665) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第117次)[0m
+[0;32mI (590668) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (590670) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (590674) mqtt_client: 💕 第117次思念消息已发送[0m
+[0;32mI (590681) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (592235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-47[0m
+[0;32mI (595687) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第118次)[0m
+[0;32mI (595690) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (595692) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (595696) mqtt_client: 💕 第118次思念消息已发送[0m
+[0;32mI (595704) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (600709) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第119次)[0m
+[0;32mI (600712) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (600714) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (600718) mqtt_client: 💕 第119次思念消息已发送[0m
+[0;32mI (600726) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (605731) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第120次)[0m
+[0;32mI (605734) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (605736) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (605740) mqtt_client: 💕 第120次思念消息已发送[0m
+[0;32mI (605748) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (610253) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (610753) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第121次)[0m
+[0;32mI (610756) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (610758) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (610763) mqtt_client: 💕 第121次思念消息已发送[0m
+[0;32mI (610770) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (611075) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (611076) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (611076) mqtt_client: Other event id:7[0m
+[0;32mI (611108) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (611109) mqtt_client: ⏰ 连接时间: 609945毫秒[0m
+[0;32mI (611111) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=17154[0m
+[0;32mI (611120) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=64874[0m
+[0;32mI (611128) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (611135) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=17154[0m
+[0;32mI (611140) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=64874[0m
+[0;32mI (615775) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第122次)[0m
+[0;32mI (615778) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (615780) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (615784) mqtt_client: 💕 第122次思念消息已发送[0m
+[0;32mI (615792) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (620797) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第123次)[0m
+[0;32mI (620800) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (620802) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (620806) mqtt_client: 💕 第123次思念消息已发送[0m
+[0;32mI (620814) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (625819) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第124次)[0m
+[0;32mI (625822) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (625824) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (625828) mqtt_client: 💕 第124次思念消息已发送[0m
+[0;32mI (625836) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (630841) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第125次)[0m
+[0;32mI (630844) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (630846) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (630850) mqtt_client: 💕 第125次思念消息已发送[0m
+[0;32mI (630858) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (635863) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第126次)[0m
+[0;32mI (635866) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (635868) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (635872) mqtt_client: 💕 第126次思念消息已发送[0m
+[0;32mI (635880) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (640253) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (640885) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第127次)[0m
+[0;32mI (640888) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (640890) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (640894) mqtt_client: 💕 第127次思念消息已发送[0m
+[0;32mI (640902) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (641206) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (641206) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (641207) mqtt_client: Other event id:7[0m
+[0;32mI (641238) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (641238) mqtt_client: ⏰ 连接时间: 640075毫秒[0m
+[0;32mI (641240) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=59582[0m
+[0;32mI (641250) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=34233[0m
+[0;32mI (641257) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (641265) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=59582[0m
+[0;32mI (641270) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=34233[0m
+[0;32mI (645907) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第128次)[0m
+[0;32mI (645910) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (645912) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (645916) mqtt_client: 💕 第128次思念消息已发送[0m
+[0;32mI (645924) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (650929) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第129次)[0m
+[0;32mI (650932) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (650934) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (650938) mqtt_client: 💕 第129次思念消息已发送[0m
+[0;32mI (650946) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (655951) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第130次)[0m
+[0;32mI (655954) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (655956) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (655960) mqtt_client: 💕 第130次思念消息已发送[0m
+[0;32mI (655968) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (660973) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第131次)[0m
+[0;32mI (660976) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (660978) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (660982) mqtt_client: 💕 第131次思念消息已发送[0m
+[0;32mI (660990) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (665995) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第132次)[0m
+[0;32mI (665998) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (666000) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (666004) mqtt_client: 💕 第132次思念消息已发送[0m
+[0;32mI (666012) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (670253) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (671017) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第133次)[0m
+[0;32mI (671020) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (671022) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (671026) mqtt_client: 💕 第133次思念消息已发送[0m
+[0;32mI (671034) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (671335) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (671336) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (671336) mqtt_client: Other event id:7[0m
+[0;32mI (671365) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (671366) mqtt_client: ⏰ 连接时间: 670202毫秒[0m
+[0;32mI (671368) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=37955[0m
+[0;32mI (671376) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=49770[0m
+[0;32mI (671384) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (671393) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=37955[0m
+[0;32mI (671397) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=49770[0m
+[0;32mI (676039) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第134次)[0m
+[0;32mI (676042) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (676044) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (676048) mqtt_client: 💕 第134次思念消息已发送[0m
+[0;32mI (676056) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (681061) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第135次)[0m
+[0;32mI (681064) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (681066) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (681070) mqtt_client: 💕 第135次思念消息已发送[0m
+[0;32mI (681078) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (686083) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第136次)[0m
+[0;32mI (686086) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (686088) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (686092) mqtt_client: 💕 第136次思念消息已发送[0m
+[0;32mI (686100) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (691105) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第137次)[0m
+[0;32mI (691108) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (691110) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (691114) mqtt_client: 💕 第137次思念消息已发送[0m
+[0;32mI (691121) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (692235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-55[0m
+[0;32mI (696127) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第138次)[0m
+[0;32mI (696130) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (696132) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (696136) mqtt_client: 💕 第138次思念消息已发送[0m
+[0;32mI (696143) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (700253) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (701149) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第139次)[0m
+[0;32mI (701152) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (701154) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (701158) mqtt_client: 💕 第139次思念消息已发送[0m
+[0;32mI (701165) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (701463) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (701463) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (701463) mqtt_client: Other event id:7[0m
+[0;32mI (701509) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (701510) mqtt_client: ⏰ 连接时间: 700346毫秒[0m
+[0;32mI (701512) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=11533[0m
+[0;32mI (701521) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=49111[0m
+[0;32mI (701528) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (701537) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=11533[0m
+[0;32mI (701541) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=49111[0m
+[0;32mI (706171) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第140次)[0m
+[0;32mI (706174) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (706176) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (706180) mqtt_client: 💕 第140次思念消息已发送[0m
+[0;32mI (706188) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (711193) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第141次)[0m
+[0;32mI (711196) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (711198) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (711202) mqtt_client: 💕 第141次思念消息已发送[0m
+[0;32mI (711210) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (716215) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第142次)[0m
+[0;32mI (716218) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (716220) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (716224) mqtt_client: 💕 第142次思念消息已发送[0m
+[0;32mI (716231) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (721237) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第143次)[0m
+[0;32mI (721240) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (721242) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (721246) mqtt_client: 💕 第143次思念消息已发送[0m
+[0;32mI (721254) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (726259) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第144次)[0m
+[0;32mI (726262) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (726264) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (726268) mqtt_client: 💕 第144次思念消息已发送[0m
+[0;32mI (726276) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (730253) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (731281) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第145次)[0m
+[0;32mI (731284) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (731286) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (731290) mqtt_client: 💕 第145次思念消息已发送[0m
+[0;32mI (731297) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (731606) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (731607) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (731607) mqtt_client: Other event id:7[0m
+[0;32mI (731641) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (731642) mqtt_client: ⏰ 连接时间: 730478毫秒[0m
+[0;32mI (731644) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=45905[0m
+[0;32mI (731653) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=45652[0m
+[0;32mI (731661) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (731668) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=45905[0m
+[0;32mI (731673) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=45652[0m
+[0;32mI (736303) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第146次)[0m
+[0;32mI (736306) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (736308) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (736312) mqtt_client: 💕 第146次思念消息已发送[0m
+[0;32mI (736319) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (741325) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第147次)[0m
+[0;32mI (741328) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (741330) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (741334) mqtt_client: 💕 第147次思念消息已发送[0m
+[0;32mI (741342) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (745264) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (745264) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (745264) mqtt_client: 💬 内容: {"timestamp": "2025-09-29 08:40:24", "message": "唐老师：您好吗？", "source": "xj1cloud_web"}[0m
+[0;32mI (745275) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (745279) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-29 08:40:24", "message": "唐老师：您好吗？", "source": "xj1cloud_web"}[0m
+[0;32mI (746347) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第148次)[0m
+[0;32mI (746350) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (746352) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (746356) mqtt_client: 💕 第148次思念消息已发送[0m
+[0;32mI (746364) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (751369) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第149次)[0m
+[0;32mI (751372) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (751374) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (751378) mqtt_client: 💕 第149次思念消息已发送[0m
+[0;32mI (751386) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (756391) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第150次)[0m
+[0;32mI (756394) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (756396) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (756400) mqtt_client: 💕 第150次思念消息已发送[0m
+[0;32mI (756408) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (760253) main: System running... Free heap: 8546100 bytes[0m
+[0;32mI (761413) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第151次)[0m
+[0;32mI (761416) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (761418) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (761422) mqtt_client: 💕 第151次思念消息已发送[0m
+[0;32mI (761430) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (762329) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (762329) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (762330) mqtt_client: Other event id:7[0m
+[0;32mI (762358) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (762359) mqtt_client: ⏰ 连接时间: 761195毫秒[0m
+[0;32mI (762361) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=734[0m
+[0;32mI (762369) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=25485[0m
+[0;32mI (762378) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (762385) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=734[0m
+[0;32mI (762390) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=25485[0m
+[0;32mI (766435) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第152次)[0m
+[0;32mI (766438) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (766440) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (766444) mqtt_client: 💕 第152次思念消息已发送[0m
+[0;32mI (766453) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (771457) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第153次)[0m
+[0;32mI (771459) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (771462) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (771466) mqtt_client: 💕 第153次思念消息已发送[0m
+[0;32mI (771474) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (776479) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第154次)[0m
+[0;32mI (776482) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (776484) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (776489) mqtt_client: 💕 第154次思念消息已发送[0m
+[0;32mI (776496) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (781501) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第155次)[0m
+[0;32mI (781504) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (781506) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (781510) mqtt_client: 💕 第155次思念消息已发送[0m
+[0;32mI (781518) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (786523) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第156次)[0m
+[0;32mI (786526) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (786528) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (786532) mqtt_client: 💕 第156次思念消息已发送[0m
+[0;32mI (786540) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (790253) main: System running... Free heap: 8546084 bytes[0m
+[0;32mI (791545) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第157次)[0m
+[0;32mI (791548) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (791550) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (791554) mqtt_client: 💕 第157次思念消息已发送[0m
+[0;32mI (791562) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (792235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-60[0m
+[0;33mW (792458) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (792458) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (792458) mqtt_client: Other event id:7[0m
+[0;32mI (792478) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (792479) mqtt_client: ⏰ 连接时间: 791315毫秒[0m
+[0;32mI (792481) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=10322[0m
+[0;32mI (792489) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=35121[0m
+[0;32mI (792497) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (792505) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=10322[0m
+[0;32mI (792510) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=35121[0m
+[0;32mI (796567) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第158次)[0m
+[0;32mI (796570) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (796572) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (796576) mqtt_client: 💕 第158次思念消息已发送[0m
+[0;32mI (796583) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (801589) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第159次)[0m
+[0;32mI (801592) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (801594) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (801598) mqtt_client: 💕 第159次思念消息已发送[0m
+[0;32mI (801606) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (806611) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第160次)[0m
+[0;32mI (806614) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (806616) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (806620) mqtt_client: 💕 第160次思念消息已发送[0m
+[0;32mI (806628) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (811633) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第161次)[0m
+[0;32mI (811636) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (811638) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (811642) mqtt_client: 💕 第161次思念消息已发送[0m
+[0;32mI (811650) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (816655) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第162次)[0m
+[0;32mI (816658) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (816660) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (816664) mqtt_client: 💕 第162次思念消息已发送[0m
+[0;32mI (816672) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (820253) main: System running... Free heap: 8546084 bytes[0m
+[0;32mI (821677) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第163次)[0m
+[0;32mI (821680) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (821682) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (821686) mqtt_client: 💕 第163次思念消息已发送[0m
+[0;32mI (821694) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (822575) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (822576) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (822576) mqtt_client: Other event id:7[0m
+[0;32mI (822633) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (822633) mqtt_client: ⏰ 连接时间: 821470毫秒[0m
+[0;32mI (822635) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=42684[0m
+[0;32mI (822644) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=18212[0m
+[0;32mI (822653) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (822660) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=42684[0m
+[0;32mI (822665) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=18212[0m
+[0;32mI (826699) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第164次)[0m
+[0;32mI (826702) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (826704) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (826708) mqtt_client: 💕 第164次思念消息已发送[0m
+[0;32mI (826717) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (831721) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第165次)[0m
+[0;32mI (831724) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (831726) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (831730) mqtt_client: 💕 第165次思念消息已发送[0m
+[0;32mI (831738) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (836743) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第166次)[0m
+[0;32mI (836746) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (836748) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (836752) mqtt_client: 💕 第166次思念消息已发送[0m
+[0;32mI (836760) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (841765) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第167次)[0m
+[0;32mI (841768) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (841770) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (841774) mqtt_client: 💕 第167次思念消息已发送[0m
+[0;32mI (841782) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (846787) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第168次)[0m
+[0;32mI (846790) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (846792) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (846796) mqtt_client: 💕 第168次思念消息已发送[0m
+[0;32mI (846804) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (850253) main: System running... Free heap: 8546076 bytes[0m
+[0;32mI (851809) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第169次)[0m
+[0;32mI (851812) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (851814) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (851818) mqtt_client: 💕 第169次思念消息已发送[0m
+[0;32mI (851826) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (852730) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (852731) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (852731) mqtt_client: Other event id:7[0m
+[0;32mI (852767) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (852768) mqtt_client: ⏰ 连接时间: 851604毫秒[0m
+[0;32mI (852770) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=57904[0m
+[0;32mI (852779) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=18115[0m
+[0;32mI (852787) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (852794) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=57904[0m
+[0;32mI (852799) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=18115[0m
+[0;32mI (856831) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第170次)[0m
+[0;32mI (856834) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (856836) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (856840) mqtt_client: 💕 第170次思念消息已发送[0m
+[0;32mI (856848) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (861853) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第171次)[0m
+[0;32mI (861856) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (861858) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (861862) mqtt_client: 💕 第171次思念消息已发送[0m
+[0;32mI (861870) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (866875) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第172次)[0m
+[0;32mI (866878) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (866880) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (866884) mqtt_client: 💕 第172次思念消息已发送[0m
+[0;32mI (866891) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (871897) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第173次)[0m
+[0;32mI (871900) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (871902) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (871906) mqtt_client: 💕 第173次思念消息已发送[0m
+[0;32mI (871914) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (876919) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第174次)[0m
+[0;32mI (876922) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (876924) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (876928) mqtt_client: 💕 第174次思念消息已发送[0m
+[0;32mI (876936) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (880253) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (880253) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (881941) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第175次)[0m
+[0;32mI (881944) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (881946) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (881950) mqtt_client: 💕 第175次思念消息已发送[0m
+[0;32mI (881958) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (882864) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (882866) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (882866) mqtt_client: Other event id:7[0m
+[0;32mI (882888) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (882888) mqtt_client: ⏰ 连接时间: 881725毫秒[0m
+[0;32mI (882890) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=9413[0m
+[0;32mI (882899) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=56667[0m
+[0;32mI (882906) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (882918) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=9413[0m
+[0;32mI (882931) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=56667[0m
+[0;32mI (886963) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第176次)[0m
+[0;32mI (886966) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (886968) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (886972) mqtt_client: 💕 第176次思念消息已发送[0m
+[0;32mI (886979) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (891985) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第177次)[0m
+[0;32mI (891988) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (891990) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (891994) mqtt_client: 💕 第177次思念消息已发送[0m
+[0;32mI (892002) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (892235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-48[0m
+[0;32mI (897007) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第178次)[0m
+[0;32mI (897010) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (897012) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (897016) mqtt_client: 💕 第178次思念消息已发送[0m
+[0;32mI (897024) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (902029) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第179次)[0m
+[0;32mI (902032) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (902034) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (902038) mqtt_client: 💕 第179次思念消息已发送[0m
+[0;32mI (902046) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (907051) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第180次)[0m
+[0;32mI (907054) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (907056) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (907060) mqtt_client: 💕 第180次思念消息已发送[0m
+[0;32mI (907068) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (910255) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (912073) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第181次)[0m
+[0;32mI (912076) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (912078) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (912082) mqtt_client: 💕 第181次思念消息已发送[0m
+[0;32mI (912089) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (912995) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (912995) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (912995) mqtt_client: Other event id:7[0m
+[0;32mI (913033) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (913034) mqtt_client: ⏰ 连接时间: 911870毫秒[0m
+[0;32mI (913036) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=9593[0m
+[0;32mI (913044) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=43410[0m
+[0;32mI (913053) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (913060) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=9593[0m
+[0;32mI (913065) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=43410[0m
+[0;32mI (917095) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第182次)[0m
+[0;32mI (917098) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (917100) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (917104) mqtt_client: 💕 第182次思念消息已发送[0m
+[0;32mI (917111) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (922117) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第183次)[0m
+[0;32mI (922120) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (922122) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (922126) mqtt_client: 💕 第183次思念消息已发送[0m
+[0;32mI (922134) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (927139) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第184次)[0m
+[0;32mI (927142) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (927144) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (927148) mqtt_client: 💕 第184次思念消息已发送[0m
+[0;32mI (927156) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (932161) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第185次)[0m
+[0;32mI (932164) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (932166) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (932170) mqtt_client: 💕 第185次思念消息已发送[0m
+[0;32mI (932178) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (937183) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第186次)[0m
+[0;32mI (937186) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (937188) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (937192) mqtt_client: 💕 第186次思念消息已发送[0m
+[0;32mI (937200) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (940255) main: System running... Free heap: 8546088 bytes[0m
+[0;32mI (942205) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第187次)[0m
+[0;32mI (942208) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (942210) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (942214) mqtt_client: 💕 第187次思念消息已发送[0m
+[0;32mI (942221) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (943130) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (943131) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (943131) mqtt_client: Other event id:7[0m
+[0;32mI (943159) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (943160) mqtt_client: ⏰ 连接时间: 941996毫秒[0m
+[0;32mI (943162) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=33991[0m
+[0;32mI (943171) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=57286[0m
+[0;32mI (943179) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (943186) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=33991[0m
+[0;32mI (943191) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=57286[0m
+[0;32mI (947227) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第188次)[0m
+[0;32mI (947230) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (947232) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (947236) mqtt_client: 💕 第188次思念消息已发送[0m
+[0;32mI (947244) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (952249) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第189次)[0m
+[0;32mI (952252) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (952254) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (952258) mqtt_client: 💕 第189次思念消息已发送[0m
+[0;32mI (952265) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (957271) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第190次)[0m
+[0;32mI (957274) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (957276) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (957280) mqtt_client: 💕 第190次思念消息已发送[0m
+[0;32mI (957287) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (962293) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第191次)[0m
+[0;32mI (962296) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (962298) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (962302) mqtt_client: 💕 第191次思念消息已发送[0m
+[0;32mI (962310) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (967315) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第192次)[0m
+[0;32mI (967318) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (967320) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (967324) mqtt_client: 💕 第192次思念消息已发送[0m
+[0;32mI (967332) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (970255) main: System running... Free heap: 8546100 bytes[0m
+[0;32mI (972337) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第193次)[0m
+[0;32mI (972340) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (972342) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (972346) mqtt_client: 💕 第193次思念消息已发送[0m
+[0;32mI (972354) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (973257) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (973257) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (973257) mqtt_client: Other event id:7[0m
+[0;32mI (973282) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (973282) mqtt_client: ⏰ 连接时间: 972119毫秒[0m
+[0;32mI (973284) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=40646[0m
+[0;32mI (973293) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=51917[0m
+[0;32mI (973301) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (973310) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=40646[0m
+[0;32mI (973314) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=51917[0m
+[0;32mI (977359) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第194次)[0m
+[0;32mI (977362) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (977364) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (977368) mqtt_client: 💕 第194次思念消息已发送[0m
+[0;32mI (977376) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (982381) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第195次)[0m
+[0;32mI (982384) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (982386) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (982390) mqtt_client: 💕 第195次思念消息已发送[0m
+[0;32mI (982398) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (987403) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第196次)[0m
+[0;32mI (987406) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (987408) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (987412) mqtt_client: 💕 第196次思念消息已发送[0m
+[0;32mI (987420) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (992235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-61[0m
+[0;32mI (992425) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第197次)[0m
+[0;32mI (992428) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (992430) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (992434) mqtt_client: 💕 第197次思念消息已发送[0m
+[0;32mI (992442) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (997447) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第198次)[0m
+[0;32mI (997450) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (997452) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (997456) mqtt_client: 💕 第198次思念消息已发送[0m
+[0;32mI (997465) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1000255) main: System running... Free heap: 8546072 bytes[0m
+[0;32mI (1002469) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第199次)[0m
+[0;32mI (1002472) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1002474) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1002479) mqtt_client: 💕 第199次思念消息已发送[0m
+[0;32mI (1002486) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1003379) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1003380) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1003380) mqtt_client: Other event id:7[0m
+[0;32mI (1003454) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1003455) mqtt_client: ⏰ 连接时间: 1002291毫秒[0m
+[0;32mI (1003457) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=14713[0m
+[0;32mI (1003465) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=12494[0m
+[0;32mI (1003474) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1003481) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=14713[0m
+[0;32mI (1003486) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=12494[0m
+[0;32mI (1007491) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第200次)[0m
+[0;32mI (1007494) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1007496) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1007501) mqtt_client: 💕 第200次思念消息已发送[0m
+[0;32mI (1007509) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1012513) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第201次)[0m
+[0;32mI (1012516) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1012518) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1012523) mqtt_client: 💕 第201次思念消息已发送[0m
+[0;32mI (1012530) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1017535) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第202次)[0m
+[0;32mI (1017538) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1017540) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1017545) mqtt_client: 💕 第202次思念消息已发送[0m
+[0;32mI (1017552) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1022557) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第203次)[0m
+[0;32mI (1022560) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1022562) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1022567) mqtt_client: 💕 第203次思念消息已发送[0m
+[0;32mI (1022574) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1027579) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第204次)[0m
+[0;32mI (1027582) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1027584) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1027589) mqtt_client: 💕 第204次思念消息已发送[0m
+[0;32mI (1027596) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1030255) main: System running... Free heap: 8546072 bytes[0m
+[0;32mI (1032601) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第205次)[0m
+[0;32mI (1032604) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1032606) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1032611) mqtt_client: 💕 第205次思念消息已发送[0m
+[0;32mI (1032618) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1033553) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1033554) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1033554) mqtt_client: Other event id:7[0m
+[0;32mI (1033585) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1033585) mqtt_client: ⏰ 连接时间: 1032422毫秒[0m
+[0;32mI (1033588) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=14931[0m
+[0;32mI (1033597) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=58481[0m
+[0;32mI (1033604) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1033613) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=14931[0m
+[0;32mI (1033617) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=58481[0m
+[0;32mI (1037623) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第206次)[0m
+[0;32mI (1037626) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1037628) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1037633) mqtt_client: 💕 第206次思念消息已发送[0m
+[0;32mI (1037640) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1042645) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第207次)[0m
+[0;32mI (1042648) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1042650) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1042655) mqtt_client: 💕 第207次思念消息已发送[0m
+[0;32mI (1042662) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1047667) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第208次)[0m
+[0;32mI (1047670) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1047672) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1047677) mqtt_client: 💕 第208次思念消息已发送[0m
+[0;32mI (1047684) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1052689) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第209次)[0m
+[0;32mI (1052692) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1052694) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1052699) mqtt_client: 💕 第209次思念消息已发送[0m
+[0;32mI (1052706) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1057711) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第210次)[0m
+[0;32mI (1057714) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1057716) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1057721) mqtt_client: 💕 第210次思念消息已发送[0m
+[0;32mI (1057728) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1060255) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (1062733) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第211次)[0m
+[0;32mI (1062736) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1062738) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1062743) mqtt_client: 💕 第211次思念消息已发送[0m
+[0;32mI (1062750) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1063683) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1063684) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1063684) mqtt_client: Other event id:7[0m
+[0;32mI (1063708) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1063709) mqtt_client: ⏰ 连接时间: 1062545毫秒[0m
+[0;32mI (1063711) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=33716[0m
+[0;32mI (1063720) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=62115[0m
+[0;32mI (1063729) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1063736) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=33716[0m
+[0;32mI (1063741) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=62115[0m
+[0;32mI (1065382) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (1065382) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (1065383) mqtt_client: 💬 内容: {"timestamp": "2025-09-29 08:45:44", "message": "唐老师：你好！", "source": "web_interface"}[0m
+[0;32mI (1065393) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (1065398) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-29 08:45:44", "message": "唐老师：你好！", "source": "web_interface"}[0m
+[0;32mI (1067755) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第212次)[0m
+[0;32mI (1067758) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1067760) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1067765) mqtt_client: 💕 第212次思念消息已发送[0m
+[0;32mI (1067772) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1072777) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第213次)[0m
+[0;32mI (1072780) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1072782) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1072787) mqtt_client: 💕 第213次思念消息已发送[0m
+[0;32mI (1072794) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1077799) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第214次)[0m
+[0;32mI (1077802) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1077804) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1077809) mqtt_client: 💕 第214次思念消息已发送[0m
+[0;32mI (1077817) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1082821) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第215次)[0m
+[0;32mI (1082824) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1082826) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1082831) mqtt_client: 💕 第215次思念消息已发送[0m
+[0;32mI (1082838) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1087843) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第216次)[0m
+[0;32mI (1087845) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1087848) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1087853) mqtt_client: 💕 第216次思念消息已发送[0m
+[0;32mI (1087860) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1090255) main: System running... Free heap: 8546072 bytes[0m
+[0;32mI (1092235) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-48[0m
+[0;32mI (1092865) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第217次)[0m
+[0;32mI (1092868) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1092870) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1092875) mqtt_client: 💕 第217次思念消息已发送[0m
+[0;32mI (1092883) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1094472) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1094472) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1094472) mqtt_client: Other event id:7[0m
+[0;32mI (1094493) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1094493) mqtt_client: ⏰ 连接时间: 1093330毫秒[0m
+[0;32mI (1094496) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=21716[0m
+[0;32mI (1094504) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=54446[0m
+[0;32mI (1094512) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1094520) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=21716[0m
+[0;32mI (1094525) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=54446[0m
+[0;32mI (1097887) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第218次)[0m
+[0;32mI (1097890) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1097892) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1097897) mqtt_client: 💕 第218次思念消息已发送[0m
+[0;32mI (1097904) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1102909) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第219次)[0m
+[0;32mI (1102912) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1102914) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1102919) mqtt_client: 💕 第219次思念消息已发送[0m
+[0;32mI (1102926) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1107931) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第220次)[0m
+[0;32mI (1107934) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1107936) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1107941) mqtt_client: 💕 第220次思念消息已发送[0m
+[0;32mI (1107948) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1112953) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第221次)[0m
+[0;32mI (1112956) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1112958) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1112963) mqtt_client: 💕 第221次思念消息已发送[0m
+[0;32mI (1112971) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1117975) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第222次)[0m
+[0;32mI (1117978) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1117980) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1117985) mqtt_client: 💕 第222次思念消息已发送[0m
+[0;32mI (1117992) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1120255) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (1122997) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第223次)[0m
+[0;32mI (1123000) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1123002) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1123007) mqtt_client: 💕 第223次思念消息已发送[0m
+[0;32mI (1123014) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1124591) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1124592) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1124593) mqtt_client: Other event id:7[0m
+[0;32mI (1124621) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1124621) mqtt_client: ⏰ 连接时间: 1123457毫秒[0m
+[0;32mI (1124623) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=54751[0m
+[0;32mI (1124632) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=2620[0m
+[0;32mI (1124640) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1124648) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=54751[0m
+[0;32mI (1124653) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=2620[0m
+[0;32mI (1127535) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (1127535) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (1127536) mqtt_client: 💬 内容: {"timestamp": "2025-09-29 08:46:46", "message": "唐老师：你好", "source": "web_interface"}[0m
+[0;32mI (1127546) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (1127550) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-29 08:46:46", "message": "唐老师：你好", "source": "web_interface"}[0m
+[0;32mI (1128019) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第224次)[0m
+[0;32mI (1128022) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1128024) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1128029) mqtt_client: 💕 第224次思念消息已发送[0m
+[0;32mI (1128036) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1133041) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第225次)[0m
+[0;32mI (1133044) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1133046) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1133051) mqtt_client: 💕 第225次思念消息已发送[0m
+[0;32mI (1133058) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1138063) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第226次)[0m
+[0;32mI (1138066) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1138068) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1138073) mqtt_client: 💕 第226次思念消息已发送[0m
+[0;32mI (1138080) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1143085) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第227次)[0m
+[0;32mI (1143088) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1143090) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1143095) mqtt_client: 💕 第227次思念消息已发送[0m
+[0;32mI (1143103) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1148107) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第228次)[0m
+[0;32mI (1148110) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1148112) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1148117) mqtt_client: 💕 第228次思念消息已发送[0m
+[0;32mI (1148124) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1150255) main: System running... Free heap: 8546072 bytes[0m
+[0;32mI (1153129) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第229次)[0m
+[0;32mI (1153132) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1153134) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1153139) mqtt_client: 💕 第229次思念消息已发送[0m
+[0;32mI (1153146) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1155621) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1155622) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1155622) mqtt_client: Other event id:7[0m
+[0;32mI (1155643) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1155644) mqtt_client: ⏰ 连接时间: 1154480毫秒[0m
+[0;32mI (1155646) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=4843[0m
+[0;32mI (1155655) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=15326[0m
+[0;32mI (1155662) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1155670) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=4843[0m
+[0;32mI (1155676) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=15326[0m
+[0;32mI (1158151) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第230次)[0m
+[0;32mI (1158154) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1158156) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1158161) mqtt_client: 💕 第230次思念消息已发送[0m
+[0;32mI (1158168) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1163173) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第231次)[0m
+[0;32mI (1163176) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1163178) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1163183) mqtt_client: 💕 第231次思念消息已发送[0m
+[0;32mI (1163190) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1168195) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第232次)[0m
+[0;32mI (1168198) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1168200) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1168205) mqtt_client: 💕 第232次思念消息已发送[0m
+[0;32mI (1168212) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1173217) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第233次)[0m
+[0;32mI (1173220) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1173222) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1173227) mqtt_client: 💕 第233次思念消息已发送[0m
+[0;32mI (1173234) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1178239) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第234次)[0m
+[0;32mI (1178242) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1178244) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1178249) mqtt_client: 💕 第234次思念消息已发送[0m
+[0;32mI (1178257) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (1180255) main: System running... Free heap: 8546080 bytes[0m
+[0;32mI (1180255) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (1183261) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第235次)[0m
+[0;32mI (1183264) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (1183266) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (1183271) mqtt_client: 💕 第235次思念消息已发送[0m
+[0;32mI (1183278) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (1185741) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1185742) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1185742) mqtt_client: Other event id:7[0m
+[0;32mI (1185775) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (1185775) mqtt_client: ⏰ 连接时间: 1184612毫秒[0m
+[0;32mI (1185778) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=57678[0m
+[0;32mI (1185786) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=13122[0m
+[0;32mI (1185794) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (1185884) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=57678[0m
+[0;32mI (1185891) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=13122[0m

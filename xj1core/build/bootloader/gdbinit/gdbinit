@@ -1,0 +1,2 @@
+source /mnt/sunny/work/xj1core/xj1core/build/bootloader/gdbinit/symbols
+source /mnt/sunny/work/xj1core/xj1core/build/bootloader/gdbinit/connect

@@ -1,0 +1,1126 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2025 21:44:45[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v0.2[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (79) boot:  3 spiffs           Unknown data     01 82 00610000 00400000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=339d4h (211412) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=000439fc vaddr=3fc9ad00 size=0568ch ( 22156) load[0m
+[0;32mI (138) esp_image: segment 2: paddr=00049090 vaddr=40374000 size=06f88h ( 28552) load[0m
+[0;32mI (145) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b97f8h (759800) map[0m
+[0;32mI (279) esp_image: segment 4: paddr=00109820 vaddr=4037af88 size=0fd58h ( 64856) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=00119580 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (303) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (303) boot: Disabling RNG early entropy source...[0m
+[0;32mI (313) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (313) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (313) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (315) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (319) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (324) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (328) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (333) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (338) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (342) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (347) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (352) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (355) esp_psram: Speed: 40MHz[0m
+[0;32mI (358) cpu_start: Multicore app[0m
+[0;32mI (1092) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1101) cpu_start: Pro cpu start user code[0m
+[0;32mI (1101) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1101) app_init: Application information:[0m
+[0;32mI (1101) app_init: Project name:     xj1core[0m
+[0;32mI (1105) app_init: App version:      1[0m
+[0;32mI (1109) app_init: Compile time:     Sep 28 2025 21:44:56[0m
+[0;32mI (1114) app_init: ELF file SHA256:  7ff2bb1a9...[0m
+[0;32mI (1118) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (1123) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1127) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1131) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1135) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1142) heap_init: At 3FCA4D60 len 000449B0 (274 KiB): RAM[0m
+[0;32mI (1147) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1152) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1157) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (1163) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1170) spi_flash: detected chip: boya[0m
+[0;32mI (1173) spi_flash: flash io: dio[0m
+[0;32mI (1176) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1182) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1189) coexist: coex firmware version: e727207[0m
+[0;32mI (1213) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1214) main_task: Started on CPU0[0m
+[0;32mI (1215) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1218) main_task: Calling app_main()[0m
+[0;32mI (1221) main: XJ1Core System Starting...[0m
+[0;32mI (1225) main: =================================[0m
+[0;32mI (1229) main: Device: ESP32-S3-WROOM-1-N16R8[0m
+[0;32mI (1233) main: Firmware: XJ1Core v1.0.0[0m
+[0;32mI (1237) main: =================================[0m
+[0;32mI (1241) main: Initializing NVS...[0m
+[0;32mI (1268) main: NVS initialized successfully[0m
+[0;32mI (1269) main: Initializing network interface...[0m
+[0;32mI (1270) main: Network interface initialized[0m
+[0;32mI (1270) main: Initializing configuration manager...[0m
+[0;32mI (1507) ini_parser: INI config created successfully[0m
+[0;32mI (1508) config_manager: Attempting to load config from: /spiffs/config.ini[0m
+[0;32mI (1510) ini_parser: Loaded 23 items from /spiffs/config.ini[0m
+[0;32mI (1513) config_manager: Config file loaded successfully from SPIFFS[0m
+[0;32mI (1520) config_manager: Loaded MQTT config - broker_host: '192.168.1.40', broker_port: 1883[0m
+[0;32mI (1528) config_manager: Loaded auth config - Username: 'admin', Password hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1540) config_manager: Configuration manager initialized successfully[0m
+[0;32mI (1547) main: Configuration manager initialized[0m
+[0;32mI (1551) main: Initializing authentication module...[0m
+[0;32mI (1557) auth: SHA-256 test - Input: '123456', Hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1566) auth: Expected hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1575) auth: SHA-256 calculation is CORRECT[0m
+[0;32mI (1579) auth: Authentication module initialized[0m
+[0;32mI (1583) main: Authentication module initialized[0m
+[0;32mI (1588) main: Initializing WiFi manager...[0m
+[0;32mI (1593) pp: pp rom version: e7ae62f[0m
+[0;32mI (1595) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1601) wifi:wifi driver task: 3fcbe290, prio:23, stack:6656, core=0[0m
+[0;32mI (1619) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (1620) wifi:wifi certification version: v7.0[0m
+[0;32mI (1620) wifi:config NVS flash: enabled[0m
+[0;32mI (1621) wifi:config nano formatting: disabled[0m
+[0;32mI (1625) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1630) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1634) wifi:Init management short buffer num: 32[0m
+[0;32mI (1638) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1642) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1647) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1651) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1655) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1659) wifi_init: rx ba win: 6[0m
+[0;32mI (1662) wifi_init: accept mbox: 6[0m
+[0;32mI (1665) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1668) wifi_init: udp mbox: 6[0m
+[0;32mI (1671) wifi_init: tcp mbox: 6[0m
+[0;32mI (1673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1677) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1680) wifi_init: tcp mss: 1440[0m
+[0;32mI (1683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1687) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1692) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (1742) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1763) wifi:mode : sta (98:a3:16:eb:6b:18) + softAP (98:a3:16:eb:6b:19)[0m
+[0;32mI (1764) wifi:enable tsf[0m
+[0;32mI (1767) wifi:Total power save buffer number: 16[0m
+[0;32mI (1768) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1770) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1775) wifi_manager: WiFi manager initialized successfully[0m
+[0;32mI (1775) wifi_manager: WiFi STA started[0m
+[0;32mI (1784) main: WiFi manager initialized[0m
+[0;32mI (1784) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1795) wifi_manager: WiFi AP started[0m
+[0;32mI (1798) main: Starting WiFi AP...[0m
+[0;32mI (1809) wifi:Total power save buffer number: 16[0m
+[0;32mI (1810) wifi_manager: WiFi AP stopped[0m
+[0;32mI (1811) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1817) wifi_manager: WiFi AP started[0m
+[0;32mI (1821) wifi_manager: WiFi AP started - SSID: Sparkriver-AP-01, IP: 192.168.5.1[0m
+[0;32mI (1828) main: WiFi AP started successfully[0m
+[0;32mI (1832) main: Attempting to connect WiFi STA...[0m
+[0;32mI (1836) main: Connecting to WiFi STA: fengqi-2G[0m
+[0;33mW (1841) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1851) wifi_manager: Connecting to WiFi SSID: fengqi-2G[0m
+[0;32mI (1854) main: WiFi STA connection initiated[0m
+[0;32mI (1860) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1865) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1871) main: Initializing ethernet manager...[0m
+[0;33mW (1873) ethernet_manager: Ethernet manager initialized (no physical ethernet on ESP32-S3-WROOM-1)[0m
+[0;32mI (1877) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1886) ethernet_manager: 以太网功能需要外接以太网模块才能使用[0m
+[0;32mI (1893) main: Ethernet manager initialized[0m
+[0;33mW (1896) main: 注意：ESP32-S3-WROOM-1没有内置以太网，需要外接模块[0m
+[0;32mI (1902) wifi:state: assoc -> run (0x10)[0m
+[0;33mW (1911) ethernet_manager: Ethernet start requested (no physical ethernet available)[0m
+[0;32mI (1915) main: Initializing bluetooth manager...[0m
+[0;32mI (1919) bluetooth_manager: Bluetooth manager initialized (simplified implementation)[0m
+[0;33mW (1927) bluetooth_manager: Full Bluetooth functionality will be implemented in future updates[0m
+[0;32mI (1930) wifi:connected with fengqi-2G, aid = 2, channel 1, BW20, bssid = ae:64:90:c0:7d:24[0m
+[0;32mI (1943) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (1950) wifi:pm start, type: 1[0m
+
+[0;32mI (1951) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1959) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (1968) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1974) main: Bluetooth manager initialized[0m
+[0;32mI (1975) wifi_manager: Connected to AP SSID:fengqi-2G, channel:1, authmode:3[0m
+[0;32mI (1984) wifi_manager: 等待获取IP地址...[0m
+[0;32mI (1988) bluetooth_manager: Bluetooth service marked as enabled[0m
+[0;33mW (1993) bluetooth_manager: Full BLE advertising features will be implemented in future updates[0m
+[0;32mI (2002) main: 等待网络连接建立...[0m
+[0;32mI (4140) esp_netif_handlers: sta ip: 192.168.1.44, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4141) wifi_manager: 🎉 WiFi连接成功! IP地址: 192.168.1.44[0m
+[0;32mI (4143) wifi_manager: 网关: 192.168.1.1, 子网掩码: 255.255.255.0[0m
+[0;32mI (4150) wifi_manager: 连接到AP: fengqi-2G, 信号强度: -39 dBm, 信道: 1[0m
+[0;32mI (4157) wifi_manager: WiFi状态已更新: connected=true, ip=192.168.1.44[0m
+[0;32mI (5006) main: Initializing MQTT client...[0m
+[0;32mI (5006) mqtt_client: MQTT topics loaded from config:[0m
+[0;32mI (5006) mqtt_client:   Student->Teacher: xj1core/student/message[0m
+[0;32mI (5009) mqtt_client:   Teacher->Student: xj1cloud/teacher/message[0m
+[0;32mI (5015) mqtt_client:   Heartbeat: xj1core/heartbeat[0m
+[0;32mI (5020) mqtt_client:   Status: xj1core/status[0m
+[0;32mI (5024) mqtt_client: 🔧 MQTT配置验证通过:[0m
+[0;32mI (5028) mqtt_client:   服务器: 192.168.1.40:1883[0m
+[0;32mI (5033) mqtt_client:   客户端ID: xj1core-student-01[0m
+[0;32mI (5038) mqtt_client:   保活时间: 60秒[0m
+[0;32mI (5042) mqtt_client: 🆔 使用唯一客户端ID: xj1core-student-01-eb6b18[0m
+[0;32mI (5049) mqtt_client: 🔗 MQTT URI: mqtt://192.168.1.40:1883[0m
+[0;32mI (5054) mqtt_client: ⏱️  保活时间: 60秒[0m
+[0;32mI (5059) mqtt_client: MQTT client initialized successfully[0m
+[0;32mI (5064) mqtt_client: Broker: 192.168.1.40:1883, Client ID: xj1core-student-01[0m
+[0;32mI (5071) mqtt_client: 💡 MQTT服务器配置为: 192.168.1.40，请确保该地址可访问[0m
+[0;32mI (5079) mqtt_client: 💡 提示：如果WiFi STA未连接，可能无法访问外部网络服务器[0m
+[0;32mI (5088) main: MQTT client initialized[0m
+[0;32mI (5092) main: WiFi STA已连接，IP: 192.168.1.44[0m
+[0;32mI (5096) mqtt_client: 🌐 WiFi STA已连接，IP: 192.168.1.44[0m
+[0;32mI (5102) mqtt_client: ✅ ESP32在192.168.1.x网段，能访问MQTT服务器[0m
+[0;32mI (5109) mqtt_client: 🔧 即将连接MQTT服务器: 192.168.1.40:1883[0m
+[0;32mI (5115) mqtt_client: ⏳ 等待网络稳定...[0m
+[0;32mI (7119) mqtt_client: Other event id:7[0m
+[0;32mI (7120) mqtt_client: MQTT client started, waiting for connection...[0m
+[0;32mI (7121) main: MQTT client started successfully[0m
+[0;32mI (7122) mqtt_client: 🔍 MQTT连接监控任务启动[0m
+[0;32mI (7127) mqtt_client: 🚀 MQTT连接监控任务已启动[0m
+[0;32mI (7132) main: 🔍 MQTT连接监控任务已启动[0m
+[0;32mI (7137) main: 💖 启动师生通信功能...[0m
+[0;32mI (7141) mqtt_client: 💖 学生思念心跳任务启动[0m
+[0;32mI (7146) mqtt_client: 🎓 将每5秒向老师发送思念消息...[0m
+[0;32mI (7152) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (7156) mqtt_client: 🚀 学生思念心跳任务已启动[0m
+[0;32mI (7161) main: 🎓 学生思念心跳任务已启动，每5秒向老师发送思念[0m
+[0;32mI (7169) main: Initializing web server...[0m
+[0;32mI (7172) web_server: Web server initialized[0m
+[0;32mI (7176) main: Web server initialized[0m
+[0;32mI (7180) main: Starting web server...[0m
+[0;33mW (7186) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (7191) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;32mI (7198) web_server: Web server started on port 80[0m
+[0;32mI (7203) main: Web server started on port 80[0m
+[0;32mI (7207) main: =================================[0m
+[0;32mI (7211) main: XJ1Core System Started Successfully![0m
+[0;32mI (7214) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (7217) wifi:I (7222) mqtt_client: ⏰ 连接时间: 6058毫秒[0m
+<ba-add>idx:0 (ifx:0, ae:64:90:c0:7d:24), tid:0, ssn:5, winSize:64
+[0;32mI (7230) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=14611[0m
+[0;32mI (7216) main: Access web interface at: http://192.168.5.1[0m
+[0;32mI (7244) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=13657[0m
+[0;32mI (7250) main: Default login: admin / 123456[0m
+[0;32mI (7257) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (7260) main: =================================[0m
+[0;32mI (7268) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=14611[0m
+[0;32mI (7278) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=13657[0m
+[0;32mI (7281) main: 等待WiFi系统稳定...[0m
+[0;32mI (8156) mqtt_client: ✅ MQTT已连接，开始发送思念消息[0m
+[0;32mI (8157) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第1次)[0m
+[0;32mI (8161) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (8166) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (8170) mqtt_client: 💕 第1次思念消息已发送[0m
+[0;32mI (8177) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (9631) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (9632) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (9632) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (9641) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (9646) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (10283) main: WiFi扫描功能已禁用，只在Web界面手动触发时才执行[0m
+[0;32mI (10283) main: System running... Free heap: 8546400 bytes[0m
+[0;32mI (10959) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (10960) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (10960) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (10970) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (10974) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (13182) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第2次)[0m
+[0;32mI (13185) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (13186) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (13191) mqtt_client: 💕 第2次思念消息已发送[0m
+[0;32mI (13198) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (14648) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (14648) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (14648) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (14658) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (14663) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (15982) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (15982) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (15982) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (15992) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (15997) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (17127) mqtt_client: 🎉 MQTT连接监控 - 连接成功！[0m
+[0;32mI (18203) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第3次)[0m
+[0;32mI (18206) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (18207) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (18212) mqtt_client: 💕 第3次思念消息已发送[0m
+[0;32mI (18219) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (19663) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (19664) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (19664) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (19673) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (19678) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (20893) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (20894) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (20894) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (20903) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (20908) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (23224) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第4次)[0m
+[0;32mI (23227) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (23228) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (23233) mqtt_client: 💕 第4次思念消息已发送[0m
+[0;32mI (23240) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (24582) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (24582) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (24583) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (24592) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (24597) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (25913) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (25913) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (25913) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (25923) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (25928) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (28245) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第5次)[0m
+[0;32mI (28248) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (28250) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (28254) mqtt_client: 💕 第5次思念消息已发送[0m
+[0;32mI (28262) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (29600) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (29600) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (29600) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (29610) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (29615) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (30929) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (30930) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (30930) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (30940) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (30945) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (33266) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第6次)[0m
+[0;32mI (33269) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (33270) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (33275) mqtt_client: 💕 第6次思念消息已发送[0m
+[0;32mI (33282) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (34624) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (34624) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (34624) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (34634) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (34639) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (35949) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (35950) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (35950) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (35960) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (35965) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;33mW (37983) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (37984) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (37984) mqtt_client: Other event id:7[0m
+[0;32mI (37999) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (38000) mqtt_client: ⏰ 连接时间: 36836毫秒[0m
+[0;32mI (38002) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=26043[0m
+[0;32mI (38011) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=8309[0m
+[0;32mI (38018) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (38028) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=26043[0m
+[0;32mI (38031) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=8309[0m
+[0;32mI (38287) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第7次)[0m
+[0;32mI (38290) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (38291) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (38296) mqtt_client: 💕 第7次思念消息已发送[0m
+[0;32mI (38303) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (39637) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (39637) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (39637) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:09:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (39647) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (39652) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:09:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (40284) main: System running... Free heap: 8546416 bytes[0m
+[0;32mI (40969) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (40970) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (40970) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (40980) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (40984) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (43308) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第8次)[0m
+[0;32mI (43311) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (43312) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (43317) mqtt_client: 💕 第8次思念消息已发送[0m
+[0;32mI (43324) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (44652) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (44653) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (44653) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (44662) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (44667) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (45985) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (45985) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (45985) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (45995) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (46000) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (48329) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第9次)[0m
+[0;32mI (48332) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (48333) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (48338) mqtt_client: 💕 第9次思念消息已发送[0m
+[0;32mI (48345) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (49667) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (49668) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (49668) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (49677) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (49682) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (51000) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (51001) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (51001) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (51011) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (51015) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (53350) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第10次)[0m
+[0;32mI (53352) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (53354) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (53359) mqtt_client: 💕 第10次思念消息已发送[0m
+[0;32mI (53367) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (54691) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (54692) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (54692) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (54701) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (54706) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (56026) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (56027) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (56027) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (56037) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (56041) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (58371) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第11次)[0m
+[0;32mI (58374) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (58376) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (58380) mqtt_client: 💕 第11次思念消息已发送[0m
+[0;32mI (58388) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (59706) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (59707) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (59707) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (59716) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (59721) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (60931) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (60932) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (60932) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (60942) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (60946) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (63392) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第12次)[0m
+[0;32mI (63395) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (63396) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (63401) mqtt_client: 💕 第12次思念消息已发送[0m
+[0;32mI (63409) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (64622) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (64623) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (64623) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (64633) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (64637) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (65950) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (65950) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (65951) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (65960) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (65965) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (68413) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第13次)[0m
+[0;32mI (68416) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (68417) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (68422) mqtt_client: 💕 第13次思念消息已发送[0m
+[0;32mI (68429) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (68987) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (68987) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (68988) mqtt_client: Other event id:7[0m
+[0;32mI (69013) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (69014) mqtt_client: ⏰ 连接时间: 67850毫秒[0m
+[0;32mI (69015) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=62422[0m
+[0;32mI (69024) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=48519[0m
+[0;32mI (69032) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (69039) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=62422[0m
+[0;32mI (69044) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=48519[0m
+[0;32mI (69637) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (69638) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (69638) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (69647) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (69652) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (70284) main: System running... Free heap: 8546400 bytes[0m
+[0;32mI (70968) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (70969) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (70969) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (70979) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (70983) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (73434) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第14次)[0m
+[0;32mI (73437) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (73438) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (73443) mqtt_client: 💕 第14次思念消息已发送[0m
+[0;32mI (73450) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (74654) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (74654) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (74654) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (74664) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (74669) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (75985) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (75986) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (75986) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (75995) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (76000) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (78455) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第15次)[0m
+[0;32mI (78458) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (78459) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (78464) mqtt_client: 💕 第15次思念消息已发送[0m
+[0;32mI (78472) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (79613) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (79614) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (79614) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (79624) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (79628) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (81002) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (81002) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (81002) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (81012) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (81017) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (83476) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第16次)[0m
+[0;32mI (83479) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (83480) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (83485) mqtt_client: 💕 第16次思念消息已发送[0m
+[0;32mI (83493) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (84691) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (84691) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (84691) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (84701) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (84706) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (86019) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (86020) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (86020) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (86030) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (86034) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (88497) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第17次)[0m
+[0;32mI (88500) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (88502) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (88506) mqtt_client: 💕 第17次思念消息已发送[0m
+[0;32mI (88514) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (89709) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (89709) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (89709) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (89719) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (89724) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (91041) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (91042) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (91042) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (91051) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (91056) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (92281) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-27[0m
+[0;32mI (93518) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第18次)[0m
+[0;32mI (93521) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (93522) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (93527) mqtt_client: 💕 第18次思念消息已发送[0m
+[0;32mI (93535) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (94724) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (94724) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (94724) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (94734) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (94739) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (96059) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (96059) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (96059) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (96069) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (96074) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (98539) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第19次)[0m
+[0;32mI (98542) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (98544) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (98548) mqtt_client: 💕 第19次思念消息已发送[0m
+[0;32mI (98556) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;33mW (99096) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (99096) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (99096) mqtt_client: Other event id:7[0m
+[0;32mI (99114) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (99115) mqtt_client: ⏰ 连接时间: 97951毫秒[0m
+[0;32mI (99117) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=51503[0m
+[0;32mI (99126) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=42391[0m
+[0;32mI (99134) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (99141) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=51503[0m
+[0;32mI (99146) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=42391[0m
+[0;32mI (99743) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (99744) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (99744) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:10:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (99754) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (99758) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:10:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (100284) main: System running... Free heap: 8546392 bytes[0m
+[0;32mI (100986) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (100986) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (100986) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (100996) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (101001) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (103560) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第20次)[0m
+[0;32mI (103563) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (103565) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (103569) mqtt_client: 💕 第20次思念消息已发送[0m
+[0;32mI (103577) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (104657) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (104657) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (104657) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (104667) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (104672) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (105992) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (105992) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (105993) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (106002) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (106007) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (108582) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第21次)[0m
+[0;32mI (108585) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (108587) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (108591) mqtt_client: 💕 第21次思念消息已发送[0m
+[0;32mI (108599) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (109677) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (109678) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (109678) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (109688) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (109693) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (111011) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (111012) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (111012) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (111022) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (111027) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (113604) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第22次)[0m
+[0;32mI (113607) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (113609) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (113613) mqtt_client: 💕 第22次思念消息已发送[0m
+[0;32mI (113621) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (114699) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (114699) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (114700) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (114709) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (114714) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (116026) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (116026) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (116027) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (116036) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (116041) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (118626) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第23次)[0m
+[0;32mI (118629) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (118631) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (118635) mqtt_client: 💕 第23次思念消息已发送[0m
+[0;32mI (118643) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (119712) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (119713) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (119713) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (119723) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (119728) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (121043) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (121044) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (121044) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (121054) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (121059) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (123648) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第24次)[0m
+[0;32mI (123651) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (123653) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (123657) mqtt_client: 💕 第24次思念消息已发送[0m
+[0;32mI (123664) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (124727) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (124728) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (124728) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (124738) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (124743) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (126063) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (126063) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (126064) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (126073) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (126078) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (128670) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第25次)[0m
+[0;32mI (128673) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (128675) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (128679) mqtt_client: 💕 第25次思念消息已发送[0m
+[0;32mI (128687) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (129746) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (129747) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (129747) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (129757) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (129762) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;33mW (129777) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (129778) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (129783) mqtt_client: Other event id:7[0m
+[0;32mI (129817) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (129817) mqtt_client: ⏰ 连接时间: 128654毫秒[0m
+[0;32mI (129819) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=10592[0m
+[0;32mI (129828) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=18735[0m
+[0;32mI (129836) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (129844) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=10592[0m
+[0;32mI (129855) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=18735[0m
+[0;32mI (130284) main: System running... Free heap: 8546420 bytes[0m
+[0;32mI (131078) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (131079) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (131079) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (131089) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (131093) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (133692) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第26次)[0m
+[0;32mI (133695) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (133697) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (133701) mqtt_client: 💕 第26次思念消息已发送[0m
+[0;32mI (133709) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (134763) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (134764) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (134764) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (134774) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (134778) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (136097) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (136097) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (136098) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (136108) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (136112) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (138714) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第27次)[0m
+[0;32mI (138717) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (138719) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (138723) mqtt_client: 💕 第27次思念消息已发送[0m
+[0;32mI (138731) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (139783) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (139783) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (139784) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (139793) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (139798) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (141115) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (141115) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (141115) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (141125) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (141130) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (143736) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第28次)[0m
+[0;32mI (143739) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (143741) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (143746) mqtt_client: 💕 第28次思念消息已发送[0m
+[0;32mI (143753) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (144801) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (144801) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (144801) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (144811) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (144816) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (146029) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (146029) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (146030) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (146040) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (146044) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (148758) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第29次)[0m
+[0;32mI (148761) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (148763) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (148767) mqtt_client: 💕 第29次思念消息已发送[0m
+[0;32mI (148774) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (149717) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (149718) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (149718) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (149728) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (149733) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (151045) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (151045) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (151046) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (151055) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (151060) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (153780) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第30次)[0m
+[0;32mI (153783) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (153785) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (153789) mqtt_client: 💕 第30次思念消息已发送[0m
+[0;32mI (153797) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (154733) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (154734) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (154734) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (154744) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (154749) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (156063) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (156063) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (156063) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (156073) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (156078) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (158802) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第31次)[0m
+[0;32mI (158805) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (158807) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (158811) mqtt_client: 💕 第31次思念消息已发送[0m
+[0;32mI (158819) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (159756) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (159757) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (159757) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:11:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (159767) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (159772) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:11:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (160284) main: System running... Free heap: 8546420 bytes[0m
+[0;33mW (160790) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (160790) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (160790) mqtt_client: Other event id:7[0m
+[0;32mI (160816) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (160816) mqtt_client: ⏰ 连接时间: 159653毫秒[0m
+[0;32mI (160818) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=50242[0m
+[0;32mI (160827) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=32735[0m
+[0;32mI (160835) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (160843) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=50242[0m
+[0;32mI (160850) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=32735[0m
+[0;32mI (161086) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (161086) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (161086) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (161096) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (161101) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (163824) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第32次)[0m
+[0;32mI (163827) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (163829) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (163833) mqtt_client: 💕 第32次思念消息已发送[0m
+[0;32mI (163841) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (164767) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (164768) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (164768) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (164778) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (164783) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (166102) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (166102) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (166103) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (166113) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (166117) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (168846) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第33次)[0m
+[0;32mI (168849) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (168851) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (168855) mqtt_client: 💕 第33次思念消息已发送[0m
+[0;32mI (168863) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (169787) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (169787) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (169788) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (169798) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (169802) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (171118) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (171118) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (171118) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (171128) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (171133) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (173868) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第34次)[0m
+[0;32mI (173871) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (173873) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (173877) mqtt_client: 💕 第34次思念消息已发送[0m
+[0;32mI (173885) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (174805) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (174806) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (174806) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (174816) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (174821) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (176135) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (176136) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (176136) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (176146) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (176151) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (178890) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第35次)[0m
+[0;32mI (178893) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (178895) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (178899) mqtt_client: 💕 第35次思念消息已发送[0m
+[0;32mI (178907) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (179823) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (179823) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (179823) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (179833) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (179838) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (181153) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (181154) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (181154) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (181164) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (181169) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (183912) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第36次)[0m
+[0;32mI (183915) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (183917) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (183921) mqtt_client: 💕 第36次思念消息已发送[0m
+[0;32mI (183929) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (184842) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (184842) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (184842) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (184852) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (184857) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (186070) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (186070) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (186071) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (186081) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (186085) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (188934) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第37次)[0m
+[0;32mI (188937) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (188939) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (188943) mqtt_client: 💕 第37次思念消息已发送[0m
+[0;32mI (188951) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (189759) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (189760) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (189760) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (189770) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (189775) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (190284) main: System running... Free heap: 8546416 bytes[0m
+[0;32mI (191087) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (191088) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (191088) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (191098) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (191103) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;33mW (191117) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (191119) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (191124) mqtt_client: Other event id:7[0m
+[0;32mI (191160) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (191160) mqtt_client: ⏰ 连接时间: 189997毫秒[0m
+[0;32mI (191162) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=11502[0m
+[0;32mI (191171) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=17228[0m
+[0;32mI (191179) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (191187) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=11502[0m
+[0;32mI (191192) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=17228[0m
+[0;32mI (192281) wifi_manager: WiFi状态查询: AP=ON, STA=CONNECTED, IP=192.168.1.44, RSSI=-35[0m
+[0;32mI (193956) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第38次)[0m
+[0;32mI (193959) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (193961) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (193965) mqtt_client: 💕 第38次思念消息已发送[0m
+[0;32mI (193973) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (194770) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (194771) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (194771) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (194781) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (194786) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (196105) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (196106) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (196106) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (196116) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (196121) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (198978) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第39次)[0m
+[0;32mI (198981) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (198983) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (198987) mqtt_client: 💕 第39次思念消息已发送[0m
+[0;32mI (198994) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (199790) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (199791) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (199791) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (199801) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (199806) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (201123) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (201123) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (201123) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (201133) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (201138) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:40", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (204000) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第40次)[0m
+[0;32mI (204003) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (204005) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (204009) mqtt_client: 💕 第40次思念消息已发送[0m
+[0;32mI (204016) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (204808) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (204808) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (204808) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (204818) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (204823) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (206139) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (206140) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (206140) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (206150) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (206155) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:45", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (209022) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第41次)[0m
+[0;32mI (209025) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (209027) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (209031) mqtt_client: 💕 第41次思念消息已发送[0m
+[0;32mI (209039) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (209825) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (209825) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (209826) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (209836) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (209840) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (211157) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (211157) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (211157) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (211167) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (211172) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:50", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (214044) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第42次)[0m
+[0;32mI (214047) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (214049) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (214053) mqtt_client: 💕 第42次思念消息已发送[0m
+[0;32mI (214061) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (214844) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (214845) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (214845) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (214855) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (214860) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:54", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (216175) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (216175) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (216175) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (216185) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (216190) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:55", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (219066) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第43次)[0m
+[0;32mI (219069) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (219071) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (219075) mqtt_client: 💕 第43次思念消息已发送[0m
+[0;32mI (219082) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (219862) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (219863) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (219863) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:12:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (219873) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (219878) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:12:59", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (220284) main: System running... Free heap: 8546420 bytes[0m
+[0;32mI (221199) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (221200) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (221200) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (221210) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (221215) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:00", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;33mW (221230) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (221231) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (221236) mqtt_client: Other event id:7[0m
+[0;32mI (221279) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (221279) mqtt_client: ⏰ 连接时间: 220116毫秒[0m
+[0;32mI (221282) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=60653[0m
+[0;32mI (221289) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=59016[0m
+[0;32mI (221298) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (221305) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=60653[0m
+[0;32mI (221310) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=59016[0m
+[0;32mI (224088) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第44次)[0m
+[0;32mI (224091) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (224093) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (224097) mqtt_client: 💕 第44次思念消息已发送[0m
+[0;32mI (224105) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (224883) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (224884) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (224884) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (224894) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (224899) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:04", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (226112) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (226112) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (226112) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (226122) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (226127) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:05", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (229110) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第45次)[0m
+[0;32mI (229113) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (229115) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (229119) mqtt_client: 💕 第45次思念消息已发送[0m
+[0;32mI (229127) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (229896) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (229897) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (229897) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (229907) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (229912) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:09", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (231127) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (231127) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (231127) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (231137) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (231142) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:10", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (234132) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第46次)[0m
+[0;32mI (234135) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (234137) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (234141) mqtt_client: 💕 第46次思念消息已发送[0m
+[0;32mI (234149) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (234813) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (234813) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (234813) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (234823) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (234828) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:14", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (236145) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (236146) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (236146) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (236156) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (236161) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:15", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (239154) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第47次)[0m
+[0;32mI (239157) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (239159) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (239163) mqtt_client: 💕 第47次思念消息已发送[0m
+[0;32mI (239171) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (239830) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (239830) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (239830) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (239840) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (239845) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:19", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (241161) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (241161) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (241161) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (241171) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (241176) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:20", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (244176) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第48次)[0m
+[0;32mI (244179) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (244181) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (244185) mqtt_client: 💕 第48次思念消息已发送[0m
+[0;32mI (244192) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (244849) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (244850) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (244850) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (244860) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (244864) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:24", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (246180) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (246181) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (246181) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (246191) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (246196) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:25", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (249198) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第49次)[0m
+[0;32mI (249201) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (249203) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (249207) mqtt_client: 💕 第49次思念消息已发送[0m
+[0;32mI (249216) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (249864) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (249865) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (249865) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (249875) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (249880) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:29", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (250284) main: System running... Free heap: 8546420 bytes[0m
+[0;32mI (251195) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (251196) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (251196) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (251206) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (251211) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:30", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;33mW (252228) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (252229) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (252229) mqtt_client: Other event id:7[0m
+[0;32mI (252262) mqtt_client: 🎉 MQTT连接成功！师生通信链路已建立[0m
+[0;32mI (252262) mqtt_client: ⏰ 连接时间: 251098毫秒[0m
+[0;32mI (252264) mqtt_client: 📥 已订阅老师消息主题: xj1cloud/teacher/message, msg_id=42332[0m
+[0;32mI (252273) mqtt_client: 📥 已订阅默认主题: xj1core/data/receive, msg_id=15088[0m
+[0;32mI (252281) mqtt_client: Published message to topic xj1core/status, msg_id=0[0m
+[0;32mI (252288) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=42332[0m
+[0;32mI (252293) mqtt_client: MQTT_EVENT_SUBSCRIBED, msg_id=15088[0m
+[0;32mI (254220) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第50次)[0m
+[0;32mI (254223) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (254225) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (254229) mqtt_client: 💕 第50次思念消息已发送[0m
+[0;32mI (254237) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (254913) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (254913) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (254913) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (254923) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (254928) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:34", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (256213) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (256213) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (256214) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (256223) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (256228) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:35", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (259242) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第51次)[0m
+[0;32mI (259245) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (259247) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (259251) mqtt_client: 💕 第51次思念消息已发送[0m
+[0;32mI (259259) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (259900) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (259901) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (259901) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (259911) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (259916) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:39", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (261233) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (261233) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (261233) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:41", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (261243) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (261248) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:41", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (264264) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第52次)[0m
+[0;32mI (264266) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (264269) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (264273) mqtt_client: 💕 第52次思念消息已发送[0m
+[0;32mI (264281) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (264919) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (264920) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (264920) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (264930) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (264935) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:44", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (266147) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (266147) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (266147) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:46", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (266157) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (266162) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:46", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (269286) mqtt_client: 💌 向老师发送消息: 唐老师：学生想你 (第53次)[0m
+[0;32mI (269289) mqtt_client: Published message to topic xj1core/student/message, msg_id=0[0m
+[0;32mI (269291) mqtt_client: ✅ 学生消息发送成功[0m
+[0;32mI (269295) mqtt_client: 💕 第53次思念消息已发送[0m
+[0;32mI (269303) mqtt_client: Published message to topic xj1core/heartbeat, msg_id=0[0m
+[0;32mI (269934) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (269934) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (269934) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (269944) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (269949) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:49", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (271165) mqtt_client: 📨 收到MQTT消息[0m
+[0;32mI (271166) mqtt_client: 📍 主题: xj1cloud/teacher/message[0m
+[0;32mI (271166) mqtt_client: 💬 内容: {"timestamp": "2025-09-28 22:13:51", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m
+[0;32mI (271176) mqtt_client: 💖 收到老师的消息！[0m
+[0;32mI (271181) mqtt_client: 🎓 老师说: {"timestamp": "2025-09-28 22:13:51", "message": "唐老师：您好吗？", "source": "xj1cloud"}[0m

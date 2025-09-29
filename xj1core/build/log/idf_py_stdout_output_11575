@@ -1,0 +1,3118 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2025 21:44:45[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v0.2[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00600000[0m
+[0;32mI (79) boot:  3 spiffs           Unknown data     01 82 00610000 00400000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (89) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=339d4h (211412) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=000439fc vaddr=3fc9ad00 size=0568ch ( 22156) load[0m
+[0;32mI (138) esp_image: segment 2: paddr=00049090 vaddr=40374000 size=06f88h ( 28552) load[0m
+[0;32mI (145) esp_image: segment 3: paddr=00050020 vaddr=42000020 size=b97f8h (759800) map[0m
+[0;32mI (279) esp_image: segment 4: paddr=00109820 vaddr=4037af88 size=0fd58h ( 64856) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=00119580 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (303) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (303) boot: Disabling RNG early entropy source...[0m
+[0;32mI (313) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (313) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (313) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (315) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (319) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (324) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (328) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (333) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (338) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (342) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (347) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (352) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (355) esp_psram: Speed: 40MHz[0m
+[0;32mI (358) cpu_start: Multicore app[0m
+[0;32mI (1092) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1101) cpu_start: Pro cpu start user code[0m
+[0;32mI (1101) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (1101) app_init: Application information:[0m
+[0;32mI (1101) app_init: Project name:     xj1core[0m
+[0;32mI (1105) app_init: App version:      1[0m
+[0;32mI (1109) app_init: Compile time:     Sep 28 2025 21:44:56[0m
+[0;32mI (1114) app_init: ELF file SHA256:  7ff2bb1a9...[0m
+[0;32mI (1118) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (1123) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1127) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1131) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1135) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1142) heap_init: At 3FCA4D60 len 000449B0 (274 KiB): RAM[0m
+[0;32mI (1147) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1152) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1157) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (1163) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1170) spi_flash: detected chip: boya[0m
+[0;32mI (1173) spi_flash: flash io: dio[0m
+[0;32mI (1176) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1182) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1189) coexist: coex firmware version: e727207[0m
+[0;32mI (1213) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1214) main_task: Started on CPU0[0m
+[0;32mI (1215) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1218) main_task: Calling app_main()[0m
+[0;32mI (1221) main: XJ1Core System Starting...[0m
+[0;32mI (1225) main: =================================[0m
+[0;32mI (1229) main: Device: ESP32-S3-WROOM-1-N16R8[0m
+[0;32mI (1233) main: Firmware: XJ1Core v1.0.0[0m
+[0;32mI (1237) main: =================================[0m
+[0;32mI (1241) main: Initializing NVS...[0m
+[0;32mI (1267) main: NVS initialized successfully[0m
+[0;32mI (1268) main: Initializing network interface...[0m
+[0;32mI (1269) main: Network interface initialized[0m
+[0;32mI (1269) main: Initializing configuration manager...[0m
+[0;32mI (1507) ini_parser: INI config created successfully[0m
+[0;32mI (1507) config_manager: Attempting to load config from: /spiffs/config.ini[0m
+[0;32mI (1509) ini_parser: Loaded 23 items from /spiffs/config.ini[0m
+[0;32mI (1513) config_manager: Config file loaded successfully from SPIFFS[0m
+[0;32mI (1519) config_manager: Loaded MQTT config - broker_host: '192.168.1.40', broker_port: 1883[0m
+[0;32mI (1527) config_manager: Loaded auth config - Username: 'admin', Password hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1540) config_manager: Configuration manager initialized successfully[0m
+[0;32mI (1546) main: Configuration manager initialized[0m
+[0;32mI (1550) main: Initializing authentication module...[0m
+[0;32mI (1556) auth: SHA-256 test - Input: '123456', Hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1566) auth: Expected hash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'[0m
+[0;32mI (1574) auth: SHA-256 calculation is CORRECT[0m
+[0;32mI (1578) auth: Authentication module initialized[0m
+[0;32mI (1582) main: Authentication module initialized[0m
+[0;32mI (1587) main: Initializing WiFi manager...[0m
+[0;32mI (1592) pp: pp rom version: e7ae62f[0m
+[0;32mI (1594) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (1600) wifi:wifi driver task: 3fcbe314, prio:23, stack:6656, core=0[0m
+[0;32mI (1619) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (1619) wifi:wifi certification version: v7.0[0m
+[0;32mI (1619) wifi:config NVS flash: enabled[0m
+[0;32mI (1620) wifi:config nano formatting: disabled[0m
+[0;32mI (1624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1629) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1633) wifi:Init management short buffer num: 32[0m
+[0;32mI (1638) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1642) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1646) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1650) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1659) wifi_init: rx ba win: 6[0m
+[0;32mI (1661) wifi_init: accept mbox: 6[0m
+[0;32mI (1664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1667) wifi_init: udp mbox: 6[0m
+[0;32mI (1670) wifi_init: tcp mbox: 6[0m
+[0;32mI (1673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1676) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1679) wifi_init: tcp mss: 1440[0m
+[0;32mI (1682) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1686) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1691) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (1732) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1803) wifi:mode : sta (98:a3:16:eb:6b:18) + softAP (98:a3:16:eb:6b:19)[0m
+[0;32mI (1803) wifi:enable tsf[0m
+[0;32mI (1807) wifi:Total power save buffer number: 16[0m
+[0;32mI (1807) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1810) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1815) wifi_manager: WiFi manager initialized successfully[0m
+[0;32mI (1815) wifi_manager: WiFi STA started[0m
+[0;32mI (1823) main: WiFi manager initialized[0m
+[0;32mI (1824) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1834) wifi_manager: WiFi AP started[0m
+[0;32mI (1838) main: Starting WiFi AP...[0m
+[0;32mI (1848) wifi:Total power save buffer number: 16[0m
+[0;32mI (1850) wifi_manager: WiFi AP stopped[0m
+[0;32mI (1851) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1857) wifi_manager: WiFi AP started[0m
+[0;32mI (1861) wifi_manager: WiFi AP started - SSID: Sparkriver-AP-01, IP: 192.168.5.1[0m
+[0;32mI (1867) main: WiFi AP started successfully[0m
+[0;32mI (1871) main: Attempting to connect WiFi STA...[0m
+[0;32mI (1875) main: Connecting to WiFi STA: fengqi-2G[0m
+[0;33mW (1880) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1891) wifi_manager: Connecting to WiFi SSID: fengqi-2G[0m
+[0;32mI (1894) main: WiFi STA connection initiated[0m
+[0;32mI (1898) main: Initializing ethernet manager...[0m
+[0;33mW (1902) ethernet_manager: Ethernet manager initialized (no physical ethernet on ESP32-S3-WROOM-1)[0m
+[0;32mI (1911) ethernet_manager: 以太网功能需要外接以太网模块才能使用[0m
+[0;32mI (1918) main: Ethernet manager initialized[0m
+[0;33mW (1922) main: 注意：ESP32-S3-WROOM-1没有内置以太网，需要外接模块[0m
+[0;33mW (1929) ethernet_manager: Ethernet start requested (no physical ethernet available)[0m
+[0;32mI (1936) main: Initializing bluetooth manager...[0m
+[0;32mI (1941) bluetooth_manager: Bluetooth manager initialized (simplified implementation)[0m
+[0;33mW (1948) bluetooth_manager: Full Bluetooth functionality will be implemented in future updates[0m
+[0;32mI (1957) main: Bluetooth manager initialized[0m
+[0;32mI (1961) bluetooth_manager: Bluetooth service marked as enabled[0m
+[0;33mW (1966) bluetooth_manager: Full BLE advertising features will be implemented in future updates[0m
+[0;32mI (1975) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1982) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1986) main: 等待网络连接建立...[0m
+[0;32mI (2054) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2102) wifi:state: assoc -> init (0x9c0)[0m
+[0;32mI (2105) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (2106) wifi_manager: ❌ WiFi连接断开 SSID:fengqi-2G, 原因:203[0m
+[0;33mW (2108) wifi_manager: WiFi断开，原因代码: 203[0m
+[0;32mI (2113) wifi_manager: 将自动尝试重新连接...[0m
+[0;32mI (4989) main: Initializing MQTT client...[0m
+[0;32mI (4989) mqtt_client: MQTT topics loaded from config:[0m
+[0;32mI (4989) mqtt_client:   Student->Teacher: xj1core/student/message[0m
+[0;32mI (4992) mqtt_client:   Teacher->Student: xj1cloud/teacher/message[0m
+[0;32mI (4998) mqtt_client:   Heartbeat: xj1core/heartbeat[0m
+[0;32mI (5003) mqtt_client:   Status: xj1core/status[0m
+[0;32mI (5007) mqtt_client: 🔧 MQTT配置验证通过:[0m
+[0;32mI (5011) mqtt_client:   服务器: 192.168.1.40:1883[0m
+[0;32mI (5016) mqtt_client:   客户端ID: xj1core-student-01[0m
+[0;32mI (5021) mqtt_client:   保活时间: 60秒[0m
+[0;32mI (5025) mqtt_client: 🆔 使用唯一客户端ID: xj1core-student-01-eb6b18[0m
+[0;32mI (5032) mqtt_client: 🔗 MQTT URI: mqtt://192.168.1.40:1883[0m
+[0;32mI (5037) mqtt_client: ⏱️  保活时间: 60秒[0m
+[0;32mI (5042) mqtt_client: MQTT client initialized successfully[0m
+[0;32mI (5047) mqtt_client: Broker: 192.168.1.40:1883, Client ID: xj1core-student-01[0m
+[0;32mI (5054) mqtt_client: 💡 MQTT服务器配置为: 192.168.1.40，请确保该地址可访问[0m
+[0;32mI (5062) mqtt_client: 💡 提示：如果WiFi STA未连接，可能无法访问外部网络服务器[0m
+[0;32mI (5071) main: MQTT client initialized[0m
+[0;33mW (5075) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (5080) main: WiFi STA未连接，MQTT可能无法连接到外部服务器[0m
+[0;32mI (5086) main: 如果MQTT服务器在AP网络内(192.168.5.x)，仍可尝试连接[0m
+[0;33mW (5094) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (5098) mqtt_client: ⚠️  WiFi STA未连接，检查AP模式网络...[0m
+[0;32mI (5105) mqtt_client: 💡 即使STA未连接，AP模式仍可能提供网络访问[0m
+[0;32mI (5112) mqtt_client: 🔧 即将连接MQTT服务器: 192.168.1.40:1883[0m
+[0;32mI (5119) mqtt_client: ⏳ 等待网络稳定...[0m
+[0;32mI (7123) mqtt_client: Other event id:7[0m
+[0;32mI (7126) mqtt_client: MQTT client started, waiting for connection...[0m
+[0;32mI (7126) main: MQTT client started successfully[0m
+[0;32mI (7126) mqtt_client: 🔍 MQTT连接监控任务启动[0m
+[0;32mI (7127) mqtt_client: 🚀 MQTT连接监控任务已启动[0m
+[0;32mI (7136) main: 🔍 MQTT连接监控任务已启动[0m
+[0;32mI (7141) main: 💖 启动师生通信功能...[0m
+[0;32mI (7145) mqtt_client: 💖 学生思念心跳任务启动[0m
+[0;32mI (7150) mqtt_client: 🎓 将每5秒向老师发送思念消息...[0m
+[0;32mI (7156) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (7160) mqtt_client: 🚀 学生思念心跳任务已启动[0m
+[0;32mI (7165) main: 🎓 学生思念心跳任务已启动，每5秒向老师发送思念[0m
+[0;32mI (7173) main: Initializing web server...[0m
+[0;32mI (7176) web_server: Web server initialized[0m
+[0;32mI (7180) main: Web server initialized[0m
+[0;32mI (7184) main: Starting web server...[0m
+[0;33mW (7190) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;33mW (7195) httpd_uri: httpd_register_uri_handler: no slots left for registering handler[0m
+[0;32mI (7202) web_server: Web server started on port 80[0m
+[0;32mI (7207) main: Web server started on port 80[0m
+[0;32mI (7211) main: =================================[0m
+[0;32mI (7215) main: XJ1Core System Started Successfully![0m
+[0;32mI (7220) main: Access web interface at: http://192.168.5.1[0m
+[0;32mI (7225) main: Default login: admin / 123456[0m
+[0;32mI (7229) main: =================================[0m
+[0;33mW (7233) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (7238) main: 等待WiFi系统稳定...[0m
+[0;32mI (8160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (9160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (10160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (10242) main: WiFi扫描功能已禁用，只在Web界面手动触发时才执行[0m
+[0;32mI (10242) main: System running... Free heap: 8547244 bytes[0m
+[0;32mI (11160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (12160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (12238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (13160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (14160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (15160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (16160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (17160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (17238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (18160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (19160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (20160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (21160) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (22127) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (22128) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (22128) mqtt_client: Error transport connect[0m
+[1;31mE (22130) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (22134) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (22138) mqtt_client: 错误代码: 0[0m
+[1;31mE (22142) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (22148) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (22152) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (22160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (22238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (23160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (24160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (25160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (26160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (27160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (27238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (28160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (29160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (30160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (31160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (32157) mqtt_client: Other event id:7[0m
+[0;32mI (32160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (32238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (33160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (34160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (35160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (36160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (37131) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 4[0m
+[0;33mW (37131) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (37132) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (37137) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (37145) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (37160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (37238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (38160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (39160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (40160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (40243) main: System running... Free heap: 8547108 bytes[0m
+[0;32mI (41160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (42160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (42238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (43160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (44160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (45160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (46160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (47160) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (47161) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (47161) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (47162) mqtt_client: Error transport connect[0m
+[1;31mE (47167) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (47170) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (47175) mqtt_client: 错误代码: 0[0m
+[1;31mE (47178) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (47185) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (47189) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;33mW (47238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (48160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (49160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (50160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (51160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (52160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (52238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (53160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (54160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (55160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (56160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (57160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (57193) mqtt_client: Other event id:7[0m
+[0;33mW (57238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (58160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (59160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (60160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (61160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (62160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (62238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (63160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (64160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (65160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (66160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (67160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (67238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (68160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (69160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (70160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (70243) main: System running... Free heap: 8547108 bytes[0m
+[0;32mI (71160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (72160) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (72197) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (72198) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (72198) mqtt_client: Error transport connect[0m
+[1;31mE (72200) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (72204) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (72208) mqtt_client: 错误代码: 0[0m
+[1;31mE (72211) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (72218) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (72222) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;33mW (72238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (73160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (74160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (75160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (76160) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (77154) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 8[0m
+[0;33mW (77154) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (77155) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (77160) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (77161) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (77172) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;33mW (77238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (78164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (79164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (80164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (81164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (82164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (82226) mqtt_client: Other event id:7[0m
+[0;33mW (82238) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (82238) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (83164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (84164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (85164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (86164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (87164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (87239) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (88164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (89164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (90164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (91164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (92164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (92239) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (93164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (94164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (95164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (96164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (97164) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (97230) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (97231) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (97231) mqtt_client: Error transport connect[0m
+[1;31mE (97233) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (97237) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (97241) mqtt_client: 错误代码: 0[0m
+[1;31mE (97244) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (97251) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (97255) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;33mW (97239) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (98164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (99164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (100164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (100243) main: System running... Free heap: 8547748 bytes[0m
+[0;32mI (101164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (102164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (102265) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (103164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (104164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (105164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (106164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (107164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (107181) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 11[0m
+[0;33mW (107181) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (107181) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (107187) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (107195) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (107260) mqtt_client: Other event id:7[0m
+[0;33mW (107265) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (108164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (109164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (110164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (111164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (112164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (112265) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (113164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (114164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (115164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (116164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (117164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (117265) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (118164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (119164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (120164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (121164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (122106) wifi_manager: Lost IP address[0m
+[0;32mI (122164) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (122264) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (122265) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (122265) mqtt_client: Error transport connect[0m
+[0;33mW (122265) wifi:Haven't to connect to a suitable AP now!E (122267) mqtt_client: ❌ MQTT连接错误[0m
+
+[1;31mE (122276) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (122280) mqtt_client: 错误代码: 0[0m
+[1;31mE (122284) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (122291) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (122294) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (123164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (124164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (125164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (126164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (127164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (127277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (128164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (129164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (130164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (130243) main: System running... Free heap: 8547888 bytes[0m
+[0;32mI (131164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (132164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (132277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (132299) mqtt_client: Other event id:7[0m
+[0;32mI (133164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (134164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (135164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (136164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (137164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (137277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (138164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (139164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (140164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (141164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (142164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (142277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (143164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (144164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (145164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (146164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (147164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (147205) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 15[0m
+[0;33mW (147205) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (147205) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (147211) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (147219) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;33mW (147277) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (147303) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (147304) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (147304) mqtt_client: Error transport connect[0m
+[1;31mE (147306) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (147310) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (147315) mqtt_client: 错误代码: 0[0m
+[1;31mE (147318) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (147325) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (147329) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (148164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (149164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (150164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (151164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (152164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (152277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (153164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (154164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (155164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (156164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (157164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (157277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (157333) mqtt_client: Other event id:7[0m
+[0;32mI (158164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (159164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (160164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (160243) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (161164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (162164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (162277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (163164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (164164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (165164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (166164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (167164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (167277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (168164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (169164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (170164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (171164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (172164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (172277) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (172277) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[1;31mE (172337) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (172337) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (172338) mqtt_client: Error transport connect[0m
+[1;31mE (172340) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (172344) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (172348) mqtt_client: 错误代码: 0[0m
+[1;31mE (172352) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (172358) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (172362) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (173164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (174164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (175164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (176164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (177164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (177278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (178164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (179164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (180164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (181164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (182164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (182278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (182367) mqtt_client: Other event id:7[0m
+[0;32mI (183164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (184164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (185164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (186164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (187164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (187229) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 19[0m
+[0;33mW (187229) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (187229) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (187235) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (187243) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;33mW (187278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (188164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (189164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (190164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (190243) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (191164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (192164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (192278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (193164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (194164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (195164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (196164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (197164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (197278) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (197371) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (197372) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (197372) mqtt_client: Error transport connect[0m
+[1;31mE (197374) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (197378) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (197383) mqtt_client: 错误代码: 0[0m
+[1;31mE (197386) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (197393) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (197397) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (198164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (199164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (200164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (201164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (202164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (202278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (203164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (204164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (205164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (206164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (207164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (207278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (207401) mqtt_client: Other event id:7[0m
+[0;32mI (208164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (209164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (210164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (211164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (212164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (212278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (213164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (214164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (215164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (216164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (217164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (217278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (218164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (219164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (220164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (220243) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (221164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (222164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (222278) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (222405) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (222406) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (222406) mqtt_client: Error transport connect[0m
+[1;31mE (222408) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (222412) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (222417) mqtt_client: 错误代码: 0[0m
+[1;31mE (222420) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (222427) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (222431) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (223164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (224164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (225164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (226164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (227164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (227253) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 23[0m
+[0;33mW (227253) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (227253) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (227259) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (227267) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;33mW (227278) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (228164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (229164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (230164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (231164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (232164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (232282) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (232435) mqtt_client: Other event id:7[0m
+[0;32mI (233164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (234164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (235164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (236164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (237164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (237282) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (238164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (239164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (240164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (241164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (242164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (242282) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (243164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (244164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (245164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (246164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (247164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (247282) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (247439) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (247440) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (247440) mqtt_client: Error transport connect[0m
+[1;31mE (247442) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (247446) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (247451) mqtt_client: 错误代码: 0[0m
+[1;31mE (247454) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (247461) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (247465) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (248164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (249164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (250164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (250243) main: System running... Free heap: 8547768 bytes[0m
+[0;32mI (251164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (252164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (252282) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (253164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (254164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (255164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (256164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (257164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (257282) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (257469) mqtt_client: Other event id:7[0m
+[0;32mI (258164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (259164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (260164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (261164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (262164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (262282) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (262282) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (263164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (264164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (265164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (266164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (267164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (267277) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 27[0m
+[0;33mW (267277) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (267277) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;33mW (267283) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (267284) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (267297) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (268164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (269164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (270164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (271164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (272164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (272289) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (272473) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (272474) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (272474) mqtt_client: Error transport connect[0m
+[1;31mE (272476) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (272480) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (272485) mqtt_client: 错误代码: 0[0m
+[1;31mE (272488) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (272495) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (272499) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (273164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (274164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (275164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (276164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (277164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (277289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (278164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (279164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (280164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (280243) main: System running... Free heap: 8547884 bytes[0m
+[0;32mI (280243) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (281164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (282164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (282289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (282503) mqtt_client: Other event id:7[0m
+[0;32mI (283164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (284164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (285164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (286164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (287164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (287289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (288164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (289164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (290164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (291164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (292164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (292289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (293164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (294164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (295164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (296164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (297164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (297289) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (297507) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (297508) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (297508) mqtt_client: Error transport connect[0m
+[1;31mE (297510) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (297514) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (297519) mqtt_client: 错误代码: 0[0m
+[1;31mE (297522) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (297529) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (297533) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (298164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (299164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (300164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (301164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (302164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (302289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (303164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (304164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (305164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (306164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (307164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (307289) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (307306) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 31[0m
+[0;33mW (307306) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (307306) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (307312) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (307320) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (307537) mqtt_client: Other event id:7[0m
+[0;32mI (308164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (309164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (310164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (310245) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (311164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (312164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (312289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (313164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (314164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (315164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (316164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (317164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (317289) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (318164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (319164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (320164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (321164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (322164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (322290) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (322541) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (322542) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (322542) mqtt_client: Error transport connect[0m
+[1;31mE (322544) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (322548) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (322553) mqtt_client: 错误代码: 0[0m
+[1;31mE (322556) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (322563) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (322567) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (323164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (324164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (325164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (326164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (327164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (327290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (328164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (329164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (330164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (331164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (332164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (332290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (332571) mqtt_client: Other event id:7[0m
+[0;32mI (333164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (334164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (335164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (336164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (337164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (337290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (338164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (339164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (340164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (340245) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (341164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (342164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (342290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (343164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (344164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (345164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (346164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (347164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (347290) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (347330) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 35[0m
+[0;33mW (347330) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (347330) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;33mW (347336) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (347343) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (347352) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[1;31mE (347575) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (347576) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (347576) mqtt_client: Error transport connect[0m
+[1;31mE (347578) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (347582) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (347587) mqtt_client: 错误代码: 0[0m
+[1;31mE (347590) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (347597) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (347601) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (348164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (349164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (350164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (351164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (352164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (352290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (353164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (354164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (355164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (356164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (357164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (357290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (357605) mqtt_client: Other event id:7[0m
+[0;32mI (358164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (359164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (360164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (361164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (362164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (362290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (363164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (364164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (365164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (366164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (367164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (367290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (368164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (369164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (370164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (370245) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (371164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (372164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (372290) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (372609) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (372610) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (372610) mqtt_client: Error transport connect[0m
+[1;31mE (372612) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (372616) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (372621) mqtt_client: 错误代码: 0[0m
+[1;31mE (372624) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (372631) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (372635) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (373164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (374164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (375164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (376164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (377164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (377290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (378164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (379164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (380164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (381164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (382164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (382290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (382639) mqtt_client: Other event id:7[0m
+[0;32mI (383164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (384164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (385164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (386164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (387164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (387290) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (387361) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 39[0m
+[0;33mW (387361) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (387361) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (387367) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (387375) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (388164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (389164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (390164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (391164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (392164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (392290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (393164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (394164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (395164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (396164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (397164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (397290) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (397643) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (397644) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (397644) mqtt_client: Error transport connect[0m
+[1;31mE (397646) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (397650) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (397655) mqtt_client: 错误代码: 0[0m
+[1;31mE (397658) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (397665) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (397669) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (398164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (399164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (400164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (400245) main: System running... Free heap: 8547772 bytes[0m
+[0;32mI (401164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (402164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (402290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (403164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (404164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (405164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (406164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (407164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (407290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (407673) mqtt_client: Other event id:7[0m
+[0;32mI (408164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (409164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (410164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (411164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (412164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (412290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (413164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (414164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (415164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (416164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (417164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (417290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (418164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (419164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (420164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (421164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (422164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (422290) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (422677) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (422678) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (422678) mqtt_client: Error transport connect[0m
+[1;31mE (422680) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (422684) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (422689) mqtt_client: 错误代码: 0[0m
+[1;31mE (422692) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (422699) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (422703) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (423164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (424164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (425164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (426164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (427164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (427290) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (427385) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 43[0m
+[0;33mW (427385) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (427385) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (427391) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (427400) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (428164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (429164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (430164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (430245) main: System running... Free heap: 8547888 bytes[0m
+[0;32mI (431164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (432164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (432290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (432707) mqtt_client: Other event id:7[0m
+[0;32mI (433164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (434164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (435164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (436164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (437164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (437290) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (437290) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (438164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (439164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (440164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (441164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (442164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (442291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (443164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (444164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (445164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (446164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (447164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (447291) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (447711) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (447712) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (447712) mqtt_client: Error transport connect[0m
+[1;31mE (447714) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (447718) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (447723) mqtt_client: 错误代码: 0[0m
+[1;31mE (447726) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (447733) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (447737) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (448164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (449164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (450164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (451164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (452164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (452291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (453164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (454164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (455164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (456164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (457164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (457291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (457741) mqtt_client: Other event id:7[0m
+[0;32mI (458164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (459164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (460164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (460245) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (461164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (462164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (462291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (463164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (464164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (465164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (466164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (467164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (467291) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (467409) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 47[0m
+[0;33mW (467409) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (467409) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (467415) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (467424) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (468164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (469164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (470164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (471164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (472164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (472291) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (472745) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (472746) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (472746) mqtt_client: Error transport connect[0m
+[1;31mE (472748) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (472752) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (472757) mqtt_client: 错误代码: 0[0m
+[1;31mE (472760) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (472767) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (472771) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (473164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (474164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (475164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (476164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (477164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (477291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (478164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (479164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (480164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (481164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (482164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (482291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (482775) mqtt_client: Other event id:7[0m
+[0;32mI (483164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (484164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (485164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (486164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (487164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (487291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (488164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (489164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (490164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (490245) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (491164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (492164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (492291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (493164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (494164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (495164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (496164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (497164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (497291) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (497779) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (497780) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (497780) mqtt_client: Error transport connect[0m
+[1;31mE (497782) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (497786) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (497791) mqtt_client: 错误代码: 0[0m
+[1;31mE (497794) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (497801) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (497805) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (498164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (499164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (500164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (501164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (502164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (502291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (503164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (504164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (505164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (506164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (507164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (507291) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (507433) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 51[0m
+[0;33mW (507433) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (507434) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (507439) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (507448) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (507809) mqtt_client: Other event id:7[0m
+[0;32mI (508164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (509164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (510164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (511164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (512164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (512291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (513164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (514164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (515164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (516164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (517164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (517291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (518164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (519164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (520164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (520245) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (521164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (522164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (522291) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (522813) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (522814) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (522814) mqtt_client: Error transport connect[0m
+[1;31mE (522816) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (522820) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (522825) mqtt_client: 错误代码: 0[0m
+[1;31mE (522828) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (522835) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (522839) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (523164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (524164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (525164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (526164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (527164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (527291) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (527291) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (528164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (529164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (530164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (531164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (532164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (532292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (532843) mqtt_client: Other event id:7[0m
+[0;32mI (533164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (534164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (535164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (536164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (537164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (537292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (538164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (539164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (540164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (541164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (542164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (542292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (543164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (544164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (545164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (546164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (547164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (547292) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (547457) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 55[0m
+[0;33mW (547457) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (547458) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (547463) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (547472) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[1;31mE (547847) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (547848) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (547848) mqtt_client: Error transport connect[0m
+[1;31mE (547850) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (547854) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (547859) mqtt_client: 错误代码: 0[0m
+[1;31mE (547862) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (547869) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (547873) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (548164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (549164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (550164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (550245) main: System running... Free heap: 8547768 bytes[0m
+[0;32mI (551164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (552164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (552292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (553164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (554164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (555164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (556164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (557164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (557292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (557877) mqtt_client: Other event id:7[0m
+[0;32mI (558164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (559164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (560164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (561164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (562164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (562292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (563164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (564164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (565164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (566164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (567164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (567292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (568164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (569164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (570164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (571164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (572164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (572292) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (572881) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (572882) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (572882) mqtt_client: Error transport connect[0m
+[1;31mE (572884) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (572888) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (572893) mqtt_client: 错误代码: 0[0m
+[1;31mE (572896) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (572903) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (572907) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (573164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (574164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (575164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (576164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (577164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (577292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (578164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (579164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (580164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (580245) main: System running... Free heap: 8547884 bytes[0m
+[0;32mI (580245) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (581164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (582164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (582292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (582911) mqtt_client: Other event id:7[0m
+[0;32mI (583164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (584164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (585164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (586164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (587164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (587292) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (587481) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 59[0m
+[0;33mW (587481) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (587482) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (587488) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (587496) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (588164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (589164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (590164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (591164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (592164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (592292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (593164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (594164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (595164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (596164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (597164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (597292) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (597915) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (597916) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (597916) mqtt_client: Error transport connect[0m
+[1;31mE (597918) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (597922) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (597927) mqtt_client: 错误代码: 0[0m
+[1;31mE (597930) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (597937) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (597941) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (598164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (599164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (600164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (601164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (602164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (602292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (603164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (604164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (605164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (606164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (607164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (607292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (607945) mqtt_client: Other event id:7[0m
+[0;32mI (608164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (609164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (610164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (610247) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (611164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (612164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (612292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (613164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (614164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (615164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (616164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (617164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (617292) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (617292) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (618164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (619164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (620164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (621164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (622164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (622293) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (622949) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (622950) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (622950) mqtt_client: Error transport connect[0m
+[1;31mE (622952) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (622956) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (622961) mqtt_client: 错误代码: 0[0m
+[1;31mE (622964) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (622971) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (622975) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (623164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (624164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (625164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (626164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (627164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (627293) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (627505) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 63[0m
+[0;33mW (627505) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (627506) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (627511) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (627520) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (628164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (629164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (630164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (631164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (632164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (632293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (632979) mqtt_client: Other event id:7[0m
+[0;32mI (633164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (634164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (635164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (636164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (637164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (637293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (638164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (639164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (640164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (640247) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (641164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (642164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (642293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (643164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (644164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (645164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (646164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (647164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (647293) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (647983) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (647984) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (647984) mqtt_client: Error transport connect[0m
+[1;31mE (647986) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (647990) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (647995) mqtt_client: 错误代码: 0[0m
+[1;31mE (647998) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (648005) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (648009) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (648164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (649164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (650164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (651164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (652164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (652293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (653164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (654164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (655164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (656164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (657164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (657293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (658013) mqtt_client: Other event id:7[0m
+[0;32mI (658164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (659164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (660164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (661164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (662164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (662293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (663164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (664164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (665164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (666164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (667164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (667293) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (667529) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 67[0m
+[0;33mW (667529) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (667530) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (667535) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (667544) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (668164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (669164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (670164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (670247) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (671164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (672164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (672293) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (673017) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (673018) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (673018) mqtt_client: Error transport connect[0m
+[1;31mE (673020) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (673024) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (673029) mqtt_client: 错误代码: 0[0m
+[1;31mE (673032) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (673039) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (673043) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (673164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (674164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (675164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (676164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (677164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (677293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (678164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (679164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (680164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (681164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (682164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (682293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (683047) mqtt_client: Other event id:7[0m
+[0;32mI (683164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (684164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (685164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (686164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (687164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (687293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (688164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (689164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (690164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (691164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (692164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (692293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (693164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (694164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (695164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (696164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (697164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (697293) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (698051) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (698052) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (698052) mqtt_client: Error transport connect[0m
+[1;31mE (698054) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (698058) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (698063) mqtt_client: 错误代码: 0[0m
+[1;31mE (698066) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (698073) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (698077) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (698164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (699164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (700164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (700247) main: System running... Free heap: 8547772 bytes[0m
+[0;32mI (701164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (702164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (702293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (703164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (704164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (705164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (706164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (707164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (707293) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (707293) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;33mW (707553) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 71[0m
+[0;33mW (707553) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (707553) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (707559) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (707568) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (708081) mqtt_client: Other event id:7[0m
+[0;32mI (708164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (709164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (710164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (711164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (712164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (712294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (713164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (714164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (715164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (716164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (717164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (717294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (718164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (719164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (720164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (721164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (722164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (722294) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (723085) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (723086) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (723086) mqtt_client: Error transport connect[0m
+[1;31mE (723088) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (723092) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (723097) mqtt_client: 错误代码: 0[0m
+[1;31mE (723100) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (723107) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (723111) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (723164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (724164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (725164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (726164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (727164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (727294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (728164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (729164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (730164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (730247) main: System running... Free heap: 8547888 bytes[0m
+[0;32mI (731164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (732164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (732294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (733115) mqtt_client: Other event id:7[0m
+[0;32mI (733164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (734164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (735164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (736164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (737164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (737294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (738164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (739164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (740164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (741164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (742164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (742294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (743164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (744164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (745164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (746164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (747164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (747294) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (747577) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 75[0m
+[0;33mW (747577) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (747578) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (747583) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (747592) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[1;31mE (748119) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (748120) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (748120) mqtt_client: Error transport connect[0m
+[1;31mE (748122) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (748126) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (748131) mqtt_client: 错误代码: 0[0m
+[1;31mE (748134) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (748141) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (748145) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (748164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (749164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (750164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (751164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (752164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (752294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (753164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (754164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (755164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (756164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (757164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (757294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (758149) mqtt_client: Other event id:7[0m
+[0;32mI (758164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (759164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (760164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (760247) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (761164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (762164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (762294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (763164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (764164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (765164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (766164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (767164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (767294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (768164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (769164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (770164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (771164) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (772164) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (772294) wifi:Haven't to connect to a suitable AP now![0m
+[1;31mE (773153) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (773154) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (773154) mqtt_client: Error transport connect[0m
+[1;31mE (773156) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (773160) mqtt_client: TCP传输错误: Success[0m
+[0;32mI (773164) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (773165) mqtt_client: 错误代码: 0[0m
+[1;31mE (773172) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (773179) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (773183) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (774168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (775168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (776168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (777168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (777294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (778168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (779168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (780168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (781168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (782168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (782294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (783168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (783187) mqtt_client: Other event id:7[0m
+[0;32mI (784168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (785168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (786168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (787168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (787294) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (787601) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 79[0m
+[0;33mW (787601) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (787602) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (787607) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (787616) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (788168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (789168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (790168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (790247) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (791168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (792168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (792294) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (792294) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (793168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (794168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (795168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (796168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (797168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (797295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (798168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (798191) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (798191) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (798192) mqtt_client: Error transport connect[0m
+[1;31mE (798194) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (798198) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (798202) mqtt_client: 错误代码: 0[0m
+[1;31mE (798206) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (798212) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (798216) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (799168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (800168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (801168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (802168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (802295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (803168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (804168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (805168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (806168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (807168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (807295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (808168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (808221) mqtt_client: Other event id:7[0m
+[0;32mI (809168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (810168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (811168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (812168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (812295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (813168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (814168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (815168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (816168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (817168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (817295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (818168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (819168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (820168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (820247) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (821168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (822168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (822295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (823168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (823225) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (823226) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (823226) mqtt_client: Error transport connect[0m
+[1;31mE (823228) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (823232) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (823236) mqtt_client: 错误代码: 0[0m
+[1;31mE (823240) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (823247) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (823250) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (824168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (825168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (826168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (827168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (827295) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (827625) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 83[0m
+[0;33mW (827625) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (827625) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (827631) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (827640) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (828168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (829168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (830168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (831168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (832168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (832295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (833168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (833255) mqtt_client: Other event id:7[0m
+[0;32mI (834168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (835168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (836168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (837168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (837295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (838168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (839168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (840168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (841168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (842168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (842295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (843168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (844168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (845168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (846168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (847168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (847295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (848168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (848259) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (848260) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (848260) mqtt_client: Error transport connect[0m
+[1;31mE (848262) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (848266) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (848270) mqtt_client: 错误代码: 0[0m
+[1;31mE (848274) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (848281) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (848284) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (849168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (850168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (850247) main: System running... Free heap: 8547768 bytes[0m
+[0;32mI (851168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (852168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (852295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (853168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (854168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (855168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (856168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (857168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (857295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (858168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (858289) mqtt_client: Other event id:7[0m
+[0;32mI (859168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (860168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (861168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (862168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (862295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (863168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (864168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (865168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (866168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (867168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (867295) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (867649) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 87[0m
+[0;33mW (867649) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (867650) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (867655) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (867664) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (868168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (869168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (870168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (871168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (872168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (872295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (873168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (873293) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (873294) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (873294) mqtt_client: Error transport connect[0m
+[1;31mE (873296) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (873300) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (873304) mqtt_client: 错误代码: 0[0m
+[1;31mE (873308) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (873315) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (873319) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (874168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (875168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (876168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (877168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (877295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (878168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (879168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (880168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (880247) main: System running... Free heap: 8547884 bytes[0m
+[0;32mI (880247) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (881168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (882168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (882295) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (882295) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (883168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (883323) mqtt_client: Other event id:7[0m
+[0;32mI (884168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (885168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (886168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (887168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (887296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (888168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (889168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (890168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (891168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (892168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (892296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (893168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (894168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (895168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (896168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (897168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (897296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (898168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (898327) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (898328) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (898328) mqtt_client: Error transport connect[0m
+[1;31mE (898330) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (898334) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (898339) mqtt_client: 错误代码: 0[0m
+[1;31mE (898342) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (898349) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (898353) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (899168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (900168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (901168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (902168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (902296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (903168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (904168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (905168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (906168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (907168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (907296) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (907673) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 91[0m
+[0;33mW (907673) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (907673) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (907679) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (907688) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (908168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (908357) mqtt_client: Other event id:7[0m
+[0;32mI (909168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (910168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (910249) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (911168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (912168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (912296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (913168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (914168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (915168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (916168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (917168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (917296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (918168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (919168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (920168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (921168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (922168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (922296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (923168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (923361) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (923362) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (923362) mqtt_client: Error transport connect[0m
+[1;31mE (923364) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (923368) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (923372) mqtt_client: 错误代码: 0[0m
+[1;31mE (923376) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (923383) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (923387) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (924168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (925168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (926168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (927168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (927296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (928168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (929168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (930168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (931168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (932168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (932296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (933168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (933391) mqtt_client: Other event id:7[0m
+[0;32mI (934168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (935168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (936168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (937168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (937296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (938168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (939168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (940168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (940249) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (941168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (942168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (942296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (943168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (944168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (945168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (946168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (947168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (947296) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (947697) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 95[0m
+[0;33mW (947697) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (947698) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (947703) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (947712) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (948168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (948395) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (948396) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (948396) mqtt_client: Error transport connect[0m
+[1;31mE (948398) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (948402) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (948407) mqtt_client: 错误代码: 0[0m
+[1;31mE (948410) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (948417) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (948421) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (949168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (950168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (951168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (952168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (952296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (953168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (954168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (955168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (956168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (957168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (957296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (958168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (958425) mqtt_client: Other event id:7[0m
+[0;32mI (959168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (960168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (961168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (962168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (962296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (963168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (964168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (965168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (966168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (967168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (967296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (968168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (969168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (970168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (970249) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (971168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (972168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (972296) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (972296) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (973168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (973429) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (973430) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (973430) mqtt_client: Error transport connect[0m
+[1;31mE (973432) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (973436) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (973441) mqtt_client: 错误代码: 0[0m
+[1;31mE (973444) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (973451) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (973455) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (974168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (975168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (976168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (977168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (977297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (978168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (979168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (980168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (981168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (982168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (982297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (983168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (983459) mqtt_client: Other event id:7[0m
+[0;32mI (984168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (985168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (986168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (987168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (987297) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (987721) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 99[0m
+[0;33mW (987721) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (987722) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (987727) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (987736) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (988168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (989168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (990168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (991168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (992168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (992297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (993168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (994168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (995168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (996168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (997168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (997297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (998168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (998463) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (998464) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (998464) mqtt_client: Error transport connect[0m
+[1;31mE (998466) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (998470) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (998475) mqtt_client: 错误代码: 0[0m
+[1;31mE (998478) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (998485) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (998489) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (999168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1000168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1000249) main: System running... Free heap: 8547772 bytes[0m
+[0;32mI (1001168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1002168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1002297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1003168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1004168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1005168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1006168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1007168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1007297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1008168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1008493) mqtt_client: Other event id:7[0m
+[0;32mI (1009168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1010168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1011168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1012168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1012297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1013168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1014168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1015168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1016168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1017168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1017297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1018168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1019168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1020168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1021168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1022168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1022297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1023168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1023497) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1023498) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1023498) mqtt_client: Error transport connect[0m
+[1;31mE (1023501) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1023505) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1023509) mqtt_client: 错误代码: 0[0m
+[1;31mE (1023513) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1023519) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1023523) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1024168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1025168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1026168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1027168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1027297) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1027745) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 103[0m
+[0;33mW (1027745) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1027746) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1027752) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1027760) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1028168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1029168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1030168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1030249) main: System running... Free heap: 8547888 bytes[0m
+[0;32mI (1031168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1032168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1032297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1033168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1033528) mqtt_client: Other event id:7[0m
+[0;32mI (1034168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1035168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1036168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1037168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1037297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1038168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1039168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1040168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1041168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1042168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1042297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1043168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1044168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1045168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1046168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1047168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1047297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1048168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1048532) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1048533) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1048533) mqtt_client: Error transport connect[0m
+[1;31mE (1048536) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1048540) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1048544) mqtt_client: 错误代码: 0[0m
+[1;31mE (1048548) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1048554) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1048558) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1049168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1050168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1051168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1052168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1052297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1053168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1054168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1055168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1056168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1057168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1057297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1058168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1058563) mqtt_client: Other event id:7[0m
+[0;32mI (1059168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1060168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1060249) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1061168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1062168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1062297) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1062297) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (1063168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1064168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1065168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1066168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1067168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1067298) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1067769) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 107[0m
+[0;33mW (1067769) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1067770) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1067776) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1067784) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1068168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1069168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1070168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1071168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1072168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1072298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1073168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1073567) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1073568) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1073568) mqtt_client: Error transport connect[0m
+[1;31mE (1073571) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1073575) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1073579) mqtt_client: 错误代码: 0[0m
+[1;31mE (1073583) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1073589) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1073593) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1074168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1075168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1076168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1077168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1077298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1078168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1079168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1080168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1081168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1082168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1082298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1083168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1083598) mqtt_client: Other event id:7[0m
+[0;32mI (1084168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1085168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1086168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1087168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1087298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1088168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1089168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1090168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1090249) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1091168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1092168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1092298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1093168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1094168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1095168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1096168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1097168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1097298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1098168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1098602) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1098603) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1098603) mqtt_client: Error transport connect[0m
+[1;31mE (1098606) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1098610) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1098614) mqtt_client: 错误代码: 0[0m
+[1;31mE (1098618) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1098624) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1098628) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1099168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1100168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1101168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1102168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1102298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1103168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1104168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1105168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1106168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1107168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1107298) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1107793) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 111[0m
+[0;33mW (1107793) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1107794) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1107800) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1107808) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1108168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1108633) mqtt_client: Other event id:7[0m
+[0;32mI (1109168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1110168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1111168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1112168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1112298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1113168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1114168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1115168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1116168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1117168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1117298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1118168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1119168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1120168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1120249) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1121168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1122168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1122298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1123168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1123637) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1123638) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1123638) mqtt_client: Error transport connect[0m
+[1;31mE (1123641) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1123645) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1123649) mqtt_client: 错误代码: 0[0m
+[1;31mE (1123653) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1123659) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1123663) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1124168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1125168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1126168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1127168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1127298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1128168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1129168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1130168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1131168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1132168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1132298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1133168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1133668) mqtt_client: Other event id:7[0m
+[0;32mI (1134168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1135168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1136168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1137168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1137298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1138168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1139168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1140168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1141168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1142168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1142298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1143168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1144168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1145168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1146168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1147168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1147298) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1147817) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 115[0m
+[0;33mW (1147817) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1147818) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;33mW (1147824) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1147831) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1147839) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1148168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1148672) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1148673) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1148673) mqtt_client: Error transport connect[0m
+[1;31mE (1148676) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1148680) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1148684) mqtt_client: 错误代码: 0[0m
+[1;31mE (1148688) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1148694) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1148698) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1149168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1150168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1150249) main: System running... Free heap: 8547768 bytes[0m
+[0;32mI (1151168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1152168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1152298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1153168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1154168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1155168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1156168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1157168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1157298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1158168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1158703) mqtt_client: Other event id:7[0m
+[0;32mI (1159168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1160168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1161168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1162168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1162298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1163168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1164168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1165168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1166168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1167168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1167298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1168168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1169168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1170168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1171168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1172168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1172298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1173168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1173707) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1173708) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1173708) mqtt_client: Error transport connect[0m
+[1;31mE (1173711) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1173715) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1173719) mqtt_client: 错误代码: 0[0m
+[1;31mE (1173723) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1173729) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1173733) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1174168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1175168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1176168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1177168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1177298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1178168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1179168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1180168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1180249) main: System running... Free heap: 8547884 bytes[0m
+[0;32mI (1180249) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (1181168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1182168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1182298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1183168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1183738) mqtt_client: Other event id:7[0m
+[0;32mI (1184168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1185168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1186168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1187168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1187298) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1187848) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 119[0m
+[0;33mW (1187848) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1187849) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1187855) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1187863) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1188168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1189168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1190168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1191168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1192168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1192298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1193168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1194168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1195168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1196168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1197168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1197298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1198168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1198742) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1198743) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1198743) mqtt_client: Error transport connect[0m
+[1;31mE (1198746) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1198750) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1198754) mqtt_client: 错误代码: 0[0m
+[1;31mE (1198758) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1198764) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1198768) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1199168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1200168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1201168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1202168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1202298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1203168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1204168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1205168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1206168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1207168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1207298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1208168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1208773) mqtt_client: Other event id:7[0m
+[0;32mI (1209168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1210168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1210251) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1211168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1212168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1212298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1213168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1214168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1215168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1216168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1217168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1217298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1218168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1219168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1220168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1221168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1222168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1222298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1223168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1223777) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1223778) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1223778) mqtt_client: Error transport connect[0m
+[1;31mE (1223781) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1223785) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1223789) mqtt_client: 错误代码: 0[0m
+[1;31mE (1223793) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1223800) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1223803) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1224168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1225168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1226168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1227168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1227298) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1227872) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 123[0m
+[0;33mW (1227872) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1227873) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1227879) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1227887) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1228168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1229168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1230168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1231168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1232168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1232298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1233168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1233808) mqtt_client: Other event id:7[0m
+[0;32mI (1234168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1235168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1236168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1237168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1237298) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1237298) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (1238168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1239168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1240168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1240251) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1241168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1242168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1242299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1243168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1244168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1245168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1246168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1247168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1247299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1248168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1248812) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1248813) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1248813) mqtt_client: Error transport connect[0m
+[1;31mE (1248816) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1248820) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1248824) mqtt_client: 错误代码: 0[0m
+[1;31mE (1248828) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1248834) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1248838) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1249168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1250168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1251168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1252168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1252299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1253168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1254168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1255168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1256168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1257168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1257299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1258168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1258843) mqtt_client: Other event id:7[0m
+[0;32mI (1259168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1260168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1261168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1262168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1262299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1263168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1264168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1265168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1266168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1267168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1267299) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1267896) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 127[0m
+[0;33mW (1267896) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1267897) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1267903) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1267911) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1268168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1269168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1270168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1270251) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1271168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1272168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1272299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1273168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1273847) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1273848) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1273848) mqtt_client: Error transport connect[0m
+[1;31mE (1273851) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1273855) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1273859) mqtt_client: 错误代码: 0[0m
+[1;31mE (1273863) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1273869) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1273873) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1274168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1275168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1276168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1277168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1277299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1278168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1279168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1280168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1281168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1282168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1282299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1283168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1283878) mqtt_client: Other event id:7[0m
+[0;32mI (1284168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1285168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1286168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1287168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1287299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1288168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1289168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1290168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1291168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1292168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1292299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1293168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1294168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1295168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1296168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1297168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1297299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1298168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1298882) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1298883) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1298883) mqtt_client: Error transport connect[0m
+[1;31mE (1298886) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1298890) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1298894) mqtt_client: 错误代码: 0[0m
+[1;31mE (1298898) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1298904) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1298908) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1299168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1300168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1300251) main: System running... Free heap: 8547772 bytes[0m
+[0;32mI (1301168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1302168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1302299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1303168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1304168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1305168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1306168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1307168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1307299) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1307920) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 131[0m
+[0;33mW (1307920) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1307921) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1307927) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1307935) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1308168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1308913) mqtt_client: Other event id:7[0m
+[0;32mI (1309168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1310168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1311168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1312168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1312299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1313168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1314168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1315168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1316168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1317168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1317299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1318168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1319168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1320168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1321168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1322168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1322299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1323168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1323917) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1323918) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1323918) mqtt_client: Error transport connect[0m
+[1;31mE (1323921) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1323925) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1323929) mqtt_client: 错误代码: 0[0m
+[1;31mE (1323933) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1323939) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1323943) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1324168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1325168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1326168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1327168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1327299) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1327299) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (1328168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1329168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1330168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1330251) main: System running... Free heap: 8547888 bytes[0m
+[0;32mI (1331168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1332168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1332300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1333168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1333948) mqtt_client: Other event id:7[0m
+[0;32mI (1334168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1335168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1336168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1337168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1337300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1338168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1339168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1340168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1341168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1342168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1342300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1343168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1344168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1345168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1346168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1347168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1347300) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1347944) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 135[0m
+[0;33mW (1347944) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1347945) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1347951) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1347959) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1348168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1348952) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1348953) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1348953) mqtt_client: Error transport connect[0m
+[1;31mE (1348956) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1348960) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1348964) mqtt_client: 错误代码: 0[0m
+[1;31mE (1348968) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1348974) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1348978) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1349168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1350168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1351168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1352168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1352300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1353168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1354168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1355168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1356168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1357168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1357300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1358168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1358983) mqtt_client: Other event id:7[0m
+[0;32mI (1359168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1360168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1360251) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1361168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1362168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1362300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1363168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1364168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1365168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1366168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1367168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1367300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1368168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1369168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1370168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1371168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1372168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1372300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1373168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1373987) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1373988) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1373988) mqtt_client: Error transport connect[0m
+[1;31mE (1373991) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1373995) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1373999) mqtt_client: 错误代码: 0[0m
+[1;31mE (1374003) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1374009) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1374013) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1374168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1375168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1376168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1377168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1377300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1378168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1379168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1380168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1381168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1382168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1382300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1383168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1384018) mqtt_client: Other event id:7[0m
+[0;32mI (1384168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1385168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1386168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1387168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1387300) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1387968) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 139[0m
+[0;33mW (1387968) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1387969) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1387975) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1387983) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1388168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1389168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1390168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1390251) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1391168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1392168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1392300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1393168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1394168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1395168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1396168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1397168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1397300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1398168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1399022) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1399023) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1399023) mqtt_client: Error transport connect[0m
+[1;31mE (1399026) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1399030) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1399034) mqtt_client: 错误代码: 0[0m
+[1;31mE (1399038) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1399044) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1399048) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1399168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1400168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1401168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1402168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1402300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1403168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1404168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1405168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1406168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1407168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1407300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1408168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1409053) mqtt_client: Other event id:7[0m
+[0;32mI (1409168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1410168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1411168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1412168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1412300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1413168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1414168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1415168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1416168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1417168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1417300) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1417300) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (1418168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1419168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1420168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1420251) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1421168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1422168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1422301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1423168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1424057) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1424058) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1424058) mqtt_client: Error transport connect[0m
+[1;31mE (1424061) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1424065) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1424069) mqtt_client: 错误代码: 0[0m
+[1;31mE (1424073) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1424079) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1424084) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1424168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1425168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1426168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1427168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1427301) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1427992) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 143[0m
+[0;33mW (1427992) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1427993) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1427999) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1428007) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1428168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1429168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1430168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1431168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1432168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1432301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1433168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1434088) mqtt_client: Other event id:7[0m
+[0;32mI (1434168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1435168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1436168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1437168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1437301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1438168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1439168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1440168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1441168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1442168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1442301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1443168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1444168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1445168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1446168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1447168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1447301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1448168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1449092) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1449093) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1449093) mqtt_client: Error transport connect[0m
+[1;31mE (1449096) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1449100) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1449104) mqtt_client: 错误代码: 0[0m
+[1;31mE (1449108) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1449114) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1449118) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1449168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1450168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1450251) main: System running... Free heap: 8547768 bytes[0m
+[0;32mI (1451168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1452168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1452301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1453168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1454168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1455168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1456168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1457168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1457301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1458168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1459123) mqtt_client: Other event id:7[0m
+[0;32mI (1459168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1460168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1461168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1462168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1462301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1463168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1464168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1465168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1466168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1467168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1467301) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1468016) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 147[0m
+[0;33mW (1468016) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1468017) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1468023) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1468031) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1468168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1469168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1470168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1471168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1472168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1472301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1473168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1474127) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1474128) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1474128) mqtt_client: Error transport connect[0m
+[1;31mE (1474131) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1474135) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1474139) mqtt_client: 错误代码: 0[0m
+[1;31mE (1474143) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1474149) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1474153) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1474168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1475168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1476168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1477168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1477301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1478168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1479168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1480168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1480251) main: System running... Free heap: 8547884 bytes[0m
+[0;32mI (1480251) main: 💡 提示：WiFi扫描已禁用，请通过Web界面手动触发扫描[0m
+[0;32mI (1481168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1482168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1482301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1483168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1484158) mqtt_client: Other event id:7[0m
+[0;32mI (1484168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1485168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1486168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1487168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1487301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1488168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1489168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1490168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1491168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1492168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1492301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1493168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1494168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1495168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1496168) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1497168) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1497301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1498168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1499162) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1499163) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1499163) mqtt_client: Error transport connect[0m
+[1;31mE (1499166) mqtt_client: ❌ MQTT连接错误[0m
+[0;32mI (1499168) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1499170) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1499178) mqtt_client: 错误代码: 0[0m
+[1;31mE (1499182) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1499188) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1499192) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1500174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1501174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1502174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1502301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1503174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1504174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1505174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1506174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1507174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1507301) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1507301) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;33mW (1508040) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 151[0m
+[0;33mW (1508040) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1508041) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1508047) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1508055) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1508174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1509174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1509197) mqtt_client: Other event id:7[0m
+[0;32mI (1510174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1510253) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1511174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1512174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1512302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1513174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1514174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1515174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1516174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1517174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1517302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1518174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1519174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1520174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1521174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1522174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1522302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1523174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1524174) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1524201) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1524201) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1524202) mqtt_client: Error transport connect[0m
+[1;31mE (1524204) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1524208) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1524213) mqtt_client: 错误代码: 0[0m
+[1;31mE (1524216) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1524223) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1524227) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1525174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1526174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1527174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1527302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1528174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1529174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1530174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1531174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1532174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1532302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1533174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1534174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1534232) mqtt_client: Other event id:7[0m
+[0;32mI (1535174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1536174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1537174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1537302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1538174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1539174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1540174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1540253) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1541174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1542174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1542302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1543174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1544174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1545174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1546174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1547174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1547302) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1548064) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 155[0m
+[0;33mW (1548064) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1548065) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1548071) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1548079) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1548174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1549174) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1549236) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1549237) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1549237) mqtt_client: Error transport connect[0m
+[1;31mE (1549239) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1549243) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1549248) mqtt_client: 错误代码: 0[0m
+[1;31mE (1549251) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1549258) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1549262) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1550174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1551174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1552174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1552302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1553174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1554174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1555174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1556174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1557174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1557302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1558174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1559174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1559267) mqtt_client: Other event id:7[0m
+[0;32mI (1560174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1561174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1562174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1562302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1563174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1564174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1565174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1566174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1567174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1567302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1568174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1569174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1570174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1570253) main: System running... Free heap: 8547116 bytes[0m
+[0;32mI (1571174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1572174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1572302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1573174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1574174) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1574271) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1574272) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1574272) mqtt_client: Error transport connect[0m
+[1;31mE (1574274) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1574278) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1574283) mqtt_client: 错误代码: 0[0m
+[1;31mE (1574286) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1574293) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1574297) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1575174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1576174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1577174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1577302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1578174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1579174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1580174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1581174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1582174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1582302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1583174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1584174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1584302) mqtt_client: Other event id:7[0m
+[0;32mI (1585174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1586174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1587174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1587302) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1588088) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 159[0m
+[0;33mW (1588088) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1588089) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1588095) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1588103) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1588174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1589174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1590174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1591174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1592174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1592302) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1592302) wifi_manager: WiFi状态查询: AP=ON, STA=DISCONNECTED, IP=, RSSI=0[0m
+[0;32mI (1593174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1594174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1595174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1596174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1597174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1597303) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1598174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1599174) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1599306) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1599307) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1599307) mqtt_client: Error transport connect[0m
+[1;31mE (1599310) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1599314) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1599318) mqtt_client: 错误代码: 0[0m
+[1;31mE (1599322) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1599328) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1599332) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1600174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1600253) main: System running... Free heap: 8547772 bytes[0m
+[0;32mI (1601174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1602174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1602304) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1603174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1604174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1605174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1606174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1607174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1607304) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1608174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1609174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1609337) mqtt_client: Other event id:7[0m
+[0;32mI (1610174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1611174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1612174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1612304) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1613174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1614174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1615174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1616174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1617174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1617304) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1618174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1619174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1620174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1621174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1622174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1622304) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1623174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1624174) mqtt_client: 等待MQTT连接...[0m
+[1;31mE (1624341) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1624342) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1624342) mqtt_client: Error transport connect[0m
+[1;31mE (1624344) mqtt_client: ❌ MQTT连接错误[0m
+[1;31mE (1624348) mqtt_client: TCP传输错误: Success[0m
+[1;31mE (1624353) mqtt_client: 错误代码: 0[0m
+[1;31mE (1624357) mqtt_client: 请检查MQTT服务器地址和端口是否正确[0m
+[0;33mW (1624363) mqtt_client: ❌ MQTT连接断开[0m
+[0;32mI (1624367) mqtt_client: 将由ESP-IDF自动重连...[0m
+[0;32mI (1625174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1626174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1627174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1627304) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1628112) mqtt_client: 🔄 MQTT连接监控 - 尝试次数: 163[0m
+[0;33mW (1628112) wifi:Haven't to connect to a suitable AP now![0m
+[0;33mW (1628113) mqtt_client: ⚠️  WiFi STA未连接，这可能影响MQTT连接[0m
+[0;32mI (1628119) mqtt_client: 💡 ESP32可能只能通过AP模式(192.168.5.x)访问MQTT服务器[0m
+[0;32mI (1628127) mqtt_client: 🔧 MQTT配置 - 服务器: 192.168.1.40:1883, 客户端ID: xj1core-student-01[0m
+[0;32mI (1628174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1628633) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1628634) wifi:station: a0:47:d7:a0:5a:9e join, AID=1, bgn, 20[0m
+[0;32mI (1628650) wifi_manager: Station a0:47:d7:a0:5a:9e joined, AID=1[0m
+[0;32mI (1628669) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.5.2[0m
+[0;32mI (1628689) wifi:<ba-add>idx:2 (ifx:1, a0:47:d7:a0:5a:9e), tid:7, ssn:3, winSize:64[0m
+[0;32mI (1628693) wifi:<ba-add>idx:3 (ifx:1, a0:47:d7:a0:5a:9e), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1629174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1630174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1630253) main: System running... Free heap: 8545424 bytes[0m
+[0;32mI (1631174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1632174) mqtt_client: 等待MQTT连接...[0m
+[0;33mW (1632304) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1633174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1634174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1634372) mqtt_client: Other event id:7[0m
+[0;32mI (1635174) mqtt_client: 等待MQTT连接...[0m
+[0;32mI (1636174) mqtt_client: 等待MQTT连接...[0m

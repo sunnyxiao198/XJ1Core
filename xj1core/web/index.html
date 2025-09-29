@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XiangRiver IoT Core - 管理控制台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* 顶部导航栏 */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* 主容器 */
+        .container {
+            display: flex;
+            height: calc(100vh - 70px);
+        }
+
+        /* 左侧导航 */
+        .sidebar {
+            width: 250px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .nav-item.active {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        /* 主内容区 */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content-section {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        /* 状态卡片 */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .status-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .status-card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .status-dot.connected { background-color: #4CAF50; }
+        .status-dot.disconnected { background-color: #f44336; }
+        .status-dot.disabled { background-color: #9E9E9E; }
+
+        /* 表单样式 */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background: #5a67d8;
+        }
+
+        .btn.btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn.btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn.btn-success {
+            background: #28a745;
+        }
+
+        .btn.btn-success:hover {
+            background: #218838;
+        }
+
+        .btn.btn-danger {
+            background: #dc3545;
+        }
+
+        .btn.btn-danger:hover {
+            background: #c82333;
+        }
+
+        /* 消息提示 */
+        .message {
+            padding: 12px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .message.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        /* WiFi扫描结果 */
+        .wifi-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .wifi-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wifi-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .wifi-item.selected {
+            background-color: #e3f2fd;
+        }
+
+        .wifi-signal {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                order: 2;
+            }
+            
+            .main-content {
+                order: 1;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .status-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="header">
+        <h1>XiangRiver IoT Core</h1>
+        <div class="header-actions">
+            <span id="currentUser">管理员</span>
+            <button class="logout-btn" onclick="logout()">登出</button>
+        </div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 左侧导航 -->
+        <div class="sidebar">
+            <div class="nav-item active" onclick="showSection('dashboard')">
+                <span class="nav-icon">📊</span>
+                数字仪表板
+            </div>
+            <div class="nav-item" onclick="showSection('wifi')">
+                <span class="nav-icon">📶</span>
+                无线网络设置
+            </div>
+            <div class="nav-item" onclick="showSection('ethernet')">
+                <span class="nav-icon">🌐</span>
+                有线网络设置
+            </div>
+            <div class="nav-item" onclick="showSection('bluetooth')">
+                <span class="nav-icon">📱</span>
+                蓝牙设置
+            </div>
+            <div class="nav-item" onclick="showSection('mqtt')">
+                <span class="nav-icon">💬</span>
+                MQTT配置
+            </div>
+            <div class="nav-item" onclick="showSection('password')">
+                <span class="nav-icon">🔐</span>
+                密码设置
+            </div>
+            <div class="nav-item" onclick="showSection('system')">
+                <span class="nav-icon">⚙️</span>
+                系统设置
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 数字仪表板 -->
+            <div id="dashboard" class="content-section active">
+                <h2 class="section-title">数字仪表板</h2>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <h3>WiFi AP热点状态</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot connected" id="wifiApStatusDot"></span>
+                            <span id="wifiApStatus">AP模式运行中</span>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <h3>WiFi STA连接状态</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot disconnected" id="wifiStaStatusDot"></span>
+                            <span id="wifiStaStatus">未连接</span>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <h3>有线网络连接状态</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot disconnected" id="ethernetStatusDot"></span>
+                            <span id="ethernetStatus">未连接</span>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <h3>蓝牙连接状态</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot disabled" id="bluetoothStatusDot"></span>
+                            <span id="bluetoothStatus">未启用</span>
+                        </div>
+                    </div>
+                    <div class="status-card">
+                        <h3>MQTT连接状态</h3>
+                        <div class="status-indicator">
+                            <span class="status-dot disconnected" id="mqttStatusDot"></span>
+                            <span id="mqttStatus">未连接</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 无线网络设置 -->
+            <div id="wifi" class="content-section">
+                <h2 class="section-title">无线网络设置</h2>
+                <div class="message" id="wifiMessage"></div>
+                
+                <div class="form-grid">
+                    <!-- AP设置 -->
+                    <div>
+                        <h3 style="margin-bottom: 15px;">AP热点设置</h3>
+                        <div class="form-group">
+                            <label for="apSSID">热点名称</label>
+                            <input type="text" id="apSSID" placeholder="输入AP热点名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="apIP">IP地址</label>
+                            <input type="text" id="apIP" placeholder="例如: 192.168.5.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="apPassword">密码</label>
+                            <input type="password" id="apPassword" placeholder="输入AP密码">
+                        </div>
+                    </div>
+                    
+                    <!-- STA设置 -->
+                    <div>
+                        <h3 style="margin-bottom: 15px;">STA客户端设置</h3>
+                        <div class="form-group">
+                            <button class="btn" onclick="scanWiFi()">扫描网络</button>
+                            <div id="wifiScanResults" class="wifi-list" style="display: none;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="staSSID">目标网络SSID</label>
+                            <input type="text" id="staSSID" placeholder="选择或输入网络名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="staPassword">密码</label>
+                            <input type="password" id="staPassword" placeholder="输入网络密码">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success" onclick="connectWiFi()">连接</button>
+                            <button class="btn btn-danger" onclick="disconnectWiFi()">断开</button>
+                            <button class="btn btn-secondary" onclick="checkWiFiStatus()">检查状态</button>
+                        </div>
+                        <div class="form-group">
+                            <label>连接状态</label>
+                            <div id="staConnectionStatus">未连接</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="saveWiFiConfig()">保存配置</button>
+            </div>
+
+            <!-- 有线网络设置 -->
+            <div id="ethernet" class="content-section">
+                <h2 class="section-title">有线网络设置</h2>
+                <div class="message" id="ethernetMessage"></div>
+                
+                <div class="form-grid">
+                    <div>
+                        <div class="form-group">
+                            <label for="ethIP">IP地址</label>
+                            <input type="text" id="ethIP" placeholder="例如: 192.168.1.40">
+                        </div>
+                        <div class="form-group">
+                            <label for="ethNetmask">子网掩码</label>
+                            <input type="text" id="ethNetmask" placeholder="例如: 255.255.255.0">
+                        </div>
+                        <div class="form-group">
+                            <label for="ethDNS">DNS服务器</label>
+                            <input type="text" id="ethDNS" placeholder="例如: 8.8.8.8">
+                        </div>
+                        <div class="form-group">
+                            <label for="ethGateway">网关</label>
+                            <input type="text" id="ethGateway" placeholder="例如: 192.168.1.1">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="saveEthernetConfig()">保存配置</button>
+            </div>
+
+            <!-- 蓝牙设置 -->
+            <div id="bluetooth" class="content-section">
+                <h2 class="section-title">蓝牙设置</h2>
+                <div class="message" id="bluetoothMessage"></div>
+                
+                <div class="form-grid">
+                    <div>
+                        <h3 style="margin-bottom: 15px;">BLE设置</h3>
+                        <div class="form-group">
+                            <label for="bleName">蓝牙名称</label>
+                            <input type="text" id="bleName" placeholder="输入蓝牙设备名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="blePassword">配对密码</label>
+                            <input type="text" id="blePassword" placeholder="输入配对密码">
+                        </div>
+                        <div class="form-group">
+                            <label>已连接的客户端</label>
+                            <div id="bluetoothClients">无连接</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="saveBluetoothConfig()">保存配置</button>
+            </div>
+
+            <!-- MQTT配置 -->
+            <div id="mqtt" class="content-section">
+                <h2 class="section-title">MQTT配置</h2>
+                <div class="message" id="mqttMessage"></div>
+                
+                <div class="form-grid">
+                    <div>
+                        <div class="form-group">
+                            <label for="mqttHost">MQTT代理地址</label>
+                            <input type="text" id="mqttHost" placeholder="例如: localhost 或 192.168.1.40">
+                        </div>
+                        <div class="form-group">
+                            <label for="mqttPort">MQTT代理端口</label>
+                            <input type="number" id="mqttPort" placeholder="1883">
+                        </div>
+                        <div class="form-group">
+                            <label for="mqttClientId">客户端ID</label>
+                            <input type="text" id="mqttClientId" placeholder="sparkriver-mqtt-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="mqttTopic">默认主题</label>
+                            <input type="text" id="mqttTopic" placeholder="radar/tlv_data">
+                        </div>
+                        <div class="form-group">
+                            <label for="mqttKeepalive">保持活跃间隔(秒)</label>
+                            <input type="number" id="mqttKeepalive" placeholder="60">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="saveMQTTConfig()">保存配置</button>
+            </div>
+
+            <!-- 密码设置 -->
+            <div id="password" class="content-section">
+                <h2 class="section-title">密码设置</h2>
+                <div class="message" id="passwordMessage"></div>
+                
+                <div class="form-grid">
+                    <div>
+                        <div class="form-group">
+                            <label for="oldPassword">旧密码</label>
+                            <input type="password" id="oldPassword" placeholder="输入当前密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">新密码</label>
+                            <input type="password" id="newPassword" placeholder="输入新密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">确认新密码</label>
+                            <input type="password" id="confirmPassword" placeholder="再次输入新密码">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="changePassword()">保存配置</button>
+            </div>
+
+            <!-- 系统设置 -->
+            <div id="system" class="content-section">
+                <h2 class="section-title">系统设置</h2>
+                <div class="message" id="systemMessage"></div>
+                
+                <div class="form-grid">
+                    <div>
+                        <div class="form-group">
+                            <label>系统信息</label>
+                            <p>设备型号: ESP32-S3-WROOM-1-N16R8</p>
+                            <p>固件版本: XJ1Core v1.0.0</p>
+                            <p>编译时间: 2025-01-01</p>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger" onclick="resetToDefault()">恢复默认设置</button>
+                            <button class="btn btn-secondary" onclick="rebootSystem()">重启系统</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentConfig = {};
+        let currentStatus = {};
+
+        // 页面加载时初始化
+        window.addEventListener('load', function() {
+            loadConfiguration();
+            loadStatus();
+            // 每5秒更新状态
+            setInterval(loadStatus, 5000);
+        });
+
+        // 显示指定的内容区域
+        function showSection(sectionId) {
+            // 隐藏所有内容区域
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // 移除所有导航项的激活状态
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            // 显示指定的内容区域
+            document.getElementById(sectionId).classList.add('active');
+            
+            // 激活对应的导航项
+            event.target.classList.add('active');
+        }
+
+        // 显示消息
+        function showMessage(elementId, message, type = 'success') {
+            const messageEl = document.getElementById(elementId);
+            messageEl.textContent = message;
+            messageEl.className = `message ${type}`;
+            messageEl.style.display = 'block';
+            
+            setTimeout(() => {
+                messageEl.style.display = 'none';
+            }, 5000);
+        }
+
+        // 加载配置
+        async function loadConfiguration() {
+            try {
+                const response = await fetch('/api/config', {
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentConfig = data;
+                    updateConfigUI();
+                } else if (response.status === 401) {
+                    // 未认证，跳转到登录页面
+                    window.location.href = '/login.html';
+                }
+            } catch (error) {
+                console.error('Failed to load configuration:', error);
+            }
+        }
+
+        // 加载状态
+        async function loadStatus() {
+            try {
+                const response = await fetch('/api/status', {
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentStatus = data;
+                    updateStatusUI();
+                } else if (response.status === 401) {
+                    // 未认证，跳转到登录页面
+                    window.location.href = '/login.html';
+                }
+            } catch (error) {
+                console.error('Failed to load status:', error);
+            }
+        }
+
+        // 更新配置UI
+        function updateConfigUI() {
+            if (!currentConfig) return;
+            
+            // WiFi配置
+            if (currentConfig.wifi_ap) {
+                document.getElementById('apSSID').value = currentConfig.wifi_ap.ssid || '';
+                document.getElementById('apIP').value = currentConfig.wifi_ap.ip || '';
+                document.getElementById('apPassword').value = currentConfig.wifi_ap.password || '';
+            }
+            
+            if (currentConfig.wifi_sta) {
+                document.getElementById('staSSID').value = currentConfig.wifi_sta.ssid || '';
+                document.getElementById('staPassword').value = currentConfig.wifi_sta.password || '';
+            }
+            
+            // 以太网配置
+            if (currentConfig.ethernet) {
+                document.getElementById('ethIP').value = currentConfig.ethernet.ip || '';
+                document.getElementById('ethNetmask').value = currentConfig.ethernet.netmask || '';
+                document.getElementById('ethDNS').value = currentConfig.ethernet.dns || '';
+                document.getElementById('ethGateway').value = currentConfig.ethernet.gateway || '';
+            }
+            
+            // 蓝牙配置
+            if (currentConfig.bluetooth) {
+                document.getElementById('bleName').value = currentConfig.bluetooth.device_name || '';
+                document.getElementById('blePassword').value = currentConfig.bluetooth.pairing_password || '';
+            }
+            
+            // MQTT配置
+            if (currentConfig.mqtt) {
+                document.getElementById('mqttHost').value = currentConfig.mqtt.broker_host || '';
+                document.getElementById('mqttPort').value = currentConfig.mqtt.broker_port || '';
+                document.getElementById('mqttClientId').value = currentConfig.mqtt.client_id || '';
+                document.getElementById('mqttTopic').value = currentConfig.mqtt.default_topic || '';
+                document.getElementById('mqttKeepalive').value = currentConfig.mqtt.keepalive || '';
+            }
+        }
+
+        // 更新状态UI
+        function updateStatusUI() {
+            if (!currentStatus) return;
+            
+            // WiFi AP状态
+            const wifiApDot = document.getElementById('wifiApStatusDot');
+            const wifiApStatus = document.getElementById('wifiApStatus');
+            if (currentStatus.wifi_ap_enabled) {
+                wifiApDot.className = 'status-dot connected';
+                wifiApStatus.textContent = 'AP模式运行中 (192.168.5.1)';
+            } else {
+                wifiApDot.className = 'status-dot disconnected';
+                wifiApStatus.textContent = 'AP模式未启用';
+            }
+            
+            // WiFi STA状态
+            const wifiStaDot = document.getElementById('wifiStaStatusDot');
+            const wifiStaStatus = document.getElementById('wifiStaStatus');
+            if (currentStatus.wifi_sta_connected) {
+                wifiStaDot.className = 'status-dot connected';
+                wifiStaStatus.textContent = `已连接 (${currentStatus.wifi_sta_ip})`;
+            } else {
+                wifiStaDot.className = 'status-dot disconnected';
+                wifiStaStatus.textContent = '未连接外部网络';
+            }
+            
+            // 以太网状态
+            const ethernetDot = document.getElementById('ethernetStatusDot');
+            const ethernetStatus = document.getElementById('ethernetStatus');
+            if (currentStatus.ethernet_connected) {
+                ethernetDot.className = 'status-dot connected';
+                ethernetStatus.textContent = `已连接 (${currentStatus.ethernet_ip})`;
+            } else {
+                ethernetDot.className = 'status-dot disconnected';
+                ethernetStatus.textContent = '未连接';
+            }
+            
+            // 蓝牙状态
+            const bluetoothDot = document.getElementById('bluetoothStatusDot');
+            const bluetoothStatus = document.getElementById('bluetoothStatus');
+            if (currentStatus.bluetooth_enabled) {
+                bluetoothDot.className = 'status-dot connected';
+                bluetoothStatus.textContent = `已启用 (${currentStatus.bluetooth_clients}个客户端)`;
+            } else {
+                bluetoothDot.className = 'status-dot disabled';
+                bluetoothStatus.textContent = '未启用';
+            }
+            
+            // MQTT状态
+            const mqttDot = document.getElementById('mqttStatusDot');
+            const mqttStatus = document.getElementById('mqttStatus');
+            if (currentStatus.mqtt_connected) {
+                mqttDot.className = 'status-dot connected';
+                mqttStatus.textContent = '已连接';
+            } else {
+                mqttDot.className = 'status-dot disconnected';
+                mqttStatus.textContent = '未连接';
+            }
+        }
+
+        // WiFi相关功能
+        async function scanWiFi() {
+            const resultsDiv = document.getElementById('wifiScanResults');
+            resultsDiv.innerHTML = '<div class="loading"><div class="spinner"></div>扫描中...</div>';
+            resultsDiv.style.display = 'block';
+            
+            try {
+                const response = await fetch('/api/wifi/scan', { method: 'POST', credentials: 'include' });
+                const data = await response.json();
+                
+                if (data.success && data.networks) {
+                    let html = '';
+                    data.networks.forEach(network => {
+                        const signalStrength = Math.min(Math.max(2 * (network.rssi + 100), 0), 100);
+                        html += `<div class="wifi-item" onclick="selectWiFi('${network.ssid}')">
+                            <span>${network.ssid}</span>
+                            <span class="wifi-signal">${signalStrength}%</span>
+                        </div>`;
+                    });
+                    resultsDiv.innerHTML = html;
+                } else {
+                    resultsDiv.innerHTML = '<div style="padding: 10px;">扫描失败或无网络</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div style="padding: 10px;">扫描失败</div>';
+            }
+        }
+
+        function selectWiFi(ssid) {
+            document.getElementById('staSSID').value = ssid;
+            // 高亮选中的网络
+            const items = document.querySelectorAll('.wifi-item');
+            items.forEach(item => item.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        async function connectWiFi() {
+            const ssid = document.getElementById('staSSID').value;
+            const password = document.getElementById('staPassword').value;
+            
+            if (!ssid) {
+                showMessage('wifiMessage', '请输入网络名称', 'error');
+                return;
+            }
+            
+            showMessage('wifiMessage', '正在连接...', 'info');
+            
+            try {
+                const response = await fetch('/api/wifi/connect', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({ ssid, password })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('wifiMessage', '连接成功', 'success');
+                    loadStatus(); // 刷新状态
+                } else {
+                    showMessage('wifiMessage', data.message || '连接失败', 'error');
+                }
+            } catch (error) {
+                showMessage('wifiMessage', '连接失败', 'error');
+            }
+        }
+
+        async function disconnectWiFi() {
+            try {
+                const response = await fetch('/api/wifi/disconnect', { method: 'POST', credentials: 'include' });
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('wifiMessage', '已断开连接', 'success');
+                    loadStatus();
+                } else {
+                    showMessage('wifiMessage', '断开失败', 'error');
+                }
+            } catch (error) {
+                showMessage('wifiMessage', '断开失败', 'error');
+            }
+        }
+
+        function checkWiFiStatus() {
+            loadStatus();
+            showMessage('wifiMessage', '状态已更新', 'info');
+        }
+
+        async function saveWiFiConfig() {
+            const config = {
+                wifi_ap: {
+                    ssid: document.getElementById('apSSID').value,
+                    ip: document.getElementById('apIP').value,
+                    password: document.getElementById('apPassword').value
+                },
+                wifi_sta: {
+                    ssid: document.getElementById('staSSID').value,
+                    password: document.getElementById('staPassword').value
+                }
+            };
+            
+            try {
+                const response = await fetch('/api/config/wifi', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify(config)
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('wifiMessage', '配置保存成功', 'success');
+                } else {
+                    showMessage('wifiMessage', '保存失败', 'error');
+                }
+            } catch (error) {
+                showMessage('wifiMessage', '保存失败', 'error');
+            }
+        }
+
+        // 以太网配置保存
+        async function saveEthernetConfig() {
+            const config = {
+                ip: document.getElementById('ethIP').value,
+                netmask: document.getElementById('ethNetmask').value,
+                dns: document.getElementById('ethDNS').value,
+                gateway: document.getElementById('ethGateway').value
+            };
+            
+            try {
+                const response = await fetch('/api/config/ethernet', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify(config)
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('ethernetMessage', '配置保存成功', 'success');
+                } else {
+                    showMessage('ethernetMessage', '保存失败', 'error');
+                }
+            } catch (error) {
+                showMessage('ethernetMessage', '保存失败', 'error');
+            }
+        }
+
+        // 蓝牙配置保存
+        async function saveBluetoothConfig() {
+            const config = {
+                device_name: document.getElementById('bleName').value,
+                pairing_password: document.getElementById('blePassword').value
+            };
+            
+            try {
+                const response = await fetch('/api/config/bluetooth', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify(config)
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('bluetoothMessage', '配置保存成功', 'success');
+                } else {
+                    showMessage('bluetoothMessage', '保存失败', 'error');
+                }
+            } catch (error) {
+                showMessage('bluetoothMessage', '保存失败', 'error');
+            }
+        }
+
+        // MQTT配置保存
+        async function saveMQTTConfig() {
+            const config = {
+                broker_host: document.getElementById('mqttHost').value,
+                broker_port: parseInt(document.getElementById('mqttPort').value),
+                client_id: document.getElementById('mqttClientId').value,
+                default_topic: document.getElementById('mqttTopic').value,
+                keepalive: parseInt(document.getElementById('mqttKeepalive').value)
+            };
+            
+            try {
+                const response = await fetch('/api/config/mqtt', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify(config)
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('mqttMessage', '配置保存成功', 'success');
+                } else {
+                    showMessage('mqttMessage', '保存失败', 'error');
+                }
+            } catch (error) {
+                showMessage('mqttMessage', '保存失败', 'error');
+            }
+        }
+
+        // 修改密码
+        async function changePassword() {
+            const oldPassword = document.getElementById('oldPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (!oldPassword || !newPassword || !confirmPassword) {
+                showMessage('passwordMessage', '请填写所有字段', 'error');
+                return;
+            }
+            
+            if (newPassword !== confirmPassword) {
+                showMessage('passwordMessage', '新密码确认不匹配', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/change-password', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({
+                        old_password: oldPassword,
+                        new_password: newPassword,
+                        confirm_password: confirmPassword
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('passwordMessage', '密码修改成功', 'success');
+                    // 清空输入框
+                    document.getElementById('oldPassword').value = '';
+                    document.getElementById('newPassword').value = '';
+                    document.getElementById('confirmPassword').value = '';
+                } else {
+                    showMessage('passwordMessage', data.message || '修改失败', 'error');
+                }
+            } catch (error) {
+                showMessage('passwordMessage', '修改失败', 'error');
+            }
+        }
+
+        // 系统功能
+        async function resetToDefault() {
+            if (!confirm('确定要恢复默认设置吗？此操作不可撤销。')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/system/reset', { method: 'POST', credentials: 'include' });
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('systemMessage', '已恢复默认设置，系统将重启', 'success');
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 3000);
+                } else {
+                    showMessage('systemMessage', '操作失败', 'error');
+                }
+            } catch (error) {
+                showMessage('systemMessage', '操作失败', 'error');
+            }
+        }
+
+        async function rebootSystem() {
+            if (!confirm('确定要重启系统吗？')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/system/reboot', { method: 'POST', credentials: 'include' });
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage('systemMessage', '系统正在重启...', 'info');
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 10000);
+                } else {
+                    showMessage('systemMessage', '重启失败', 'error');
+                }
+            } catch (error) {
+                showMessage('systemMessage', '重启失败', 'error');
+            }
+        }
+
+        // 登出
+        async function logout() {
+            try {
+                await fetch('/api/logout', { method: 'POST', credentials: 'include' });
+            } catch (error) {
+                console.error('Logout error:', error);
+            } finally {
+                window.location.href = '/login.html';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP API 测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        .success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 XJ1CoreCloud HTTP API 测试</h1>
+        <p>这个页面用于测试MQTT HTTP API发送功能</p>
+        
+        <div class="form-group">
+            <label for="server-url">服务器地址:</label>
+            <input type="text" id="server-url" value="http://192.168.1.40:5000" placeholder="http://192.168.1.40:5000">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">消息内容:</label>
+            <textarea id="message" rows="3" placeholder="请输入要发送的消息...">唐老师：学生通过HTTP API向您问好！</textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="source">消息来源:</label>
+            <input type="text" id="source" value="http_api_test" placeholder="消息来源标识">
+        </div>
+        
+        <div class="form-group">
+            <label for="custom-topic">自定义主题 (可选):</label>
+            <input type="text" id="custom-topic" placeholder="留空使用默认主题">
+        </div>
+        
+        <button onclick="sendMessage()">📤 发送MQTT消息</button>
+        <button onclick="checkStatus()">📊 检查服务器状态</button>
+        <button onclick="getMessages()">📜 获取消息历史</button>
+        
+        <div id="response" class="response" style="display: none;"></div>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            const serverUrl = document.getElementById('server-url').value;
+            const message = document.getElementById('message').value;
+            const source = document.getElementById('source').value;
+            const customTopic = document.getElementById('custom-topic').value;
+            
+            if (!message.trim()) {
+                showResponse('请输入消息内容', 'error');
+                return;
+            }
+            
+            const data = {
+                message: message,
+                source: source || 'http_api_test'
+            };
+            
+            if (customTopic.trim()) {
+                data.topic = customTopic;
+            }
+            
+            try {
+                showResponse('正在发送消息...', 'info');
+                
+                const response = await fetch(`${serverUrl}/api/mqtt/publish`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showResponse(`✅ 消息发送成功！\n\n响应数据:\n${JSON.stringify(result, null, 2)}`, 'success');
+                } else {
+                    showResponse(`❌ 发送失败！\n\n错误信息:\n${JSON.stringify(result, null, 2)}`, 'error');
+                }
+                
+            } catch (error) {
+                showResponse(`❌ 网络错误: ${error.message}`, 'error');
+            }
+        }
+        
+        async function checkStatus() {
+            const serverUrl = document.getElementById('server-url').value;
+            
+            try {
+                showResponse('正在检查服务器状态...', 'info');
+                
+                const response = await fetch(`${serverUrl}/api/status`);
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showResponse(`✅ 服务器状态正常！\n\n状态信息:\n${JSON.stringify(result, null, 2)}`, 'success');
+                } else {
+                    showResponse(`❌ 服务器状态异常！\n\n错误信息:\n${JSON.stringify(result, null, 2)}`, 'error');
+                }
+                
+            } catch (error) {
+                showResponse(`❌ 无法连接到服务器: ${error.message}`, 'error');
+            }
+        }
+        
+        async function getMessages() {
+            const serverUrl = document.getElementById('server-url').value;
+            
+            try {
+                showResponse('正在获取消息历史...', 'info');
+                
+                const response = await fetch(`${serverUrl}/api/messages`);
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showResponse(`✅ 获取消息历史成功！\n\n最近消息 (${result.length} 条):\n${JSON.stringify(result, null, 2)}`, 'success');
+                } else {
+                    showResponse(`❌ 获取消息历史失败！\n\n错误信息:\n${JSON.stringify(result, null, 2)}`, 'error');
+                }
+                
+            } catch (error) {
+                showResponse(`❌ 网络错误: ${error.message}`, 'error');
+            }
+        }
+        
+        function showResponse(message, type) {
+            const responseDiv = document.getElementById('response');
+            responseDiv.textContent = message;
+            responseDiv.className = `response ${type}`;
+            responseDiv.style.display = 'block';
+        }
+        
+        // 页面加载完成后自动检查服务器状态
+        window.addEventListener('load', () => {
+            checkStatus();
+        });
+    </script>
+</body>
+</html>

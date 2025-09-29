@@ -1,0 +1,37 @@
+esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mpi_periph.c.obj: \
+ /usr/local/esp-idf-v5.4.1/components/soc/esp32s3/mpi_periph.c \
+ /usr/local/esp-idf-v5.4.1/components/soc/esp32s3/include/soc/hwcrypto_reg.h \
+ /usr/local/esp-idf-v5.4.1/components/soc/esp32s3/include/soc/soc.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include/stdint.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/stdint.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/machine/_default_types.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/features.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/_newlib_version.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/_intsup.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/_stdint.h \
+ /usr/local/esp-idf-v5.4.1/components/esp_common/include/esp_assert.h \
+ /usr/local/esp-idf-v5.4.1/components/newlib/platform_include/assert.h \
+ /mnt/sunny/work/xj1core/xj1core/build/config/sdkconfig.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/stdlib.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/machine/ieeefp.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/newlib.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/config.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include/stddef.h \
+ /usr/local/esp-idf-v5.4.1/components/newlib/platform_include/sys/reent.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/reent.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/_ansi.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/_types.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/machine/_types.h \
+ /usr/local/esp-idf-v5.4.1/components/newlib/platform_include/sys/lock.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/lock.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/cdefs.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/machine/stdlib.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/alloca.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/sys/_locale.h \
+ /home/sunny/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include/assert.h \
+ /usr/local/esp-idf-v5.4.1/components/esp_common/include/esp_bit_defs.h \
+ /usr/local/esp-idf-v5.4.1/components/soc/esp32s3/register/soc/reg_base.h \
+ /usr/local/esp-idf-v5.4.1/components/soc/include/soc/mpi_periph.h \
+ /usr/local/esp-idf-v5.4.1/components/soc/esp32s3/include/soc/soc_caps.h \
+ /usr/local/esp-idf-v5.4.1/components/soc/esp32s3/include/soc/mpu_caps.h
