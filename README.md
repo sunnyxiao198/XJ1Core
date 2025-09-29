@@ -122,12 +122,12 @@ xj1core/
 ### 📋 环境要求
 
 **ESP32开发环境:**
-- ESP-IDF v4.4+
-- Python 3.8+
+- ESP-IDF v5.4.1
+- Python 3.10.12+
 - Git
 
 **云端服务环境:**
-- Python 3.8+
+- Python 3.10.12+
 - MQTT Broker (Mosquitto推荐)
 
 ### 🔧 安装步骤
@@ -183,7 +183,7 @@ pip install -r requirements.txt
 2. **连接配置**: 
    - 连接到热点
    - 打开浏览器访问 `http://192.168.5.1`
-   - 输入默认密码: `xj1core2025`
+   - 输入默认密码: `12345678`
 3. **网络配置**: 在Web界面中配置WiFi、MQTT等参数
 4. **保存重启**: 配置保存后ESP32会自动重启并连接到指定网络
 

@@ -1,0 +1,19 @@
+# 完全清理并重新开始
+deactivate
+rm -rf venv
+
+# 创建新的虚拟环境
+/usr/bin/python3.10 -m venv venv --system-site-packages=false
+source venv/bin/activate
+
+# 设置 pip 不使用用户安装模式
+pip config set install.user false
+
+# 安装 Flask
+pip install -r requirements.txt
+# 验证
+pip show flask
+python -c "import flask; print('Flask imported successfully')"
+
+# 运行应用
+python start_web.py
